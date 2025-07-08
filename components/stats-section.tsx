@@ -1,5 +1,6 @@
 "use client"
 import { useCountUpOnView } from "@/hooks/use-countup"
+import StatCounter from "./ui/StatCounter"
 
 export default function StatsSection() {
 
@@ -29,29 +30,11 @@ export default function StatsSection() {
             cursus lacus. Tincidunt nunc venenatis quam viverra adipiscing at in non.
           </p>
         </div>
-        <div className="col-span-10 col-start-2 grid grid-cols-10 gap-8 font-neulisneue text-primary-900">
-          <div className="col-span-3 pb-10 flex flex-col gap-9 bg-primary-200 rounded-[60px] border border-primary-900/15 text-center overflow-hidden">
-            <div className="flex flex-col gap-3 w-full bg-primary-500/15 text-2xl px-8 pt-6">
-              <p className="opacity-50">projects executed</p>
-              <div className="w-full rounded-full bg-primary-900/25 h-[2px]" />
-            </div>
-            <div ref={projects.ref} className="text-7xl font-medium tracking-tighter ">{projects.count}+</div>
-          </div>
-          <div className="col-span-4 pb-10 flex flex-col gap-9 bg-primary-200 rounded-[60px] border border-primary-900/15 text-center overflow-hidden">
-            <div className="flex flex-col gap-3 w-full bg-primary-500/15 text-2xl px-8 pt-6">
-              <p className="opacity-50">gallons of water saved</p>
-              <div className="w-full rounded-full bg-primary-900/25 h-[2px]" />
-            </div>
-            <div ref={water.ref} className="text-7xl font-medium tracking-tighter ">{water.count}</div>
-          </div>
-          <div className="col-span-3 pb-10 flex flex-col gap-9 bg-primary-200 rounded-[60px] border border-primary-900/15 text-center overflow-hidden">
-            <div className="flex flex-col gap-3 w-full bg-primary-500/15 text-2xl px-8 pt-6">
-              <p className="opacity-50">products sold</p>
-              <div className="w-full rounded-full bg-primary-900/25 h-[2px]" />
-            </div>
-            <div ref={products.ref} className="text-7xl font-medium tracking-tighter ">{products.count}+</div>
-          </div>
-        </div>
+        <StatCounter duration={1500} StatData={[
+          { title: "projects executed", count: 100 },
+          { title: "gallons of water saved", count: 50000 },
+          { title: "products sold", count: 200 }
+        ]} />
       </div>
     </section>
   )

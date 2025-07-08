@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import Icon from "@/src/assets/vectors"
+import Icon from "@/public/assets/vectors"
 
 export default function SolutionsSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0)

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import Icon from "@/src/assets/vectors"
+import Icon from "@/public/assets/vectors"
 import Image from "next/image"
 
 export default function HeroSection() {

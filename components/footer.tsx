@@ -1,10 +1,10 @@
-import Icon, { Logo } from "@/src/assets/vectors"
+import Icon, { Logo } from "@/public/assets/vectors"
 import Link from "next/link"
 import { Button } from "./ui/button"
 
 export default function Footer() {
   return (
-    <footer className="col-span-full grid-cols-12 grid gap-y-32 relative w-full bg-[#242424] text-white py-16 pt-20 overflow-hidden bg-[url('../src/assets/images/footerbg.png')] bg-right-top bg-no-repeat">
+    <footer className="col-span-full font-neulissans grid-cols-12 grid gap-y-32 relative w-full bg-[#242424] text-white py-16 pt-20 overflow-hidden bg-[url('../public/assets/images/footerbg.png')] bg-right-top bg-no-repeat">
       <div className="col-span-full grid grid-cols-2 px-20 gap-8">
         <div className="flex flex-col gap-10">
           <Logo width={240} theme="dark" />
@@ -14,7 +14,7 @@ export default function Footer() {
             <Button variant="footer" size="footer"><Icon name="linkedin" className="fill-primary-600"/></Button>
           </div>
         </div>
-        <ul className="flex flex-col gap-4 text-right text-xl items-end font-light text-gray-400">
+        <ul className="flex flex-col gap-4 text-right text-xl items-end font-light tracking-tight text-gray-400">
           <li>
             <Link href="#about" className="flex gap-x-3 items-start hover:text-white transition-colors">
               <p>About</p>

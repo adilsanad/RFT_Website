@@ -1,0 +1,434 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "sku": "RWH-001",
+      "slug": "rainwater-harvesting-tank-5000l",
+      "name": "Rainwater Harvesting Tank 5000L",
+      "category": "rainwater-harvesting",
+      "subcategory": "storage-tanks",
+      "description": "High-capacity polyethylene water storage tank designed for rainwater harvesting systems. UV-resistant and suitable for above-ground installation.",
+      "specifications": {
+        "Capacity": "5000 Liters",
+        "Material": "Food-grade Polyethylene",
+        "Dimensions": "2.1m (D) x 2.2m (H)",
+        "Weight": "180 kg",
+        "Color": "Black",
+        "UV Protection": "Yes",
+        "Warranty": "10 years"
+      },
+      "features": [
+        "UV-resistant material",
+        "Food-grade certified",
+        "Mosquito-proof lid",
+        "Multiple inlet/outlet options",
+        "Overflow connection available"
+      ],
+      "images": ["/images/products/rwh-tank-5000l-1.jpg"],
+      "brand": "EcoRain",
+      "metaTitle": "5000L Rainwater Harvesting Tank | Rainfield",
+      "metaDescription": "Premium 5000-liter rainwater storage tank with UV protection. Perfect for residential and commercial rainwater harvesting systems."
+    },
+    {
+      "id": "2",
+      "sku": "IRR-DRP-001",
+      "slug": "drip-irrigation-kit-100sqm",
+      "name": "Drip Irrigation Kit - 100 sq.m",
+      "category": "irrigation",
+      "subcategory": "drip-systems",
+      "description": "Complete drip irrigation kit suitable for gardens up to 100 square meters. Includes all necessary components for water-efficient irrigation.",
+      "specifications": {
+        "Coverage Area": "100 sq.m",
+        "Pipe Length": "50m main + 100m lateral",
+        "Drippers": "100 units (2 LPH)",
+        "Timer": "Digital programmable",
+        "Pressure": "1-3 bar",
+        "Water Saving": "Up to 70%"
+      },
+      "features": [
+        "Programmable timer included",
+        "Pressure-compensating drippers",
+        "Easy DIY installation",
+        "Expandable system",
+        "Fertilizer tank compatible"
+      ],
+      "images": ["/images/products/drip-kit-100-1.jpg"],
+      "brand": "Jain",
+      "metaTitle": "100sqm Drip Irrigation Kit | Water-Efficient Garden Irrigation",
+      "metaDescription": "Complete drip irrigation system for 100 square meter gardens. Save up to 70% water with programmable timer and pressure-compensating drippers."
+    },
+    {
+      "id": "3",
+      "sku": "RWH-002",
+      "slug": "first-flush-diverter-90mm",
+      "name": "First Flush Diverter 90mm",
+      "category": "rainwater-harvesting",
+      "subcategory": "filtration",
+      "description": "Essential component for rainwater harvesting that diverts the first contaminated water flow, ensuring cleaner water storage.",
+      "specifications": {
+        "Pipe Diameter": "90mm",
+        "Material": "PVC",
+        "Diverter Volume": "20 Liters",
+        "Flow Rate": "Up to 2000 L/hr",
+        "Installation": "Vertical or angled",
+        "Warranty": "5 years"
+      },
+      "features": [
+        "Automatic operation",
+        "Self-cleaning chamber",
+        "Maintenance-free design",
+        "Weather-resistant",
+        "Easy installation"
+      ],
+      "images": ["/images/products/first-flush-90mm-1.jpg"],
+      "brand": "Amiad",
+      "metaTitle": "90mm First Flush Diverter | Rainwater Filter System",
+      "metaDescription": "Automatic first flush diverter for cleaner rainwater collection. Self-cleaning design for maintenance-free operation."
+    },
+    {
+      "id": "4",
+      "sku": "IRR-SPR-001",
+      "slug": "rotary-sprinkler-system-6-zone",
+      "name": "Rotary Sprinkler System - 6 Zone",
+      "category": "irrigation",
+      "subcategory": "sprinkler-systems",
+      "description": "Professional-grade rotary sprinkler system with 6-zone capability for large lawns and landscapes up to 500 square meters.",
+      "specifications": {
+        "Coverage Area": "500 sq.m",
+        "Zones": "6 independent zones",
+        "Sprinkler Heads": "12 rotary heads",
+        "Controller": "Smart WiFi enabled",
+        "Operating Pressure": "2-4 bar",
+        "Throw Distance": "8-15 meters"
+      },
+      "features": [
+        "WiFi smart controller",
+        "Weather-based scheduling",
+        "360° or adjustable arc rotation",
+        "Pressure regulation",
+        "Mobile app control"
+      ],
+      "images": ["/images/products/rotary-sprinkler-6zone-1.jpg"],
+      "brand": "Hunter",
+      "metaTitle": "6-Zone Smart Rotary Sprinkler System | Professional Irrigation",
+      "metaDescription": "Smart WiFi-enabled 6-zone rotary sprinkler system for large landscapes. Weather-based scheduling with mobile app control."
+    },
+    {
+      "id": "5",
+      "sku": "WF-FNT-001",
+      "slug": "solar-fountain-pump-40w",
+      "name": "Solar Fountain Pump 40W",
+      "category": "water-features",
+      "subcategory": "fountains",
+      "description": "Energy-efficient solar-powered fountain pump perfect for garden ponds, water features, and decorative fountains.",
+      "specifications": {
+        "Power": "40W Solar Panel",
+        "Flow Rate": "2000 L/hr",
+        "Max Head": "3.5 meters",
+        "Pump Type": "Brushless DC",
+        "Battery": "Lithium 12V 20Ah",
+        "Operating Hours": "8-10 hours daily"
+      },
+      "features": [
+        "Solar powered - no electricity costs",
+        "Battery backup for cloudy days",
+        "Multiple fountain heads included",
+        "LED lighting compatible",
+        "Weather-resistant design"
+      ],
+      "images": ["/images/products/solar-fountain-40w-1.jpg"],
+      "brand": "Yuzuak",
+      "metaTitle": "40W Solar Fountain Pump | Eco-Friendly Water Features",
+      "metaDescription": "Solar-powered fountain pump with battery backup. Perfect for garden ponds and water features with no electricity costs."
+    },
+    {
+      "id": "6",
+      "sku": "RWH-003",
+      "slug": "underground-rainwater-tank-10000l",
+      "name": "Underground Rainwater Tank 10000L",
+      "category": "rainwater-harvesting",
+      "subcategory": "storage-tanks",
+      "description": "Large-capacity underground rainwater storage tank made from reinforced polyethylene. Ideal for commercial and large residential properties.",
+      "specifications": {
+        "Capacity": "10,000 Liters",
+        "Material": "Reinforced Polyethylene",
+        "Dimensions": "3.8m (L) x 2.0m (W) x 1.8m (H)",
+        "Weight": "420 kg",
+        "Installation": "Underground",
+        "Load Rating": "20 tonnes",
+        "Warranty": "15 years"
+      },
+      "features": [
+        "Space-saving underground design",
+        "Heavy-duty load bearing",
+        "Corrosion resistant",
+        "Integrated pump chamber",
+        "Multiple access points"
+      ],
+      "images": ["/images/products/underground-tank-10000l-1.jpg"],
+      "brand": "Finolex",
+      "metaTitle": "10000L Underground Rainwater Tank | Commercial Storage",
+      "metaDescription": "Heavy-duty underground rainwater storage tank for commercial properties. 15-year warranty with integrated pump chamber."
+    },
+    {
+      "id": "7",
+      "sku": "IRR-MIC-001",
+      "slug": "micro-spray-irrigation-kit-200sqm",
+      "name": "Micro Spray Irrigation Kit - 200 sq.m",
+      "category": "irrigation",
+      "subcategory": "micro-irrigation",
+      "description": "Precision micro spray irrigation system designed for vegetable gardens, flower beds, and greenhouse applications.",
+      "specifications": {
+        "Coverage Area": "200 sq.m",
+        "Spray Heads": "50 micro sprayers",
+        "Flow Rate": "30-120 L/hr per head",
+        "Working Pressure": "1.5-3 bar",
+        "Pipe Size": "16mm main, 6mm lateral",
+        "Timer": "Analog 24-hour"
+      },
+      "features": [
+        "Adjustable spray patterns",
+        "Uniform water distribution",
+        "Clog-resistant nozzles",
+        "UV-resistant tubing",
+        "Easy maintenance"
+      ],
+      "images": ["/images/products/micro-spray-200-1.jpg"],
+      "brand": "Jain",
+      "metaTitle": "200sqm Micro Spray Irrigation Kit | Precision Garden Watering",
+      "metaDescription": "Precision micro spray irrigation for vegetable gardens and greenhouses. Adjustable patterns with uniform water distribution."
+    },
+    {
+      "id": "8",
+      "sku": "WF-PND-001",
+      "slug": "pond-filtration-system-5000l",
+      "name": "Pond Filtration System 5000L",
+      "category": "water-features",
+      "subcategory": "pond-equipment",
+      "description": "Complete biological and mechanical filtration system for ornamental ponds up to 5000 liters. Maintains crystal clear water.",
+      "specifications": {
+        "Pond Capacity": "Up to 5000L",
+        "Flow Rate": "3000 L/hr",
+        "Filtration": "Bio + Mechanical",
+        "UV Sterilizer": "25W included",
+        "Pump": "Energy efficient 100W",
+        "Media": "Bio balls + foam"
+      },
+      "features": [
+        "3-stage filtration process",
+        "UV sterilizer for algae control",
+        "Energy-efficient pump",
+        "Easy-clean design",
+        "Fish-safe operation"
+      ],
+      "images": ["/images/products/pond-filter-5000l-1.jpg"],
+      "brand": "Paige",
+      "metaTitle": "5000L Pond Filtration System | Crystal Clear Water Features",
+      "metaDescription": "Complete pond filtration with UV sterilizer for crystal clear water. 3-stage bio-mechanical filtration for healthy ponds."
+    },
+    {
+      "id": "9",
+      "sku": "RWH-004",
+      "slug": "roof-water-harvesting-complete-kit",
+      "name": "Roof Water Harvesting Complete Kit",
+      "category": "rainwater-harvesting",
+      "subcategory": "complete-systems",
+      "description": "All-in-one roof water harvesting kit including gutters, downpipes, first flush diverter, and storage tank for typical residential homes.",
+      "specifications": {
+        "Roof Area": "Up to 150 sq.m",
+        "Storage": "3000L tank included",
+        "Guttering": "20m PVC gutters",
+        "Downpipes": "2 x 90mm downpipes",
+        "Filtration": "First flush diverter",
+        "Installation": "Professional required"
+      },
+      "features": [
+        "Complete turnkey solution",
+        "Professional installation included",
+        "10-year system warranty",
+        "Mosquito-proof design",
+        "Overflow management"
+      ],
+      "images": ["/images/products/roof-harvest-complete-1.jpg"],
+      "brand": "EcoRain",
+      "metaTitle": "Complete Roof Water Harvesting Kit | Turnkey Rainwater Solution",
+      "metaDescription": "Complete roof rainwater harvesting system with professional installation. Includes tank, gutters, and filtration for homes up to 150sqm."
+    },
+    {
+      "id": "10",
+      "sku": "IRR-CNT-001",
+      "slug": "smart-irrigation-controller-12-zone",
+      "name": "Smart Irrigation Controller - 12 Zone",
+      "category": "irrigation",
+      "subcategory": "controllers",
+      "description": "Advanced WiFi-enabled irrigation controller with weather intelligence and smartphone app control for up to 12 zones.",
+      "specifications": {
+        "Zones": "12 independent zones",
+        "Connectivity": "WiFi + Bluetooth",
+        "Weather Integration": "Yes",
+        "App Control": "iOS + Android",
+        "Programs": "4 programs, 6 start times",
+        "Power": "24VAC transformer included"
+      },
+      "features": [
+        "Weather-based watering",
+        "Remote smartphone control",
+        "Water usage tracking",
+        "Seasonal adjustments",
+        "Rain sensor compatible"
+      ],
+      "images": ["/images/products/smart-controller-12zone-1.jpg"],
+      "brand": "Hunter",
+      "metaTitle": "12-Zone Smart Irrigation Controller | WiFi Garden Control",
+      "metaDescription": "Smart WiFi irrigation controller with weather intelligence. Control 12 zones remotely with water usage tracking and seasonal adjustments."
+    },
+    {
+      "id": "11",
+      "sku": "WF-WAT-001",
+      "slug": "garden-waterfall-kit-3-tier",
+      "name": "Garden Waterfall Kit - 3 Tier",
+      "category": "water-features",
+      "subcategory": "waterfalls",
+      "description": "Natural stone-look 3-tier waterfall kit with integrated LED lighting. Creates a stunning focal point for any garden.",
+      "specifications": {
+        "Tiers": "3 cascading levels",
+        "Height": "1.2 meters",
+        "Material": "Fiberglass with stone finish",
+        "Pump": "2500 L/hr submersible",
+        "Lighting": "6 LED spots included",
+        "Basin": "300L capacity"
+      },
+      "features": [
+        "Realistic stone texture",
+        "Integrated LED lighting",
+        "Easy modular assembly",
+        "Pump and lighting included",
+        "Weather-resistant finish"
+      ],
+      "images": ["/images/products/waterfall-3tier-1.jpg"],
+      "brand": "Paige",
+      "metaTitle": "3-Tier Garden Waterfall Kit | LED Water Feature",
+      "metaDescription": "Stunning 3-tier waterfall with integrated LED lighting. Natural stone finish with easy modular assembly for beautiful gardens."
+    },
+    {
+      "id": "12",
+      "sku": "RWH-005",
+      "slug": "rainwater-pump-system-automatic",
+      "name": "Rainwater Pump System - Automatic",
+      "category": "rainwater-harvesting",
+      "subcategory": "pumps",
+      "description": "Fully automatic pressure pump system for rainwater harvesting with mains water backup and intelligent switching.",
+      "specifications": {
+        "Flow Rate": "4500 L/hr",
+        "Pressure": "3.5 bar",
+        "Power": "1.5 kW",
+        "Tank Capacity": "300L pressure vessel",
+        "Backup": "Automatic mains changeover",
+        "Control": "Digital pressure switch"
+      },
+      "features": [
+        "Automatic mains backup",
+        "Dry-run protection",
+        "Quiet operation",
+        "Stainless steel impeller",
+        "Smart pressure control"
+      ],
+      "images": ["/images/products/rainwater-pump-auto-1.jpg"],
+      "brand": "Amiad",
+      "metaTitle": "Automatic Rainwater Pump System | Smart Water Management",
+      "metaDescription": "Intelligent rainwater pump with automatic mains backup. Digital control with dry-run protection for reliable water supply."
+    }
+  ],
+  "categories": [
+    {
+      "id": "rainwater-harvesting",
+      "slug": "rainwater-harvesting",
+      "name": "Rainwater Harvesting",
+      "description": "Complete solutions for collecting, storing, and utilizing rainwater",
+      "subcategories": [
+        {
+          "id": "storage-tanks",
+          "slug": "storage-tanks",
+          "name": "Storage Tanks",
+          "description": "Above and underground water storage solutions"
+        },
+        {
+          "id": "filtration",
+          "slug": "filtration",
+          "name": "Filtration Systems",
+          "description": "Water treatment and filtration components"
+        },
+        {
+          "id": "complete-systems",
+          "slug": "complete-systems",
+          "name": "Complete Systems",
+          "description": "Turnkey rainwater harvesting solutions"
+        },
+        {
+          "id": "pumps",
+          "slug": "pumps",
+          "name": "Pumps & Controls",
+          "description": "Water pumping and pressure systems"
+        }
+      ]
+    },
+    {
+      "id": "irrigation",
+      "slug": "irrigation",
+      "name": "Irrigation Systems",
+      "description": "Efficient water distribution systems for gardens and landscapes",
+      "subcategories": [
+        {
+          "id": "drip-systems",
+          "slug": "drip-systems",
+          "name": "Drip Irrigation",
+          "description": "Water-efficient drip irrigation solutions"
+        },
+        {
+          "id": "sprinkler-systems",
+          "slug": "sprinkler-systems",
+          "name": "Sprinkler Systems",
+          "description": "Rotary and spray sprinkler systems"
+        },
+        {
+          "id": "micro-irrigation",
+          "slug": "micro-irrigation",
+          "name": "Micro Irrigation",
+          "description": "Precision watering for specialized applications"
+        },
+        {
+          "id": "controllers",
+          "slug": "controllers",
+          "name": "Controllers & Timers",
+          "description": "Smart irrigation control systems"
+        }
+      ]
+    },
+    {
+      "id": "water-features",
+      "slug": "water-features",
+      "name": "Water Features",
+      "description": "Decorative and functional water elements for your property",
+      "subcategories": [
+        {
+          "id": "fountains",
+          "slug": "fountains",
+          "name": "Fountains",
+          "description": "Solar and electric fountain systems"
+        },
+        {
+          "id": "pond-equipment",
+          "slug": "pond-equipment",
+          "name": "Pond Equipment",
+          "description": "Filtration and maintenance for ornamental ponds"
+        },
+        {
+          "id": "waterfalls",
+          "slug": "waterfalls",
+          "name": "Waterfalls",
+          "description": "Cascading water features and kits"
+        }
+      ]
+    }
+  ]
+}
