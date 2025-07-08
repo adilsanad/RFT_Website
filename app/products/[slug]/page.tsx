@@ -227,7 +227,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (
-            <div className="mt-16">
+            <div className="col-span-full mt-16">
               <h2 className="text-2xl font-neulisneue font-bold mb-8">Related Products</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {relatedProducts.map((relatedProduct) => (
