@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Icon from "@/public/assets/vectors";
 import { Button } from '../../components/ui/button'
-import StatsSection from "@/components/stats-section";
+import StatsSection from "@/components/StatsSection";
 import StatCounter from "@/components/ui/StatCounter";
 import DivAnimation from "@/components/ui/DivAnimated";
 
@@ -32,13 +32,17 @@ export default function About() {
         <main className="grid grid-cols-12 gap-24 min-h-screen bg-white font-neulissans tracking-tight py-[5.5rem]">
             <section className="col-span-full relative flex flex-col w-full ">
                 <div className="flex flex-col w-full px-4 z-10">
-                    <div className="w-full min-h-[720px] rounded-[15px_15px_60px_60px] bg-gray-500 overflow-hidden ">
+                    <div className="relative w-full min-h-[720px] rounded-[15px_15px_60px_60px] bg-gray-500 overflow-hidden ">
+                        <div className="absolute flex flex-col gap-4 left-12 bottom-12 md:max-w-lg ">
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                        </div>
                     </div>
                 </div>
             </section >
-            <section className="col-span-full relative grid grid-cols-12 gap-8">
-                <h2 className="col-span-10 col-start-2 flex text-7xl font-neulisneue font-medium tracking-tighter">Who we are</h2>
-                <div className="col-span-10 col-start-2 flex flex-col gap-12">
+            <section className="col-span-full relative flex flex-col px-24 gap-8">
+                <h2 className="col-span-full flex text-7xl font-neulisneue font-medium tracking-tighter">Who we are</h2>
+                <div className="col-span-full flex flex-col gap-12">
                     {/* Tab Buttons */}
                     <div className="flex gap-4 font-neulisneue text-xl tracking-tighter">
                         <Button
@@ -67,7 +71,7 @@ export default function About() {
                 </div>
                 <StatCounter duration={1500} StatData={[
                     { title: "projects executed", count: 100 },
-                    { title: "gallons of water saved", count: 50000 },
+                    { title: "gallons of water saved", count: 500000 },
                     { title: "products sold", count: 200 }
                 ]} />
             </section>

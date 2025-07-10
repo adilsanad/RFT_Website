@@ -83,6 +83,30 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+p {
+  font-family: 'Manrope', sans-serif;
+}
+h1 { 
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  font-size: 4.5rem;
+  
+  line-height: 100%;
+}
+
+h2 {
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  font-size: 4rem;
+  
+  line-height: 105%;
+}
+h3 {
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  font-size: 2.75rem;
+  line-height: 105%;
+}
 
 @layer base {
   * {

@@ -56,7 +56,7 @@ const ProductsDropdown = () => {
       {/* Trigger */}
       <Link 
         href="/products" 
-        className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+        className="flex items-center gap-2 text-black hover:text-gray-900 transition-colors"
       >
         <span>Products</span>
         <Icon name="chevronDown" width={10} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -75,7 +75,7 @@ const ProductsDropdown = () => {
                     className={`flex-1 py-3 px-4 text-sm font-medium transition-colors ${
                       activeCategory === category.id
                         ? 'text-primary-600 bg-white border-b-2 border-primary-600'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                        : 'text-black hover:text-gray-900 hover:bg-gray-100'
                     }`}
                     onMouseEnter={() => setActiveCategory(category.id)}
                   >
@@ -104,7 +104,7 @@ const ProductsDropdown = () => {
                       <div className="aspect-[3/2] bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center group-hover:border-primary-300 group-hover:bg-primary-50 transition-colors">
                         <div className="text-center">
                           <div className="w-16 h-10 bg-gray-300 rounded mb-2 mx-auto"></div>
-                          <span className="text-xs text-gray-600 group-hover:text-primary-600 font-medium">
+                          <span className="text-xs text-black group-hover:text-primary-600 font-medium">
                             {brand.name}
                           </span>
                         </div>
@@ -166,22 +166,22 @@ export default function Header() {
     >
       <div className={`w-full flex items-center justify-between
         ${scrolled
-          ? "px-6 py-3 bg-primary-100/75 border border-gray-300 rounded-[15px] shadow-md backdrop-blur-lg"
-          : "px-8 py-4 bg-gradient-to-b from-primary-100/80 to-primary-100/0 rounded-none shadow-none backdrop-blur-sm"
+          ? "px-6 py-3 bg-white/50 border border-gray-300 rounded-[15px] shadow-md backdrop-blur-lg"
+          : "px-8 py-4 bg-gradient-to-b from-white80 to-white/0 rounded-none shadow-none backdrop-blur-sm"
         }`}>
         <Link href='/' className="flex items-center py-2">
           <Logo width={scrolled ? 140 : 160} />
         </Link>
 
         <nav className="relative hidden md:flex items-center space-x-8">
-          <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <Link href="/about" className="text-black hover:text-gray-900 transition-colors">
             About
           </Link>
-          <Link href="#solutions" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <Link href="/solutions" className="text-black hover:text-gray-900 transition-colors">
             Solutions
           </Link>
           <ProductsDropdown />
-          <Link href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <Link href="#contact" className="text-black  hover:text-gray-900 transition-colors">
             Contact
           </Link>
 
