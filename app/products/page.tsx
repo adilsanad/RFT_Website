@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -23,6 +24,8 @@ interface TempFilterState {
 
 export default function ProductsPage() {
   const { products, categories } = productsData
+  const searchParams = useSearchParams()
+  const router = useRouter()
 
   // Main filter state (applied filters)
   const [filters, setFilters] = useState<FilterState>({
@@ -52,6 +55,41 @@ export default function ProductsPage() {
   const categoryRef = useRef<HTMLDivElement>(null)
   const brandRef = useRef<HTMLDivElement>(null)
   const sortRef = useRef<HTMLDivElement>(null)
+
+  // Initialize filters from URL parameters
+  useEffect(() => {
+    const categoriesParam = searchParams.get('categories')
+    const brandsParam = searchParams.get('brands')
+    const searchParam = searchParams.get('search')
+    const sortParam = searchParams.get('sort')
+
+    const initialFilters: FilterState = {
+      search: searchParam || '',
+      categories: categoriesParam ? [categoriesParam] : [],
+      brands: brandsParam ? [brandsParam] : [],
+      sortBy: sortParam || 'name-asc'
+    }
+
+    setFilters(initialFilters)
+    setTempFilters({
+      categories: initialFilters.categories,
+      brands: initialFilters.brands,
+      sortBy: initialFilters.sortBy
+    })
+  }, [searchParams])
+
+  // Update URL when filters change
+  const updateURL = (newFilters: FilterState) => {
+    const params = new URLSearchParams()
+    
+    if (newFilters.search) params.set('search', newFilters.search)
+    if (newFilters.categories.length > 0) params.set('categories', newFilters.categories[0])
+    if (newFilters.brands.length > 0) params.set('brands', newFilters.brands[0])
+    if (newFilters.sortBy !== 'name-asc') params.set('sort', newFilters.sortBy)
+
+    const newURL = params.toString() ? `/products?${params.toString()}` : '/products'
+    router.replace(newURL, { scroll: false })
+  }
 
   // Extract unique brands from products
   const allBrands = useMemo(() => {
@@ -145,61 +183,76 @@ export default function ProductsPage() {
 
   // Handle search input
   const handleSearchChange = (value: string) => {
-    setFilters(prev => ({ ...prev, search: value }))
+    const newFilters = { ...filters, search: value }
+    setFilters(newFilters)
+    updateURL(newFilters)
   }
 
   // Handle filter confirmations
   const handleCategoryConfirm = () => {
-    setFilters(prev => ({ ...prev, categories: tempFilters.categories }))
+    const newFilters = { ...filters, categories: tempFilters.categories }
+    setFilters(newFilters)
+    updateURL(newFilters)
     setCategoryDropdownOpen(false)
   }
 
   const handleBrandConfirm = () => {
-    setFilters(prev => ({ ...prev, brands: tempFilters.brands }))
+    const newFilters = { ...filters, brands: tempFilters.brands }
+    setFilters(newFilters)
+    updateURL(newFilters)
     setBrandDropdownOpen(false)
   }
 
   const handleSortConfirm = () => {
-    setFilters(prev => ({ ...prev, sortBy: tempFilters.sortBy }))
+    const newFilters = { ...filters, sortBy: tempFilters.sortBy }
+    setFilters(newFilters)
+    updateURL(newFilters)
     setSortDropdownOpen(false)
   }
 
   // Reset all filters
   const resetFilters = () => {
-    setFilters({
+    const newFilters = {
       search: '',
       categories: [],
       brands: [],
       sortBy: 'name-asc'
-    })
+    }
+    setFilters(newFilters)
     setTempFilters({
       categories: [],
       brands: [],
       sortBy: 'name-asc'
     })
     setCurrentPage(1)
+    router.replace('/products', { scroll: false })
   }
 
   // Remove individual filter
   const removeFilter = (type: string, value?: string) => {
+    let newFilters = { ...filters }
+    
     switch (type) {
       case 'search':
-        setFilters(prev => ({ ...prev, search: '' }))
+        newFilters.search = ''
         break
       case 'category':
         if (value) {
-          setFilters(prev => ({ ...prev, categories: prev.categories.filter(c => c !== value) }))
+          newFilters.categories = newFilters.categories.filter(c => c !== value)
         }
         break
       case 'brand':
         if (value) {
-          setFilters(prev => ({ ...prev, brands: prev.brands.filter(b => b !== value) }))
+          newFilters.brands = newFilters.brands.filter(b => b !== value)
         }
         break
       case 'sort':
-        setFilters(prev => ({ ...prev, sortBy: 'name-asc' }))
+        newFilters.sortBy = 'name-asc'
         break
     }
+    
+    setFilters(newFilters)
+    updateURL(newFilters)
   }
 
   // Handle checkbox changes

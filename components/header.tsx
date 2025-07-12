@@ -97,7 +97,7 @@ const ProductsDropdown = () => {
                 {brandsByCategory[activeCategory as keyof typeof brandsByCategory]?.map((brand, index) => (
                   <div key={index} className="group">
                     <Link 
-                      href={`/products?category=${activeCategory}&brand=${brand.name.toLowerCase()}`}
+                      href={`/products?categories=${activeCategory}&brands=${encodeURIComponent(brand.name)}`}
                       className="block"
                     >
                       {/* Placeholder for brand logo */}
@@ -117,7 +117,7 @@ const ProductsDropdown = () => {
               {/* View All Link */}
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <Link 
-                  href={`/products?category=${activeCategory}`}
+                  href={`/products?categories=${activeCategory}`}
                   className="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700"
                 >
                   View all {categories.find(c => c.id === activeCategory)?.name} products

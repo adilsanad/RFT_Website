@@ -6,10 +6,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: "default" | "compact" | "footer";
   loading?: boolean;
   icon?: string;
+  link?: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "default", size = "default", loading = false, disabled, children, ...props }, ref) => {
+  ({ className, variant = "default", size = "default", loading = false, disabled, children, link, ...props }, ref) => {
     const baseStyles = " font-medium tracking-tight border-2 flex items-center justify-center gap-2 transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
 
     const variants = {
@@ -33,6 +34,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || loading}
         className={cn(baseStyles, variants[variant], sizes[size], className)}
         {...props}
+        onClick={link ? () => window.open(link, "_blank") : props.onClick}
       >
         {loading ? (
           <span className="animate-spin rounded-full border-2 border-t-transparent border-current w-5 h-5" />

@@ -21,10 +21,11 @@ const partners: MarqueeData[] = [
 ];
 
 const clients: MarqueeData[] = [
-  { src: "/logos/sobha.png", alt: "Sobha" },
-  { src: "/logos/prestige.png", alt: "Prestige" },
-  { src: "/logos/brigade.png", alt: "Brigade" },
-  { src: "/logos/realty.png", alt: "Realty" },
+  { src: "/assets/images/logos/sobha.png", alt: "Sobha" },
+  { src: "/assets/images/logos/prestige.png", alt: "Prestige" },
+  { src: "/assets/images/logos/brigade.png", alt: "Brigade" },
+  { src: "/assets/images/logos/bagmane.png", alt: "Bagmane" },
+  { src: "/assets/images/logos/embassy.png", alt: "Embassy" },
 ];
 
 export default function Home() {

@@ -30,13 +30,11 @@ export default function HeroSection() {
       </div>
       <div className="flex flex-col w-full px-4 z-10">
         <div className="flex flex-col items-center text-center mb-16">
-          <h1 className="text-6xl tracking-tighter md:text-6xl font-medium text-gray-900 mb-6">
-            Lorem ipsum
-            <br />
-            dolor sit amet.
+          <h1 className=" max-w-2xl mb-6">
+            Smart, efficient water systems - from source to soil
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus.
+          <p className="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
+            From automated irrigation to rainwater harvesting to swimming pools— we handle water end-to-end for residential, commercial, and industrial spaces.
           </p>
           <Button>Send an inquiry</Button>
         </div>
