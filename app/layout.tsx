@@ -16,11 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/assets/fonnts.com-Neulis_Neue_Medium.otf" as="font" type="font/otf" crossOrigin="" />
+        <link rel="preload" href="/assets/fonnts.com-Neulis_Sans_Medium.otf" as="font" type="font/otf" crossOrigin="" />
+        <link rel="preload" href="/assets/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossOrigin="" />
+      </head>
       <body>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   )
 }

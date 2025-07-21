@@ -96,7 +96,7 @@ export default function Solutions() {
                     <div className="z-10 p-2 flex w-fit rounded-full border-2 border-primary-500 bg-primary-900/15"><Icon width={24} height={24} name="sprinkler" className="fill-primary-500" /></div>
                     <div className="z-10 flex flex-col gap-8">
                         <h3 className="text-white max-w-xs">Irrigation Systems</h3>
-                        <Button variant="default" size="compact" className="w-fit">
+                        <Button variant="default" size="compact" className="w-fit" link="/solutions/irrigation-systems">
                             Learn More
                         </Button>
                     </div>
@@ -106,7 +106,7 @@ export default function Solutions() {
                     <div className="z-10 p-2 flex w-fit rounded-full border-2 border-primary-500 bg-primary-900/15"><Icon width={24} height={24} name="rainwater" className="fill-primary-500" /></div>
                     <div className="z-10 flex flex-col gap-8">
                         <h3 className="text-white">Rainwater Harvesting & Management</h3>
-                        <Button variant="default" size="compact" className="w-fit">
+                        <Button variant="default" size="compact" className="w-fit" link="/solutions/rainwater-management">
                             Learn More
                         </Button>
                     </div>
@@ -116,7 +116,7 @@ export default function Solutions() {
                     <div className="z-10 p-2 flex w-fit rounded-full border-2 border-primary-500 bg-primary-900/15"><Icon width={24} height={24} name="pool" className="fill-primary-500" /></div>
                     <div className="z-10 flex flex-col gap-8">
                         <h3 className="text-white">Pools & Water Features</h3>
-                        <Button variant="default" size="compact" className="w-fit">
+                        <Button variant="default" size="compact" className="w-fit" link="/solutions/pools-water-features">
                             Learn More
                         </Button>
                     </div>

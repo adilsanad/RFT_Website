@@ -1,5 +1,8 @@
+'use client';
 import * as React from "react"
 import { cn } from "@/lib/utils" // This should merge classnames
+import { useRouter } from "next/navigation"; // Changed from next/router
+import { useEffect, useState } from "react";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "light" | "dark" | "footer" | "defaultnobg" ;
@@ -11,7 +14,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "default", size = "default", loading = false, disabled, children, link, ...props }, ref) => {
-    const baseStyles = " font-medium tracking-tight border-2 flex items-center justify-center gap-2 transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+    const baseStyles = "font-neulissans font-medium tracking-tight border-2 flex items-center justify-center gap-2 transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
 
     const variants = {
       default: "bg-primary-500 text-primary-900 border-primary-900 hover:bg-primary-400 hover:translate-y-[2px] ",
@@ -28,13 +31,30 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       footer: " p-4 rounded-[15px]",
     }
 
+    const router = useRouter();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (link === 'back' && mounted) {
+        router.back();
+      } else if (link && link !== 'back') {
+        window.open(link, "_blank");
+      } else if (props.onClick) {
+        props.onClick(e);
+      }
+    };
+
     return (
       <button
         ref={ref}
         disabled={disabled || loading}
         className={cn(baseStyles, variants[variant], sizes[size], className)}
         {...props}
-        onClick={link ? () => window.open(link, "_blank") : props.onClick}
+        onClick={handleClick}
       >
         {loading ? (
           <span className="animate-spin rounded-full border-2 border-t-transparent border-current w-5 h-5" />

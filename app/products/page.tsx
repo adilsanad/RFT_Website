@@ -7,7 +7,10 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Search, Filter, X, Check, RotateCcw, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 import productsData from '@/data/products.json'
+import Icon from '@/public/assets/vectors'
+import ContactSection from '@/components/contact-section'
 
 interface FilterState {
   search: string
@@ -49,7 +52,7 @@ export default function ProductsPage() {
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 12
+  const itemsPerPage = 6
 
   // Refs for dropdown positioning
   const categoryRef = useRef<HTMLDivElement>(null)
@@ -58,15 +61,15 @@ export default function ProductsPage() {
 
   // Initialize filters from URL parameters
   useEffect(() => {
-    const categoriesParam = searchParams.get('categories')
-    const brandsParam = searchParams.get('brands')
+    const categoriesParam = searchParams.getAll('categories')
+    const brandsParam = searchParams.getAll('brands')
     const searchParam = searchParams.get('search')
     const sortParam = searchParams.get('sort')
 
     const initialFilters: FilterState = {
       search: searchParam || '',
-      categories: categoriesParam ? [categoriesParam] : [],
-      brands: brandsParam ? [brandsParam] : [],
+      categories: categoriesParam || [],
+      brands: brandsParam || [],
       sortBy: sortParam || 'name-asc'
     }
 
@@ -81,10 +84,23 @@ export default function ProductsPage() {
   // Update URL when filters change
   const updateURL = (newFilters: FilterState) => {
     const params = new URLSearchParams()
-    
+
     if (newFilters.search) params.set('search', newFilters.search)
-    if (newFilters.categories.length > 0) params.set('categories', newFilters.categories[0])
-    if (newFilters.brands.length > 0) params.set('brands', newFilters.brands[0])
+
+    // Handle multiple categories
+    if (newFilters.categories.length > 0) {
+      newFilters.categories.forEach(category => {
+        params.append('categories', category)
+      })
+    }
+
+    // Handle multiple brands
+    if (newFilters.brands.length > 0) {
+      newFilters.brands.forEach(brand => {
+        params.append('brands', brand)
+      })
+    }
+
     if (newFilters.sortBy !== 'name-asc') params.set('sort', newFilters.sortBy)
 
     const newURL = params.toString() ? `/products?${params.toString()}` : '/products'
@@ -155,12 +171,14 @@ export default function ProductsPage() {
 
   // Check if any filters are active
   const hasActiveFilters = filters.search || filters.categories.length > 0 || filters.brands.length > 0 || filters.sortBy !== 'name-asc'
+  const hasActiveCategory = filters.categories.length > 0
+  const hasActiveBrand = filters.brands.length > 0
 
   // Get active filters for display
   const activeFilters = useMemo(() => {
     const active = []
     if (filters.search) {
-      active.push({ type: 'search', value: `"${filters.search}"`, label: `Search: "${filters.search}"` })
+      active.push({ type: 'search', value: filters.search, label: `Search: "${filters.search}"` })
     }
     filters.categories.forEach(categoryId => {
       const category = categories.find(c => c.id === categoryId)
@@ -180,7 +198,6 @@ export default function ProductsPage() {
     }
     return active
   }, [filters, categories])
-
   // Handle search input
   const handleSearchChange = (value: string) => {
     const newFilters = { ...filters, search: value }
@@ -231,7 +248,7 @@ export default function ProductsPage() {
   // Remove individual filter
   const removeFilter = (type: string, value?: string) => {
     let newFilters = { ...filters }
-    
+
     switch (type) {
       case 'search':
         newFilters.search = ''
@@ -250,7 +267,7 @@ export default function ProductsPage() {
         newFilters.sortBy = 'name-asc'
         break
     }
-    
+
     setFilters(newFilters)
     updateURL(newFilters)
   }
@@ -259,7 +276,7 @@ export default function ProductsPage() {
   const handleCategoryChange = (categoryId: string, checked: boolean) => {
     setTempFilters(prev => ({
       ...prev,
-      categories: checked 
+      categories: checked
         ? [...prev.categories, categoryId]
         : prev.categories.filter(c => c !== categoryId)
     }))
@@ -268,7 +285,7 @@ export default function ProductsPage() {
   const handleBrandChange = (brand: string, checked: boolean) => {
     setTempFilters(prev => ({
       ...prev,
-      brands: checked 
+      brands: checked
         ? [...prev.brands, brand]
         : prev.brands.filter(b => b !== brand)
     }))
@@ -342,311 +359,386 @@ export default function ProductsPage() {
     }
 
     return (
-      <div className="flex items-center justify-center space-x-2 mt-8">
-        <Button
-          variant="light"
+      <div className="flex items-center gap-6 justify-center py-16 pt-32">
+        <button
           onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3"
+          className="group p-4 px-4 bg-primary-200 border border-primary-900/30 disabled:border-0 rounded-[45px_15px_15px_45px] flex items-center justify-center transition-all hover:translate-y-1 "
         >
-          <ChevronLeft className="h-4 w-4" />
-        </Button>
+          <Icon width={16} name="roundedArrow" className="fill-primary-900 rotate-180 group-disabled:fill-primary-900/30 transition-all" />
+        </button>
+        <div className='flex items-center justify-center'>
+          {getVisiblePages().map((page, index) => (
+            <button
+              key={index}
+              onClick={() => typeof page === 'number' && setCurrentPage(page)}
+              disabled={page === '...'}
+              className="group m-0 py-2 px-3 flex flex-col w-fit gap-2 items-center justify-center hover:translate-y-1 transition-all"
+            >
+              <h5 className={`
+              ${page === currentPage ? 'opacity-100' : 'opacity-60 hover:opacity-100'}  
+              text-center flex justify-center text-xl font-medium min-w-6 transition-all`}
+              >
+                {page}</h5>
+              <div className={`h-1 ${page === currentPage ? 'bg-primary-600' : 'bg-primary-600/0'} rounded-full  w-full transition-all`} />
+            </button>
+          ))}
+        </div>
 
-        {getVisiblePages().map((page, index) => (
-          <Button
-            key={index}
-            variant={page === currentPage ? "default" : "light"}
-            onClick={() => typeof page === 'number' && setCurrentPage(page)}
-            disabled={page === '...'}
-            className="px-3"
-          >
-            {page}
-          </Button>
-        ))}
-
-        <Button
-          variant="light"
+        <button
           onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-3"
+          className="group p-4 px-4 bg-primary-200 border border-primary-900/30 disabled:border-0 rounded-[15px_45px_45px_15px] flex items-center justify-center transition-all enabled:hover:translate-y-1"
         >
-          <ChevronRight className="h-4 w-4" />
-        </Button>
+          <Icon width={16} name="roundedArrow" className="fill-primary-900 group-disabled:fill-primary-900/30 transition-all" />
+        </button>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="grid grid-cols-12 pt-20">
+
       {/* Hero Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-neulisneue font-bold mb-4">All Products</h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
-            Explore our comprehensive range of water management solutions. Request quotes for any products that meet your needs.
-          </p>
+      <section className="relative col-span-full flex flex-col px-24 py-16 pb-0 gap-24">
+        <div className=" px-4">
+          <h1 className="font-neulisneue">All Products</h1>
         </div>
-      </section>
+        {/* Filtering Option Bar */}
+        <div className='flex flex-col'>
+          <div className={`flex h-fit border-2 border-primary-900/30 ${brandDropdownOpen ? 'rounded-[15px_15px_15px_0px]' : 'rounded-[15px]'} transition-all `}>
+            <div className='flex flex-[2] font-neulissans'>
+              {/* Brand Filter Dropdown */}
+              <div className="relative h-fit flex-1 flex" ref={brandRef}>
+                <button
+                  className={`flex justify-between w-full items-center p-6 py-4 ${hasActiveBrand ? 'bg-primary-300' : 'bg-primary-100'} ${brandDropdownOpen ? 'rounded-[14.5px_0px_0px_0px]' : 'rounded-[14.5px_0px_0px_14.6px]'} transition-all`}
+                  onClick={() => setBrandDropdownOpen(!brandDropdownOpen)}
+                >
+                  <h5 className=''>Brand</h5>
+                  <div className='flex items-center justify-center gap-2'>
+                    <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveBrand ? 'opacity-100' : 'opacity-0'}`}>{filters.brands.length > 0 && `${filters.brands.length}`}</span>
 
-      {/* Filters Section */}
-      <section className="bg-white border-b sticky top-20 z-40 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* Search */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-              <Input 
-                placeholder="Search products..." 
-                className="pl-10"
-                value={filters.search}
-                onChange={(e) => handleSearchChange(e.target.value)}
-              />
+                    <ChevronDown className={`h-4 w-4 transition-transform ${brandDropdownOpen ? 'rotate-180' : ''}`} />
+                  </div>
+                </button>
+
+                {brandDropdownOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
+                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    <div className="flex flex-col">
+                      <div className="flex flex-col max-h-64 overflow-y-auto">
+                        {allBrands.map((brand) => (
+                          <label key={brand} className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.brands.includes(brand) ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
+                            <span className="text-lg text-[#35463A] tracking-tight">{brand}</span>
+                            {/* Custom Checkbox */}
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                checked={tempFilters.brands.includes(brand)}
+                                onChange={(e) => handleBrandChange(brand, e.target.checked)}
+                                className="sr-only" // Hide default checkbox
+                              />
+                              <div
+                                className={`
+                                  w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center
+                                  ${tempFilters.brands.includes(brand)
+                                    ? 'bg-primary-600 border-primary-600'
+                                    : 'bg-white border-gray-300 hover:border-primary-400'
+                                  }
+                                    `}
+                              >
+                                {tempFilters.brands.includes(brand) && (
+                                  <Icon name='check' className='h-3 w-3 fill-white' />
+                                )}
+                              </div>
+                            </div>
+                          </label>
+
+                        ))}
+                      </div>
+                      <div className="flex w-full p-4 gap-4">
+                        <button
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          onClick={() => setBrandDropdownOpen(false)}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          onClick={handleBrandConfirm}>
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+              <div className='h-full flex w-[2px] bg-primary-900/30' />
+              {/* Category Dropdown */}
+              <div className="relative h-full flex-1 flex" ref={categoryRef}>
+                <button
+                  className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveCategory ? 'bg-primary-300' : 'bg-primary-100'} `}
+                  onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
+                >
+                  <h5 className=''>Category</h5>
+                  <div className='flex items-center justify-center gap-2'>
+                    <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveCategory ? 'opacity-100' : 'opacity-0'}`}>{filters.categories.length > 0 && `${filters.categories.length}`}</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
+                  </div>
+                </button>
+
+                {categoryDropdownOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
+                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    <div className="flex flex-col">
+                      <div className="flex flex-col max-h-64 overflow-y-auto">
+                        {categories.map((category) => (
+                          <label key={category.id} className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.categories.includes(category.id) ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
+                            <span className="text-lg text-[#35463A] tracking-tight">{category.name}</span>
+                            {/* Custom Checkbox */}
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                checked={tempFilters.categories.includes(category.id)}
+                                onChange={(e) => handleCategoryChange(category.id, e.target.checked)}
+                                className="sr-only" // Hide default checkbox
+                              />
+                              <div
+                                className={`
+                                  w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center
+                                  ${tempFilters.categories.includes(category.id)
+                                    ? 'bg-primary-600 border-primary-600'
+                                    : 'bg-white border-gray-300 hover:border-primary-400'
+                                  }
+                                    `}
+                              >
+                                {tempFilters.categories.includes(category.id) && (
+                                  <Icon name='check' className='h-3 w-3 fill-white' />
+                                )}
+                              </div>
+                            </div>
+                          </label>
+
+                        ))}
+                      </div>
+                      <div className="flex w-full p-4 gap-4">
+                        <button
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          onClick={() => setCategoryDropdownOpen(false)}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          onClick={handleCategoryConfirm}>
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+              <div className='h-full flex w-[2px] bg-primary-900/30' />
             </div>
+            <div className='flex flex-[3] font-neulissans'>
+              {/* Sort By Dropdown */}
+              <div className="relative h-full flex-[3] flex" ref={sortRef}>
+                <button
+                  className={`flex justify-between h-full w-full items-center p-6 py-4 bg-primary-100 `}
+                  onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
+                >
+                  <div className='flex gap-2 items-center'>
+                    <h5>Sort By:</h5>
+                    <span className='text-md opacity-70'>
+                      {
+                        filters.sortBy === 'name-asc' ? 'Name (A-Z)' :
+                          filters.sortBy === 'name-desc' ? 'Name (Z-A)' : 'Newest First'
+                      }
+                    </span>
+                  </div>
 
-            {/* Category Filter Dropdown */}
-            <div className="relative" ref={categoryRef}>
-              <Button 
-                variant="light" 
-                className="w-full md:w-[200px] justify-between"
-                onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-              >
-                Categories {filters.categories.length > 0 && `(${filters.categories.length})`}
-                <ChevronDown className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
-              </Button>
-              
-              {categoryDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-full md:w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="p-4">
-                    <h3 className="font-medium text-gray-900 mb-3">Select Categories</h3>
-                    <div className="space-y-3 max-h-60 overflow-y-auto">
-                      {categories.map((category) => (
-                        <label key={category.id} className="flex items-center space-x-3 cursor-pointer">
+                  <ChevronDown className={`h-4 w-4 transition-transform ${sortDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {sortDropdownOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
+                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    <div className="flex flex-col">
+                      <div className="flex flex-col max-h-64 overflow-y-auto">
+                        <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
+                          <span className="text-lg text-[#35463A] tracking-tight">Name (A-Z)</span>
                           <input
-                            type="checkbox"
-                            checked={tempFilters.categories.includes(category.id)}
-                            onChange={(e) => handleCategoryChange(category.id, e.target.checked)}
-                            className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                            type="radio"
+                            name="sort"
+                            value="name-asc"
+                            checked={tempFilters.sortBy === 'name-asc'}
+                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
+                            className="sr-only"
                           />
-                          <span className="text-sm text-gray-700">{category.name}</span>
+                          <div
+                            className={`
+                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  ${tempFilters.sortBy.includes('name-asc')
+                                ? 'bg-transparent '
+                                : 'bg-white border-gray-300 hover:border-primary-400'
+                              }`}
+                          >
+                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                          </div>
                         </label>
-                      ))}
-                    </div>
-                    <div className="flex justify-end space-x-2 mt-4 pt-3 border-t">
-                      <Button 
-                        variant="light" 
-                        size='compact' 
-                        onClick={() => setCategoryDropdownOpen(false)}
-                      >
-                        Cancel
-                      </Button>
-                      <Button size='compact' onClick={handleCategoryConfirm}>
-                        <Check className="h-4 w-4 mr-1" />
-                        Apply
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+                        <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
 
-            {/* Brand Filter Dropdown */}
-            <div className="relative" ref={brandRef}>
-              <Button 
-                variant="light" 
-                className="w-full md:w-[200px] justify-between"
-                onClick={() => setBrandDropdownOpen(!brandDropdownOpen)}
-              >
-                Brands {filters.brands.length > 0 && `(${filters.brands.length})`}
-                <ChevronDown className={`h-4 w-4 transition-transform ${brandDropdownOpen ? 'rotate-180' : ''}`} />
-              </Button>
-              
-              {brandDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-full md:w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="p-4">
-                    <h3 className="font-medium text-gray-900 mb-3">Select Brands</h3>
-                    <div className="space-y-3 max-h-60 overflow-y-auto">
-                      {allBrands.map((brand) => (
-                        <label key={brand} className="flex items-center space-x-3 cursor-pointer">
+                          <span className="text-lg text-[#35463A] tracking-tight">Name (Z-A)</span>
                           <input
-                            type="checkbox"
-                            checked={tempFilters.brands.includes(brand)}
-                            onChange={(e) => handleBrandChange(brand, e.target.checked)}
-                            className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                            type="radio"
+                            name="sort"
+                            value="name-desc"
+                            checked={tempFilters.sortBy === 'name-desc'}
+                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
+                            className="sr-only"
                           />
-                          <span className="text-sm text-gray-700">{brand}</span>
+                          <div
+                            className={`
+                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  ${tempFilters.sortBy.includes('name-desc')
+                                ? 'bg-transparent '
+                                : 'bg-white border-gray-300 hover:border-primary-400'
+                              }`}
+                          >
+                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                          </div>
                         </label>
-                      ))}
+                        <label className={`flex font-neulissans items-center justify-between w-full h-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('newest') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
+                          <span className="text-lg text-[#35463A] tracking-tight">Newest First</span>
+                          <input
+                            type="radio"
+                            name="sort"
+                            value="newest"
+                            checked={tempFilters.sortBy === 'newest'}
+                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
+                            className="sr-only"
+                          />
+                          <div
+                            className={`
+                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  ${tempFilters.sortBy.includes('newest')
+                                ? 'bg-transparent '
+                                : 'bg-white border-gray-300 hover:border-primary-400'
+                              }`}
+                          >
+                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('newest') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                          </div>
+                        </label>
+                      </div>
+                      <div className="flex w-full p-4 gap-4">
+                        <button
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          onClick={() => setSortDropdownOpen(false)}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          onClick={handleSortConfirm}>
+                          Save
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex justify-end space-x-2 mt-4 pt-3 border-t">
-                      <Button 
-                        variant="light" 
-                        size='compact' 
-                        onClick={() => setBrandDropdownOpen(false)}
-                      >
-                        Cancel
-                      </Button>
-                      <Button size='compact' onClick={handleBrandConfirm}>
-                        <Check className="h-4 w-4 mr-1" />
-                        Apply
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+                  </motion.div>
+                )}
+              </div>
+              <div className='h-full flex w-[2px] bg-primary-900/30' />
+              <div className='flex gap-4 flex-[5] items-center rounded-[0px_15px_15px_0px] bg-primary-100 '>
+                <Icon name="search" width={20} className="ml-6" />
+                <input
+                  className='
+                    bg-transparent font-neulissans w-full py-4 pl-0 px-8
+                    text-xl font-normal
+                    placeholder:font-neulissans placeholder:text-lg placeholder:font-normal placeholder:tracking-tight placeholder:text-[#808381]
+                    focus-visible:outline-none
+                    disabled:cursor-not-allowed disabled:opacity-50
+                  '
+                  placeholder='Search products'
+                  value={filters.search}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                />
 
-            {/* Sort By Dropdown */}
-            <div className="relative" ref={sortRef}>
-              <Button 
-                variant="light" 
-                className="w-full md:w-[200px] justify-between"
-                onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
-              >
-                {filters.sortBy === 'name-asc' ? 'Name (A-Z)' : 
-                 filters.sortBy === 'name-desc' ? 'Name (Z-A)' : 'Newest First'}
-                <ChevronDown className={`h-4 w-4 transition-transform ${sortDropdownOpen ? 'rotate-180' : ''}`} />
-              </Button>
-              
-              {sortDropdownOpen && (
-                <div className="absolute top-full left-0 mt-1 w-full md:w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="p-4">
-                    <h3 className="font-medium text-gray-900 mb-3">Sort Products</h3>
-                    <div className="space-y-3">
-                      <label className="flex items-center space-x-3 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="sort"
-                          value="name-asc"
-                          checked={tempFilters.sortBy === 'name-asc'}
-                          onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                          className="h-4 w-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span className="text-sm text-gray-700">Name (A-Z)</span>
-                      </label>
-                      <label className="flex items-center space-x-3 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="sort"
-                          value="name-desc"
-                          checked={tempFilters.sortBy === 'name-desc'}
-                          onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                          className="h-4 w-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span className="text-sm text-gray-700">Name (Z-A)</span>
-                      </label>
-                      <label className="flex items-center space-x-3 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="sort"
-                          value="newest"
-                          checked={tempFilters.sortBy === 'newest'}
-                          onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                          className="h-4 w-4 text-primary-600 focus:ring-primary-500"
-                        />
-                        <span className="text-sm text-gray-700">Newest First</span>
-                      </label>
-                    </div>
-                    <div className="flex justify-end space-x-2 mt-4 pt-3 border-t">
-                      <Button 
-                        variant="light" 
-                        size='compact' 
-                        onClick={() => setSortDropdownOpen(false)}
-                      >
-                        Cancel
-                      </Button>
-                      <Button size='compact' onClick={handleSortConfirm}>
-                        <Check className="h-4 w-4 mr-1" />
-                        Apply
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          {/* Results Info and Active Filters */}
-          <div className="mb-6">
+          <div className="flex justify-between  w-full px-3 pr-0 py-4">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <p className="text-gray-600">
-                Showing {startIndex + 1}-{Math.min(endIndex, filteredProducts.length)} of {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
-                {filteredProducts.length !== products.length && ` (filtered from ${products.length} total)`}
+              <p className="font-neulissans tracking-tight text-[#808381] text-lg py-3">
+                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
               </p>
-              
-              {hasActiveFilters && (
-                <Button
-                  variant="light"
-                  onClick={resetFilters}
-                  className="flex items-center gap-2"
-                >
-                  <RotateCcw className="h-4 w-4" />
-                  Reset Filters
-                </Button>
+
+              {/* Active Filters */}
+              {activeFilters.length > 0 && (
+                <div className="flex flex-wrap gap-4">
+                  <span className="w-1 h-1 rounded-full bg-[#808381] self-center"></span>
+                  {activeFilters.map((filter, index) => (
+                    <div key={index} className="flex items-center py-2 px-3 bg-primary-100 border border-primary-900/30 rounded-[15px] font-neulissans gap-3">
+                      {filter.label}
+                      <button
+                        onClick={() => removeFilter(filter.type, filter.value)}
+                        className="group hover:bg-primary-900 rounded-full p-1.5 border border-primary-900/30 transition-all"
+                      >
+                        <X className="group-hover:text-white text-primary-900 transition-all h-3 w-3" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
 
-            {/* Active Filters */}
-            {activeFilters.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="text-sm text-gray-500 self-center">Active filters:</span>
-                {activeFilters.map((filter, index) => (
-                  <Badge key={index} variant="secondary" className="flex items-center gap-1">
-                    {filter.label}
-                    <button
-                      onClick={() => removeFilter(filter.type, filter.value)}
-                      className="ml-1 hover:bg-gray-300 rounded-full p-0.5"
-                    >
-                      <X className="h-3 w-3" />
-                    </button>
-                  </Badge>
-                ))}
-              </div>
+            {hasActiveFilters && (
+              <button
+                onClick={resetFilters}
+                className="flex py-3 px-6 items-center gap-3 hover:opacity-80 transition-all"
+              >
+                <p className='font-neulissans tracking-tight text-xl'>Reset Filters</p>
+                <RotateCcw className="h-5 w-5" />
+              </button>
             )}
           </div>
-          
+        </div>
+
+      </section>
+      {/* Products Grid */}
+      <section className="col-span-full pt-0 py-12 px-24">
+        <div className="">
+          {/* Results Info and Active Filters */}
+
+
           {/* Products Grid - Changed to 3 columns */}
           {currentProducts.length > 0 ? (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {currentProducts.map((product) => (
-                  <Card key={product.id} className="group hover:shadow-lg transition-shadow">
+                  <div key={product.id} className="group hover:translate-y-1 transition-all duration-500">
                     <a href={`/products/${product.slug}`}>
-                      <CardHeader className="p-0">
-                        <div className="aspect-square bg-gray-100 rounded-t-lg overflow-hidden">
-                          <img 
-                            src={product.images[0] || '/placeholder.svg'} 
+                      <div className="p-0">
+                        <div className="aspect-square bg-primary-100 rounded-[15px] border-2 border-primary-900/30 overflow-hidden">
+                          <img
+                            src={product.images[0] || '/placeholder.svg'}
                             alt={product.name}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                      </CardHeader>
-                      <CardContent className="p-4">
-                        <Badge variant="secondary" className="mb-2">
-                          {categories.find(c => c.id === product.category)?.name}
-                        </Badge>
-                        <CardTitle className="text-lg mb-2 line-clamp-2">{product.name}</CardTitle>
-                        <CardDescription className="line-clamp-3">
-                          {product.description}
-                        </CardDescription>
-                        <div className="mt-3 space-y-1 text-sm text-gray-600">
-                          <p><span className="font-medium">SKU:</span> {product.sku}</p>
+                      </div>
+                      <div className="flex flex-col p-4">
+                        <h4 className="group-hover:text-primary-800 transition-all text-2xl font-neulissans font-medium tracking-tighter">{product.name}</h4>
+                        <div className="flex text-gray-600 font-medium">
                           {product.brand && (
-                            <p><span className="font-medium">Brand:</span> {product.brand}</p>
+                            <p className='text-lg font-medium font-neulissans tracking-tight'>{product.brand} · {categories.find(c => c.id === product.category)?.name} </p>
                           )}
                         </div>
-                      </CardContent>
+                      </div>
                     </a>
-                    <CardFooter className="p-4 pt-0">
-                      <Button className="w-full" variant="default">
-                        Request Quote
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                  </div>
                 ))}
               </div>
 
@@ -665,18 +757,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary-100 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-neulisneue font-bold mb-4">Can't find what you're looking for?</h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            We have over 400 products in our catalogue. Contact us for personalized assistance in finding the right solution for your needs.
-          </p>
-          <Button>
-            <a href="/contact">Contact Our Experts</a>
-          </Button>
-        </div>
-      </section>
+      <ContactSection bgColor='white' />
     </div>
   )
 }

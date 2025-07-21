@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
+import Icon from '@/public/assets/vectors'
 
 interface Project {
   id: string
@@ -13,10 +14,53 @@ interface Project {
 }
 
 interface ProjectsCarouselProps {
-  projects: Project[]
+  projects?: Project[];
 }
 
-export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
+const sampleProjects: Project[] = [
+    {
+        id: '1',
+        image: '/images/projects/dsu-campus.jpg',
+        location: 'Dayananda Sagar University, Harohalli, Bengaluru',
+        title: 'Dayananda Sagar University',
+        service: 'Automated Irrigation Systems',
+        organization: 'DSU'
+    },
+    {
+        id: '2',
+        image: '/images/projects/tech-park.jpg',
+        location: 'Electronic City, Bengaluru',
+        title: 'Tech Park Water Management',
+        service: 'Rainwater Harvesting & Treatment',
+        organization: 'Infosys Limited'
+    },
+    {
+        id: '3',
+        image: '/images/projects/residential.jpg',
+        location: 'Whitefield, Bengaluru',
+        title: 'Luxury Residential Complex',
+        service: 'Complete Water Management Solution',
+        organization: 'Prestige Group'
+    },
+    {
+        id: '4',
+        image: '/images/projects/hospital.jpg',
+        location: 'Koramangala, Bengaluru',
+        title: 'Multi-Specialty Hospital',
+        service: 'Water Purification & Storage',
+        organization: 'Manipal Hospitals'
+    },
+    {
+        id: '5',
+        image: '/images/projects/factory.jpg',
+        location: 'Tumkur Industrial Area',
+        title: 'Manufacturing Plant',
+        service: 'Industrial Water Treatment',
+        organization: 'Toyota Kirloskar'
+    }
+]
+
+export default function ProjectsCarousel({ projects = sampleProjects }: ProjectsCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const carouselRef = useRef<HTMLDivElement>(null)
@@ -38,19 +82,17 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
   }
 
 
-  const translateX = -(currentIndex * 33.333) // Move by one card width (100% / 3 cards)
+  const translateX = -(currentIndex * 480) // Move by one card width (100% / 3 cards)
 
   return (
     <section className="col-span-full grid grid-cols-12 pl-24 gap-8 py-16">
-      <div className="col-span-full">
-        <div className="flex items-center justify-between mb-8">
-          <div>
+      <div className="col-span-full flex flex-col gap-12">
+        <div className="flex items-center justify-between">
             <h2 >
               Our Projects
             </h2>
-          </div>
           
-          {/* Navigation Controls - Only show on mobile */}
+          {/* Navigation Controls*/}
           <div className="flex gap-2 pr-24">
             <button
               onClick={goToPrev}
@@ -70,76 +112,19 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative overflow-hidden">
-          {/* Mobile Carousel */}
-          <div 
-            ref={carouselRef}
-            className="flex transition-transform duration-300 ease-in-out md:hidden"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="flex-shrink-0 w-full px-3"
-              >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
-                  {/* Project Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Location Strip */}
-                  <div className="bg-primary-200 px-4 py-3">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-primary-700 flex-shrink-0" />
-                      <span className="text-sm font-medium text-primary-800 truncate">
-                        {project.location}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Project Details */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-neulisneue font-bold text-gray-900 mb-3 line-clamp-2 leading-tight">
-                      {project.title}
-                    </h3>
-                    
-                    <div className="space-y-2">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-sm text-gray-600 font-medium">Service Rendered</span>
-                        <span className="text-base text-gray-900">{project.service}</span>
-                      </div>
-                      
-                      <div className="flex flex-col gap-1">
-                        <span className="text-sm text-gray-600 font-medium">Organization</span>
-                        <span className="text-base text-primary-700 font-semibold">{project.organization}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="flex relative overflow-x-auto snap-x snap-start no-scrollbar">
 
           {/* Desktop Carousel */}
           <div 
-            className="hidden md:flex transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 320}px)` }}
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(${translateX}px)` }}
           >
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="flex-shrink-0 w-96 px-3"
+                className="w-[480px] px-3 py-5"
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                <div className="bg-white border-2 border-primary-900/40 hover:border-primary-900 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
                   {/* Project Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -151,31 +136,25 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
                   </div>
 
                   {/* Location Strip */}
-                  <div className="bg-primary-200 px-4 py-3">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-primary-700 flex-shrink-0" />
-                      <span className="text-sm font-medium text-primary-800 truncate">
+                  <div className="bg-primary-300 px-8 py-6">
+                    <div className="flex flex-col gap-2">
+                      <Icon className="w-4 h-4 stroke-primary-700 fill-transparent " name='location'/>
+                      <span className="text-xl font-medium text-primary-900">
                         {project.location}
                       </span>
                     </div>
                   </div>
 
                   {/* Project Details */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-neulisneue font-bold text-gray-900 mb-3 line-clamp-2 leading-tight">
+                  <div className="flex flex-col gap-3 p-10 px-8">
+                    <h3 className="">
                       {project.title}
                     </h3>
                     
-                    <div className="space-y-2">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-sm text-gray-600 font-medium">Service Rendered</span>
+                    <div className="flex flex-wrap gap-2 gap-y-0 items-center">
                         <span className="text-base text-gray-900">{project.service}</span>
-                      </div>
-                      
-                      <div className="flex flex-col gap-1">
-                        <span className="text-sm text-gray-600 font-medium">Organization</span>
-                        <span className="text-base text-primary-700 font-semibold">{project.organization}</span>
-                      </div>
+                        <div className='flex w-1 h-1 rounded-full bg-black'/>
+                        <h5 className="font-bold">{project.organization}</h5>
                     </div>
                   </div>
 
