@@ -1,7 +1,11 @@
+'use client';
 import { Button } from "@/components/ui/button"
 import Icon from "@/public/assets/vectors"
 import Image from "next/image"
 import AnimatedTopographicSection from "./testanimation"
+import { useState } from "react"
+import { AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
@@ -44,38 +48,127 @@ export default function HeroSection() {
           <Button>Send an inquiry</Button>
         </div>
 
-        <div className="relative ">
-          <div className="w-full min-h-[800px] rounded-[150px_150px_30px_30px] bg-gray-500 overflow-hidden ">
-          </div>
-
-          {/* Info Card Overlay */}
-          <div className="absolute top-16 right-16">
-            <div className="flex items-start space-x-3">
-              <div className="w-10 h-10 my-3 bg-info-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg width="7" viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.17572 7.27186C3.99972 7.27186 2.59172 5.67186 2.87972 3.52786C3.13572 1.70386 4.73572 0.359863 6.55972 0.359863C8.73572 0.359863 10.1437 1.95986 9.85572 4.10386C9.59972 5.95986 8.03172 7.27186 6.17572 7.27186ZM0.511719 24.9999L2.81572 8.67986H8.57572L6.27172 24.9999H0.511719Z" fill="#ECF7EF" />
-                </svg>
-              </div>
-              <div className="flex flex-col gap-2 items-end">
-                <div className="flex flex-col gap-3 bg-primary-200 rounded-[15px_60px_15px_15px] p-7 pr-10 shadow-lg max-w-xs">
-                  <h3 className="text-2xl font-neulisneue tracking-tighter font-medium leading-7 text-gray-900 ">Lorem ipsum dolor sit amet.</h3>
-                  <p className="text-sm text-gray-600 font-manrope font-medium">
-                    Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet.
-                  </p>
-                </div>
-                <div className="flex space-x-1">
-                  <button className="p-3 px-4 bg-primary-200 rounded-[45px_15px_15px_45px] flex items-center justify-center">
-                    <Icon width={16} name="roundedArrow" className="fill-primary-900 rotate-180" />
-                  </button>
-                  <button className="p-3 px-4 bg-primary-200 rounded-[15px_45px_45px_15px] flex items-center justify-center">
-                    <Icon width={16} name="roundedArrow" className="fill-primary-900" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CarouselComponent />
       </div>
     </section>
   )
 }
+
+
+
+const CarouselComponent = () => {
+  // Sample data for the carousel
+  const carouselItems = [
+    {
+      id: 1,
+      title: "Lorem ipsum dolor sit amet.",
+      description: "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop"
+    },
+    {
+      id: 2,
+      title: "Consectetur adipiscing elit.",
+      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+      image: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=800&fit=crop"
+    },
+    {
+      id: 3,
+      title: "Sed do eiusmod tempor.",
+      description: "Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
+      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=800&fit=crop"
+    },
+    {
+      id: 4,
+      title: "Ut enim ad minim veniam.",
+      description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=800&fit=crop"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const currentItem = carouselItems[currentIndex];
+
+  return (
+    <div className="relative flex flex-col gap-3">
+
+      <div className="w-full min-h-[540px] md:h-[800px] rounded-[60px_60px_30px_30px] md:rounded-[150px_150px_30px_30px] bg-primary-100 overflow-hidden ">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="w-full h-full "
+          >
+            <img
+              src={currentItem.image}
+              alt={currentItem.title}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence >
+      </div>
+
+      {/* Info Card Overlay */}
+      <div className="md:absolute md:top-16 md:right-16" >
+        <div className="flex items-start md:gap-x-3">
+          <div className="hidden md:flex w-10 h-10 my-3 bg-info-500 rounded-full items-center justify-center flex-shrink-0">
+            <svg width="7" viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.17572 7.27186C3.99972 7.27186 2.59172 5.67186 2.87972 3.52786C3.13572 1.70386 4.73572 0.359863 6.55972 0.359863C8.73572 0.359863 10.1437 1.95986 9.85572 4.10386C9.59972 5.95986 8.03172 7.27186 6.17572 7.27186ZM0.511719 24.9999L2.81572 8.67986H8.57572L6.27172 24.9999H0.511719Z" fill="#ECF7EF" />
+            </svg>
+          </div>
+          <div className="flex md:flex-col md:gap-2 max-md:bg-primary-100 items-end max-md:border-2 border-primary-90/30 overflow-hidden max-md:rounded-[15px_15px_60px_60px]">
+            <div className="flex flex-col gap-3 md:bg-primary-100 md:rounded-[15px_60px_15px_15px] p-7 md:pr-10 md:shadow-lg md:max-w-xs">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  className="w-full flex flex-col gap-2.5"
+                >
+                  <h3 className="text-2xl font-neulisneue tracking-tighter font-medium leading-7 text-gray-900 ">
+                    {currentItem.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 font-manrope font-medium">
+                    {currentItem.description}
+                  </p>
+                </motion.div>
+              </AnimatePresence >
+
+            </div>
+            <div className="flex max-md:flex-col max-md:p-6 max-md:px-4 gap-3 md:gap-1 max-md:bg-primary-200 max-md:border-l border-primary-900/30">
+              <button
+                onClick={goToPrevious}
+                className="p-5 px-6 md:p-3 md:px-4  max-md:rotate-90 bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900"
+              >
+                <Icon width={20} name="roundedArrow" className="fill-primary-900 rotate-180" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="p-5 px-5 md:p-3 md:px-4  max-md:rotate-90 bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900"
+              >
+                <Icon width={20} name="roundedArrow" className="fill-primary-900" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div >
+    </div >
+  );
+};

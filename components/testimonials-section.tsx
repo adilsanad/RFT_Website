@@ -1,17 +1,10 @@
 "use client"
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Icon from "@/public/assets/vectors"
 
 export default function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
-
-  // Trigger animation when testimonial changes
-  useEffect(() => {
-    setIsAnimating(true)
-    const timer = setTimeout(() => setIsAnimating(false), 300)
-    return () => clearTimeout(timer)
-  }, [currentTestimonial])
 
   const testimonials = [
     {
@@ -55,49 +48,68 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="col-span-full grid grid-cols-12 gap-24 py-16 bg-primary-100 text-primary-900">
-      <div className="col-span-10 col-start-2 flex flex-col gap-3 items-center">
+    <section className="col-span-full grid grid-cols-4 md:grid-cols-12 gap-16 md:gap-24 py-16 bg-primary-100 text-primary-900">
+      <div className="col-span-full md:col-span-10 md:col-start-2 flex flex-col gap-3 items-center">
         <h3 className="text-2xl tracking-tighter font-medium text-primary-600">Testimonials</h3>
-        <h2 className="text-6xl tracking-tighter font-medium text-black">What our clients say</h2>
+        <h2 className="text-center">What our clients say</h2>
       </div>
-      <div className="col-span-8 col-start-3 flex flex-col gap-16 items-center justify-between mb-8">
-        <div
-          className={`relative flex space-x-2 tracking-normal leading-[2.8rem] text-[2.2rem] text-center transition-all duration-300 ease-in-out ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-            }`}
-        >
-          <div className=" absolute -left-8 -top-16 flex -gap-2 -z-10">
-            <svg width="49" height="90" viewBox="0 0 49 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="col-span-full md:col-span-8 md:col-start-3 min-h-[360px] md:min-h-[] flex flex-col gap-16 items-center justify-between mb-8">
+        <div className="max-md:-space-y-8 relative">
+          <div className="max-md:px-8 h-[80px] md:h-[90px] md:absolute -left-8 -top-16 flex -gap-2 -z-10">
+            <svg viewBox="0 0 49 90" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.5532 3.78733C21.1096 1.56149 23.1095 0 25.4039 0H44C46.7614 0 49 2.23858 49 5V43.5932C49 44.5132 48.7462 45.4154 48.2664 46.2004L22.9622 87.6072C22.054 89.0935 20.4377 90 18.6958 90H5.40388C2.15103 90 -0.235764 86.9431 0.553169 83.7873L20.5532 3.78733Z" fill="#BEFAD0" />
             </svg>
-            <svg width="49" height="90" viewBox="0 0 49 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 49 90" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.5532 3.78733C21.1096 1.56149 23.1095 0 25.4039 0H44C46.7614 0 49 2.23858 49 5V43.5932C49 44.5132 48.7462 45.4154 48.2664 46.2004L22.9622 87.6072C22.054 89.0935 20.4377 90 18.6958 90H5.40388C2.15103 90 -0.235764 86.9431 0.553169 83.7873L20.5532 3.78733Z" fill="#BEFAD0" />
             </svg>
           </div>
-          {testimonials[currentTestimonial].text}
+          
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentTestimonial}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="space-x-2 font-manrope tracking-tight leading-snug text-[1.4rem] md:text-[2.2rem] text-center max-md:px-10"
+            >
+              {testimonials[currentTestimonial].text}
+            </motion.div>
+          </AnimatePresence>
         </div>
-        <div
-          className={`flex flex-col items-center transition-all duration-300 ease-in-out ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-            }`}
-          style={{ transitionDelay: '100ms' }}
-        >
-          <div className="font-medium text-[2rem] text-primary-900/80">{testimonials[currentTestimonial].author}</div>
-          <div className="text-2xl text-primary-900/60">{testimonials[currentTestimonial].company}</div>
-        </div>
+        
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`author-${currentTestimonial}`}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ 
+              duration: 0.3, 
+              ease: "easeInOut",
+              delay: 0.1 
+            }}
+            className="flex flex-col items-center"
+          >
+            <div className="font-medium text-[1.5rem] md:text-[2rem] text-primary-900/80">{testimonials[currentTestimonial].author}</div>
+            <div className="text-xl md:text-2xl text-primary-900/60">{testimonials[currentTestimonial].company}</div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      <div className="col-span-8 col-start-3 flex items-center justify-center gap-4">
+      <div className="col-span-full md:col-span-8 md:col-start-3 flex items-center justify-center gap-4">
         {/* Previous Button */}
-        <button
+        <motion.button
           onClick={prevTestimonial}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-200"
-          aria-label="Previous testimonial"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="p-3 px-4 bg-primary-200 rounded-[45px_15px_15px_45px] hidden md:flex items-center justify-center z-30"
         >
-          <ChevronLeft className="w-5 h-5 text-primary-700" />
-        </button>
+          <Icon width={16} name="roundedArrow" className="fill-primary-900 rotate-180" />
+        </motion.button>
 
         {/* Author Images Carousel */}
-        <div className="relative h-20 w-80 flex justify-center items-end">
-          {/* Create extended array with duplicates for smooth infinite scrolling */}
+        <div className="relative h-20 w-80 md:overflow-hidden flex justify-center items-end">
           {[...testimonials.slice(-2), ...testimonials, ...testimonials.slice(0, 2)].map((testimonial, index) => {
             // Calculate which testimonial this represents in the original array
             let originalIndex;
@@ -115,20 +127,30 @@ export default function TestimonialsSection() {
             const distanceFromCenter = Math.abs(relativePosition);
             const isVisible = distanceFromCenter <= 2;
             const opacity = isVisible ? (isCenter ? 1 : distanceFromCenter === 1 ? 0.7 : 0.4) : 0;
-            const size = isCenter ? 'w-16 h-16' : 'w-12 h-12';
+            const size = isCenter ? 64 : 48; // w-16 h-16 = 64px, w-12 h-12 = 48px
             const translateX = relativePosition * 70;
 
             return (
-              <button
+              <motion.button
                 key={index}
                 onClick={() => setCurrentTestimonial(originalIndex)}
-                className={`${size} rounded-lg overflow-hidden hover:scale-105 absolute transition-all duration-500 ease-in-out bottom-0`}
-                style={{
+                className="rounded-lg overflow-hidden absolute bottom-0"
+                animate={{
                   opacity,
-                  transform: `translateX(${translateX}px)`,
+                  x: translateX,
+                  width: size,
+                  height: size,
+                  marginLeft: isCenter ? -32 : -24,
+                  marginBottom: isCenter ? 12 : 0,
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ 
+                  duration: 0.5, 
+                  ease: "easeInOut" 
+                }}
+                style={{
                   left: '50%',
-                  marginLeft: isCenter ? '-32px' : '-24px',
-                  marginBottom: isCenter ? '12px' : '0px',
                 }}
                 aria-label={`View testimonial from ${testimonial.author}`}
               >
@@ -137,19 +159,20 @@ export default function TestimonialsSection() {
                   alt={testimonial.author}
                   className="w-full h-full object-cover bg-gray-400"
                 />
-              </button>
+              </motion.button>
             )
           })}
         </div>
 
         {/* Next Button */}
-        <button
+        <motion.button
           onClick={nextTestimonial}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-200 z-20"
-          aria-label="Next testimonial"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="p-3 px-4 bg-primary-200 rounded-[15px_45px_45px_15px] hidden md:flex items-center justify-center z-30"
         >
-          <ChevronRight className="w-5 h-5 text-primary-700" />
-        </button>
+          <Icon width={16} name="roundedArrow" className="fill-primary-900" />
+        </motion.button>
       </div>
     </section>
   )

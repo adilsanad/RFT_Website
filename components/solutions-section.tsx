@@ -15,7 +15,7 @@ export default function SolutionsSection() {
       title: "Irrigation Systems",
       description:
         "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus. Tincidunt nunc venenatis quam viverra adipiscing at in non.",
-      icon: <Icon name="rainwater" className="w-8 h-8" />,
+      icon: <Icon width={24} height={24} name="sprinkler" className="fill-primary-500" />,
       image: Irrigation,
       link: "/solutions/irrigation-systems",
     },
@@ -23,7 +23,7 @@ export default function SolutionsSection() {
       title: "Rainwater Harvesting",
       description:
         "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus. Tincidunt nunc venenatis quam viverra adipiscing at in non.",
-      icon: <Icon name="sprinkler" className="w-8 h-8" />,
+      icon: <Icon width={24} height={24} name="rainwater" className="fill-primary-500" />,
       image: Rwh,
       link: "/solutions/rainwater-harvesting",
     },
@@ -31,7 +31,7 @@ export default function SolutionsSection() {
       title: "Pools & Water Features",
       description:
         "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus. Tincidunt nunc venenatis quam viverra adipiscing at in non.",
-      icon: <Icon name="pool" className="w-8 h-8" />,
+      icon: <Icon width={24} height={24} name="pool" className="fill-primary-500" />,
       image: Pools,
       link: "/solutions/pools-water-features",
     },
@@ -65,61 +65,30 @@ export default function SolutionsSection() {
   }
 
   return (
-    <section className="col-span-full grid grid-cols-12 gap-16 py-16 mt-8 bg-primary-100" id="solutions">
-      <div className="col-span-10 col-start-2">
+    <section className="col-span-full grid grid-cols-4 md:grid-cols-12 gap-8 md:gap-16 py-24 md:pt-32 border-t border-primary-900/15 mt-8 bg-primary-100 rounded-[45px_45px_0px_0px]" id="solutions">
+      <div className="md:col-span-10 md:col-start-2 max-md:px-8">
         <h2>Solutions</h2>
       </div>
 
-      <div className="col-span-full flex flex-col min-h-[740px] space-y-2 px-14"> {/* min-h is bc autoplay changes container height constantly*/}
+      <div className="col-span-full flex max-md:flex-col gap-5 px-4 md:px-14"> {/* min-h is bc autoplay changes container height constantly*/}
         {solutions.map((solution, index) => {
           const isOpen = expandedIndex === index
           return (
-            <div
-              onClick={() => handleCardClick(index)}
-              key={index}
-              className={`relative flex gap-20 transition-all items-center justify-between duration-700 ease-out border-2 overflow-hidden  cursor-pointer 
-                ${isOpen
-                  ? "border-primary-900/40 bg-primary-200 rounded-[60px] pl-12"
-                  : "border-primary-900/15 bg-white rounded-[30px] pl-10"
-                }`}
-            >
-              <div className={`flex items-start gap-8 transition-all duration-700 ease-out ${isOpen ? "py-12 pt-16" : "p-0 py-8"}`}>
-                <span className={`flex text-2xl transition-all duration-700 ease-out ${isOpen ? "text-primary-900" : "text-primary-900/60"}`}>
-                  {solution.icon}
-                </span>
-                <div className={`flex flex-col transition-all duration-700 ease-out ${isOpen ? "gap-6" : "gap-0"}`}>
-                  <h3 className={`font-neulisneue text-gray-900 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'text-4xl font-medium ' : 'text-3xl'}`}>
-                    {solution.title}
-                  </h3>
-                  <div className={`flex flex-col gap-8 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0  overflow-hidden"}`}>
-                    <p className="text-gray-600 font-manrope text-medium">{solution.description}</p>
-                    <Button 
-                      variant="light" 
-                      className="w-fit z-30" 
-                      onClick={(e) => handleExploreClick(e, solution.link)}
-                    >
-                      Explore
-                    </Button>
-                  </div>
+            <a href={solution.link} key={index} className="group relative flex-1 flex flex-col  gap-6  bg-black hover:rounded-[60px] rounded-[30px] min-h-[360px] md:min-h-[500px] overflow-hidden transition-all duration-300">
+              {/* Base image */}
+              <img className="absolute w-full h-full inset-0 object-cover object-bottom z-0 group-hover:scale-[1.05] transition-all duration-700" src={solution.image.src} />
+              {/* Dark gradient overlay - flipped */}
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/60 via-black/1 via-50% to-transparent z-8" />
+              <div className="flex flex-col gap-6 p-6 md:p-8 group-hover:md:p-8 group-hover:p-10 pb-6 group-hover:pb-8 transition-all bg-primary-100/10 backdrop-blur-sm border border-white/15 rounded-[15px] group-hover:rounded-[30px]">
+                <div className="z-10 p-2 flex w-fit rounded-full border-2 border-primary-500 bg-primary-900/15">{solution.icon}</div>
+                <div className="z-10 flex md:flex-col gap-3">
+                  <h3 className="text-[1.75rem] md:text-4xl leading-7 text-white">{solution.title}</h3>
+                  <Button variant="default" size="compact" className="max-md:hidden flex w-fit text-nowrap h-fit" link={solution.link}>
+                    Learn More
+                  </Button>
                 </div>
               </div>
-              <div className={`flex rounded-[15px] w-full h-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "opacity-100" : "opacity-0"}`}
-                style={{
-                  backgroundImage: `url(${solution.image.src})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}>
-              </div>
-              <div className={`absolute top-0 bottom-0 right-0 flex transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'p-12 ' : 'p-8'}`}>
-                <button
-                  onClick={(e) => handleToggleClick(e, index)}
-                  className={`flex w-10 h-10 bg-primary-100 rounded-[10px] border-2 border-primary-800/60 items-center justify-center hover:bg-primary-100 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] z-20`}
-                >
-                  <ChevronUp className={`w-4 h-4 text-primary-900 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "rotate-180" : "rotate-0"}`} />
-                </button>
-              </div>
-            </div>
+            </a>
           )
         })}
       </div>

@@ -11,9 +11,10 @@ interface MarqueeSectionProps {
   title: React.ReactNode;
   className?: string;
   gradientColor?: string;
+  imageClass?: string;
 }
 
-export default function MarqueeSection({ data, title, className = "", gradientColor = "#FFFFFF" }: MarqueeSectionProps) {
+export default function MarqueeSection({ data, title, className = "", gradientColor = "#FFFFFF", imageClass='h-12 px-12' }: MarqueeSectionProps) {
   return (
     <section className={`col-span-full w-full py-16 ${className}`}>
       <div className="flex flex-col">
@@ -26,7 +27,7 @@ export default function MarqueeSection({ data, title, className = "", gradientCo
             {data.map((image, index) => (
               <div key={index} className="flex items-center">
                 <img
-                  className={`px-12 h-12`}
+                  className={`${imageClass}`}
                   src={image.src}
                   alt={image.alt}
                 />

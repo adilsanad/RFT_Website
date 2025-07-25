@@ -41,7 +41,7 @@ export default function About() {
                 </div>
             </section >
             <section className="col-span-full relative flex flex-col px-24 gap-8">
-                <h2 className="col-span-full flex text-7xl font-neulisneue font-medium tracking-tighter">Who we are</h2>
+                <h2 className="col-span-full flex ">Who we are</h2>
                 <div className="col-span-full flex flex-col gap-12">
                     {/* Tab Buttons */}
                     <div className="flex gap-4 font-neulisneue text-xl tracking-tighter">
@@ -77,17 +77,17 @@ export default function About() {
             </section>
 
             <section className="col-span-full grid grid-cols-12 gap-12 rounded-[45px_45px_0px_0px] bg-primary-100 ">
-                <div className="col-span-full flex w-full items-end pl-24 py-24">
-                    <div className="flex flex-col gap-4 py-16">
-                        <h1 className="text-7xl font-medium tracking-tighter">Our Impact</h1>
+                <div className="col-span-full flex w-full items-center gap-24 pl-24 py-24">
+                    <div className="flex flex-[2] flex-col gap-4 py-16">
+                        <h2 className="">Our Impact</h2>
                         <p>Lorem ipsum dolor sit amet consectetur. Pretium lobortis ante libero viverra ultricies suspendisse eget pulvinar sit. Purus sapien tincidunt est integer ultricies in arcu. Urna id amet nec id duis.
 
                             Purus sapien tincidunt est integer ultricies in arcu. Urna id amet nec id duis. </p>
                     </div>
-                    <img className="w-full h-full bg-gray-50" />
+                    <img className="flex flex-[3] aspect-[3/2] w-full h-full bg-gray-50 rounded-[60px_0px_0px_60px]" />
                 </div>
                 <div className="col-span-10 col-start-2 flex flex-col gap-20 pb-24">
-                    <h1 className="text-7xl font-medium tracking-tighter text-center">The team behind the scenes</h1>
+                    <h2 className="text-center">The team behind the scenes</h2>
                     <div className="flex gap-5 w-full">
                         <TeamMember
                             name="John Doe"

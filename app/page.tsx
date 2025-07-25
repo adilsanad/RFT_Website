@@ -30,12 +30,12 @@ const clients: MarqueeData[] = [
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-12 min-h-screen bg-white font-neulissans tracking-tight">
+    <main className="grid grid-cols-4 md:grid-cols-12 min-h-screen bg-white font-neulissans tracking-tight">
       <HeroSection />
       <MarqueeSection data={partners} title={<p className="text-2xl text-gray-500">our <span className="font-bold">partners</span></p>}/>
       <StatsSection />
       <SolutionsSection />
-      <MarqueeSection data={clients} gradientColor="#F3F4F6" title={<p className="text-2xl text-gray-500">our <span className="font-bold">clients</span></p>} className="bg-primary-100"/>
+      <MarqueeSection data={clients} imageClass="h-20 px-20" gradientColor="#F3F4F6" title={<p className="text-2xl text-gray-500">our <span className="font-bold">clients</span></p>} className="bg-primary-100"/>
       <TestimonialsSection />
       <ContactSection />
     </main>
