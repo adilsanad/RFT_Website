@@ -128,7 +128,7 @@ const CarouselComponent = () => {
 
 export default function HeroSection() {
   return (
-    <section className="col-span-full relative flex flex-col w-full py-20 pt-36 md:pt-44">
+    <section className="col-span-full relative flex flex-col w-full py-20 pt-36 ">
       <div className="absolute -top-12 md:-top-24 md:right-0 -left-36 right-0 md:left-0">
         <svg className="hidden md:flex w-full -z-10" viewBox="0 0 1540 859" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.45">
@@ -169,15 +169,15 @@ export default function HeroSection() {
         </svg>
 
       </div>
-      <div className="flex flex-col gap-12 w-full z-10">
-        <div className="flex flex-col px-8 md:px-4">
+      <div className="flex flex-col gap-12 md:gap-16 w-full z-10">
+        <div className="flex flex-col px-8 md:items-center md:text-center md:px-4">
           <h1 className=" max-w-2xl mb-6">
             Smart, efficient water systems - from source to soil
           </h1>
-          <p className="leading-tight text-gray-600 mb-8 md:max-w-lg max-md:pr-8">
+          <p className="md:text-xl leading-tight text-gray-600 mb-8 md:max-w-xl max-md:pr-8">
             From automated irrigation to rainwater harvesting to swimming pools— we handle water end-to-end for any space.
           </p>
-          <Button className="w-fit text-lg py-2 px-5">Send an inquiry</Button>
+          <Button className="w-fit max-md:text-lg max-md:py-2 max-md:px-5">Send an inquiry</Button>
         </div>
 
         <CarouselComponent />
