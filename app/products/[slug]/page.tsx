@@ -100,15 +100,15 @@ export default async function ProductPage({ params }: { params: { slug: string }
   }
 
   return (
-    <div className="bg-white grid grid-cols-12 font-neulissans tracking-tight gap-20 pt-12 ">
+    <div className="bg-white grid grid-cols-4 md:grid-cols-12 font-neulissans tracking-tight gap-20 pt-20 md:pt-24 ">
       {/* Product Details */}
-      <section className="col-span-full grid grid-cols-12 gap-8 p-12 pb-0">
+      <section className="col-span-full grid grid-cols-4 md:grid-cols-12 gap-8 py-8 md:p-12 md:py-0 max-md:bg-primary-900 max-md:rounded-[15px]">
         {/* Product Info */}
-        <div className='col-span-5 col-start-1 h-fit flex flex-col gap-16 text-white rounded-[15px] p-12 bg-primary-900'>
+        <div className='md:order-1 order-2 col-span-full md:col-span-5 md:col-start-1 h-fit flex flex-col gap-4 md:gap-16 text-white rounded-[15px] max-md:px-8 md:p-12 md:bg-primary-900'>
           <div className='flex flex-col gap-6'>
-            <Button size='compact' className='w-fit py-3 rounded-[15px]' link='back'><Icon width={16} name='roundedArrow' className='rotate-180' /></Button>
+            <Button size='compact' className='max-md:hidden w-fit py-3 rounded-[15px]' link='back'><Icon width={16} name='roundedArrow' className='rotate-180' /></Button>
             <nav className="col-span-full flex  py-3">
-              <ol className="flex items-center gap-2 text-xl text-white/30 ">
+              <ol className="flex items-center gap-2 text-base md:text-lg text-white/30 flex-wrap gap-y-0 ">
                 <li><Link href="/" className="hover:text-primary-600">Home</Link></li>
                   //
                 <li><Link href="/products" className="hover:text-primary-600">Products</Link></li>
@@ -118,12 +118,12 @@ export default async function ProductPage({ params }: { params: { slug: string }
             </nav>
           </div>
           <div className="flex flex-col gap-8">
-            <h3 className="text-5xl font-neulisneue font-medium mb-2">{product.name}</h3>
+            <h3 >{product.name}</h3>
             <div className="">
-              <p className='text-xl text-white/70 tracking-tight'>{product.description}</p>
+              <p className=''>{product.description}</p>
             </div>
           </div>
-
+          
           {/* Action Buttons */}
           <div className="space-y-4">
             <Dialog>
@@ -145,15 +145,15 @@ export default async function ProductPage({ params }: { params: { slug: string }
             </Dialog>
           </div>
         </div>
-        <div className="col-span-7 col-start-6 flex flex-col gap-12">
+        <div className="md:order-2 order-1 col-span-full md:col-span-7 max-h-full max-md:bg-black/10 max-md:p-4 md:col-start-6 flex flex-col gap-12 max-md:border-t max-md:border-b border-white/15">
           <ProductImageGallery product={product} />
         </div>
       </section>
-      <section className='col-span-full flex flex-col px-24'>
+      <section className='col-span-full flex flex-col px-8 md:px-24'>
         <ProductDropdowns product={product} />
       </section>
 
-      <section className='col-span-full flex flex-col px-24 pr-0 overflow-x-auto'>
+      <section className='col-span-full flex flex-col px-8 md:px-24 pr-0 overflow-x-auto'>
         {/* Related Products */}
           <RelatedProductsCarousel
             products={productsData.products}

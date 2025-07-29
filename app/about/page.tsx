@@ -7,9 +7,9 @@ import StatCounter from "@/components/ui/StatCounter";
 import DivAnimation from "@/components/ui/DivAnimated";
 
 const TeamMember = ({ name, role, image }: { name: string, role: string, image: string }) => (
-    <div className="flex-1 h-fit flex flex-col gap-4 items-start ">
+    <div className="flex-1 h-fit flex flex-col gap-6 md:gap-4 items-center md:items-start ">
         <img src={image} alt={name} className="w-full min-h-80 h-full rounded-[15px] object-cover bg-gray-300" />
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col max-md:text-center gap-1 px-4">
             <h3 className="text-3xl font-medium font-neulisneue tracking-tighter">{name}</h3>
             <p className="text-gray-600">{role}</p>
         </div>
@@ -29,18 +29,18 @@ export default function About() {
     }
 
     return (
-        <main className="grid grid-cols-12 gap-24 min-h-screen bg-white font-neulissans tracking-tight py-[5.5rem]">
+        <main className="grid grid-cols-4 md:grid-cols-12 gap-24 min-h-screen bg-white font-neulissans tracking-tight py-[5.5rem]">
             <section className="col-span-full relative flex flex-col w-full ">
-                <div className="flex flex-col w-full px-4 z-10">
-                    <div className="relative w-full min-h-[720px] rounded-[15px_15px_60px_60px] bg-gray-500 overflow-hidden ">
-                        <div className="absolute flex flex-col gap-4 left-12 bottom-12 md:max-w-lg ">
+                <div className="flex flex-col w-full px-2 md:px-4 z-10">
+                    <div className="relative w-full min-h-[480px] md:min-h-[720px] rounded-[15px_15px_60px_60px] bg-gray-500 overflow-hidden ">
+                        <div className="absolute flex flex-col gap-4 left-0 right-0 bottom-0 p-10 md:p-12 md:max-w-xl ">
                             <h1>Lorem ipsum dolor sit amet.</h1>
-                            <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                            <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
                         </div>
                     </div>
                 </div>
             </section >
-            <section className="col-span-full relative flex flex-col px-24 gap-8">
+            <section className="col-span-full relative flex flex-col px-8 md:px-24 gap-8">
                 <h2 className="col-span-full flex ">Who we are</h2>
                 <div className="col-span-full flex flex-col gap-12">
                     {/* Tab Buttons */}
@@ -76,51 +76,53 @@ export default function About() {
                 ]} />
             </section>
 
-            <section className="col-span-full grid grid-cols-12 gap-12 rounded-[45px_45px_0px_0px] bg-primary-100 ">
-                <div className="col-span-full flex w-full items-center gap-24 pl-24 py-24">
-                    <div className="flex flex-[2] flex-col gap-4 py-16">
+            <section className="col-span-full flex flex-col gap-12 rounded-[45px_45px_0px_0px] bg-primary-100 ">
+                <div className="col-span-full flex max-md:flex-col w-full items-center gap-8 md:gap-24 max-md:px-2 md:pl-24 py-16 md:py-24">
+                    <div className="flex md:flex-[2] flex-col gap-8 max-md:px-8 py-16">
                         <h2 className="">Our Impact</h2>
                         <p>Lorem ipsum dolor sit amet consectetur. Pretium lobortis ante libero viverra ultricies suspendisse eget pulvinar sit. Purus sapien tincidunt est integer ultricies in arcu. Urna id amet nec id duis.
-
+                        <br/><br/>
                             Purus sapien tincidunt est integer ultricies in arcu. Urna id amet nec id duis. </p>
                     </div>
-                    <img className="flex flex-[3] aspect-[3/2] w-full h-full bg-gray-50 rounded-[60px_0px_0px_60px]" />
+                    <img className="flex md:flex-[3] aspect-[3/2] w-full bg-gray-50 rounded-[30px] md:rounded-[60px_0px_0px_60px]" />
                 </div>
-                <div className="col-span-10 col-start-2 flex flex-col gap-20 pb-24">
-                    <h2 className="text-center">The team behind the scenes</h2>
-                    <div className="flex gap-5 w-full">
-                        <TeamMember
-                            name="John Doe"
-                            role="Project Manager"
-                            image="/images/team/john.jpg"
-                        />
-                        <TeamMember
-                            name="Jane Smith"
-                            role="Lead Developer"
-                            image="/images/team/jane.jpg"
-                        />
-                        <TeamMember
-                            name="Alice Johnson"
-                            role="UX Designer"
-                            image="/images/team/alice.jpg"
-                        />
-                    </div>
-                    <div className="flex gap-5 w-full">
-                        <TeamMember
-                            name="John Doe"
-                            role="Project Manager"
-                            image="/images/team/john.jpg"
-                        />
-                        <TeamMember
-                            name="Jane Smith"
-                            role="Lead Developer"
-                            image="/images/team/jane.jpg"
-                        />
-                        <TeamMember
-                            name="Alice Johnson"
-                            role="UX Designer"
-                            image="/images/team/alice.jpg"
-                        />
+                <div className="grid grid-cols-4 md:grid-cols-12  gap-20 pb-24">
+                    <h2 className="col-span-full md:col-span-10 md:col-start-2 text-center">The team behind the scenes</h2>
+                    <div className="col-span-full md:col-span-10 md:col-start-2 flex flex-col gap-12 max-md:px-4">
+                        <div className="flex max-md:flex-col gap-x-5 gap-y-12 w-full ">
+                            <TeamMember
+                                name="John Doe"
+                                role="Project Manager"
+                                image="/images/team/john.jpg"
+                            />
+                            <TeamMember
+                                name="Jane Smith"
+                                role="Lead Developer"
+                                image="/images/team/jane.jpg"
+                            />
+                            <TeamMember
+                                name="Alice Johnson"
+                                role="UX Designer"
+                                image="/images/team/alice.jpg"
+                            />
+                        </div>
+                        <div className="flex max-md:flex-col gap-x-5 gap-y-12 w-full">
+                            <TeamMember
+                                name="John Doe"
+                                role="Project Manager"
+                                image="/images/team/john.jpg"
+                            />
+                            <TeamMember
+                                name="Jane Smith"
+                                role="Lead Developer"
+                                image="/images/team/jane.jpg"
+                            />
+                            <TeamMember
+                                name="Alice Johnson"
+                                role="UX Designer"
+                                image="/images/team/alice.jpg"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

@@ -397,21 +397,21 @@ export default function ProductsPage() {
   }
 
   return (
-    <div className="grid grid-cols-12 pt-20">
+    <div className="grid grid-cols-12 pt-20 max-md:gap-y-8">
 
       {/* Hero Section */}
-      <section className="relative col-span-full flex flex-col px-24 py-16 pb-0 gap-24">
-        <div className=" px-4">
+      <section className="relative col-span-full flex flex-col px-4 md:px-24 py-16 pb-0 gap-24">
+        <div className="px-4">
           <h1 className="font-neulisneue">All Products</h1>
         </div>
         {/* Filtering Option Bar */}
         <div className='flex flex-col'>
-          <div className={`flex h-fit border-2 border-primary-900/30 ${brandDropdownOpen ? 'rounded-[15px_15px_15px_0px]' : 'rounded-[15px]'} transition-all `}>
-            <div className='flex flex-[2] font-neulissans'>
+          <div className={`flex max-md:flex-col h-fit border-2 border-primary-900/30 ${brandDropdownOpen ? 'md:rounded-[15px_15px_15px_0px]' : 'md:rounded-[15px]'} ${sortDropdownOpen ? 'max-md:rounded-[15px_15px_15px_0px]' : 'max-md:rounded-[15px]'} transition-all `}>
+            <div className='flex flex-[2] font-neulissans max-md:border-b-2 border-primary-900/30'>
               {/* Brand Filter Dropdown */}
               <div className="relative h-fit flex-1 flex" ref={brandRef}>
                 <button
-                  className={`flex justify-between w-full items-center p-6 py-4 ${hasActiveBrand ? 'bg-primary-300' : 'bg-primary-100'} ${brandDropdownOpen ? 'rounded-[14.5px_0px_0px_0px]' : 'rounded-[14.5px_0px_0px_14.6px]'} transition-all`}
+                  className={`flex justify-between w-full items-center p-6 py-4 ${hasActiveBrand ? 'bg-primary-300' : 'bg-primary-100'} ${brandDropdownOpen ? 'rounded-[14.5px_0px_0px_0px]' : 'rounded-[14.5px_0px_0px_0px] md:rounded-[14.5px_0px_0px_14.5px]'} transition-all`}
                   onClick={() => setBrandDropdownOpen(!brandDropdownOpen)}
                 >
                   <h5 className=''>Brand</h5>
@@ -425,12 +425,12 @@ export default function ProductsPage() {
                 {brandDropdownOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
-                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    className="absolute top-[94%] -left-[1%] md:-left-[0.5%] mt-1 w-56 md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
                     <div className="flex flex-col">
                       <div className="flex flex-col max-h-64 overflow-y-auto">
                         {allBrands.map((brand) => (
                           <label key={brand} className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.brands.includes(brand) ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                            <span className="text-lg text-[#35463A] tracking-tight">{brand}</span>
+                            <span className="text-base md:text-lg text-[#35463A] tracking-tight">{brand}</span>
                             {/* Custom Checkbox */}
                             <div className="relative">
                               <input
@@ -459,13 +459,13 @@ export default function ProductsPage() {
                       </div>
                       <div className="flex w-full p-4 gap-4">
                         <button
-                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-base md:text-lg items-center justify-center px-3 md:px-5 py-3 transition-all'
                           onClick={() => setBrandDropdownOpen(false)}
                         >
                           Cancel
                         </button>
                         <button
-                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          className='flex font-medium tracking-tighter text-base md:text-lg items-center justify-center rounded-[15px] px-3 md:px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
                           onClick={handleBrandConfirm}>
                           Save
                         </button>
@@ -478,7 +478,7 @@ export default function ProductsPage() {
               {/* Category Dropdown */}
               <div className="relative h-full flex-1 flex" ref={categoryRef}>
                 <button
-                  className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveCategory ? 'bg-primary-300' : 'bg-primary-100'} `}
+                  className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveCategory ? 'bg-primary-300' : 'bg-primary-100'} max-md:rounded-[0px_14.5px_0px_0px]`}
                   onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
                 >
                   <h5 className=''>Category</h5>
@@ -491,12 +491,12 @@ export default function ProductsPage() {
                 {categoryDropdownOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
-                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    className="absolute top-[94%] max-md:-right-[1%] md:-left-[0.5%] mt-1 w-64 md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[15px_0px_30px_30px] md:rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
                     <div className="flex flex-col">
                       <div className="flex flex-col max-h-64 overflow-y-auto">
                         {categories.map((category) => (
                           <label key={category.id} className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.categories.includes(category.id) ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                            <span className="text-lg text-[#35463A] tracking-tight">{category.name}</span>
+                            <span className="text-base md:text-lg text-[#35463A] tracking-tight">{category.name}</span>
                             {/* Custom Checkbox */}
                             <div className="relative">
                               <input
@@ -525,13 +525,13 @@ export default function ProductsPage() {
                       </div>
                       <div className="flex w-full p-4 gap-4">
                         <button
-                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-base md:text-lg items-center justify-center px-3 md:px-5 py-3 transition-all'
                           onClick={() => setCategoryDropdownOpen(false)}
                         >
                           Cancel
                         </button>
                         <button
-                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          className='flex font-medium tracking-tighter text-base md:text-lg items-center justify-center rounded-[15px] px-3 md:px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
                           onClick={handleCategoryConfirm}>
                           Save
                         </button>
@@ -540,18 +540,18 @@ export default function ProductsPage() {
                   </motion.div>
                 )}
               </div>
-              <div className='h-full flex w-[2px] bg-primary-900/30' />
+              <div className='h-full hidden md:flex w-[2px] bg-primary-900/30' />
             </div>
             <div className='flex flex-[3] font-neulissans'>
               {/* Sort By Dropdown */}
               <div className="relative h-full flex-[3] flex" ref={sortRef}>
                 <button
-                  className={`flex justify-between h-full w-full items-center p-6 py-4 bg-primary-100 `}
+                  className={`flex justify-between h-full w-full items-center p-6 py-4 bg-primary-100 ${sortDropdownOpen ? 'max-md:rounded-[0px]' : 'max-md:rounded-[0px_0px_0px_14.5px]'} `}
                   onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
                 >
-                  <div className='flex gap-2 items-center'>
-                    <h5>Sort By:</h5>
-                    <span className='text-md opacity-70'>
+                  <div className='flex max-md:flex-col gap-2 md:items-center'>
+                    <h5 className='max-md:text-left'>Sort By:</h5>
+                    <span className='text-xs md:text-base max-md:text-left opacity-70'>
                       {
                         filters.sortBy === 'name-asc' ? 'Name (A-Z)' :
                           filters.sortBy === 'name-desc' ? 'Name (Z-A)' : 'Newest First'
@@ -565,11 +565,11 @@ export default function ProductsPage() {
                 {sortDropdownOpen && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
-                    className="absolute top-[94%] -left-[0.5%] mt-1 w-full md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    className="absolute top-[94%] -left-[1%] md:-left-[0.5%] mt-1 w-56 md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
                     <div className="flex flex-col">
                       <div className="flex flex-col max-h-64 overflow-y-auto">
                         <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                          <span className="text-lg text-[#35463A] tracking-tight">Name (A-Z)</span>
+                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Name (A-Z)</span>
                           <input
                             type="radio"
                             name="sort"
@@ -580,18 +580,18 @@ export default function ProductsPage() {
                           />
                           <div
                             className={`
-                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
                                   ${tempFilters.sortBy.includes('name-asc')
                                 ? 'bg-transparent '
                                 : 'bg-white border-gray-300 hover:border-primary-400'
                               }`}
                           >
-                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
                           </div>
                         </label>
                         <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
 
-                          <span className="text-lg text-[#35463A] tracking-tight">Name (Z-A)</span>
+                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Name (Z-A)</span>
                           <input
                             type="radio"
                             name="sort"
@@ -602,17 +602,17 @@ export default function ProductsPage() {
                           />
                           <div
                             className={`
-                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
                                   ${tempFilters.sortBy.includes('name-desc')
                                 ? 'bg-transparent '
                                 : 'bg-white border-gray-300 hover:border-primary-400'
                               }`}
                           >
-                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
                           </div>
                         </label>
                         <label className={`flex font-neulissans items-center justify-between w-full h-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('newest') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                          <span className="text-lg text-[#35463A] tracking-tight">Newest First</span>
+                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Newest First</span>
                           <input
                             type="radio"
                             name="sort"
@@ -623,25 +623,25 @@ export default function ProductsPage() {
                           />
                           <div
                             className={`
-                                  w-6 h-6 p-[4px] rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
+                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
                                   ${tempFilters.sortBy.includes('newest')
                                 ? 'bg-transparent '
                                 : 'bg-white border-gray-300 hover:border-primary-400'
                               }`}
                           >
-                            <div className={`w-full h-full rounded-[5px] ${tempFilters.sortBy.includes('newest') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
+                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('newest') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
                           </div>
                         </label>
                       </div>
                       <div className="flex w-full p-4 gap-4">
                         <button
-                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-lg items-center justify-center px-5 py-3 transition-all'
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-base md:text-lg items-center justify-center px-3 md:px-5 py-3 transition-all'
                           onClick={() => setSortDropdownOpen(false)}
                         >
                           Cancel
                         </button>
                         <button
-                          className='flex font-medium tracking-tighter text-lg items-center justify-center rounded-[15px] px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          className='flex font-medium tracking-tighter text-base md:text-lg items-center justify-center rounded-[15px] px-3  md:px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
                           onClick={handleSortConfirm}>
                           Save
                         </button>
@@ -651,14 +651,14 @@ export default function ProductsPage() {
                 )}
               </div>
               <div className='h-full flex w-[2px] bg-primary-900/30' />
-              <div className='flex gap-4 flex-[5] items-center rounded-[0px_15px_15px_0px] bg-primary-100 '>
+              <div className={`flex gap-4 flex-[5] items-center rounded-[0px_15px_15px_0px] ${filters.search ? 'bg-primary-300 ' : 'bg-primary-100 '} transition-all `}>
                 <Icon name="search" width={20} className="ml-6" />
                 <input
                   className='
                     bg-transparent font-neulissans w-full py-4 pl-0 px-8
-                    text-xl font-normal
-                    placeholder:font-neulissans placeholder:text-lg placeholder:font-normal placeholder:tracking-tight placeholder:text-[#808381]
-                    focus-visible:outline-none
+                    md:text-xl text-lg font-normal
+                    placeholder:font-neulissans placeholder:text-base placeholder:font-normal placeholder:tracking-tight placeholder:text-[#afb3b0]
+                    focus-visible:outline-none 
                     disabled:cursor-not-allowed disabled:opacity-50
                   '
                   placeholder='Search products'
@@ -669,18 +669,28 @@ export default function ProductsPage() {
               </div>
             </div>
           </div>
-          <div className="flex justify-between  w-full px-3 pr-0 py-4">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <p className="font-neulissans tracking-tight text-[#808381] text-lg py-3">
-                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
-              </p>
-
+          <div className="flex justify-between w-full px-3 pr-0 py-4">
+            <div className="flex flex-col max-md:w-full md:flex-row md:items-center justify-center md:justify-between gap-4">
+              <div className='flex gap-4 max-md:justify-center'>
+                <p className="font-neulissans tracking-tight text-[#808381] text-lg py-3">
+                  {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
+                </p>
+                <span className={` ${activeFilters.length > 0 ? 'inline-block' : 'hidden'} w-1 h-1 rounded-full bg-[#808381] self-center`}></span>
+                {hasActiveFilters && (
+                  <button
+                    onClick={resetFilters}
+                    className="md:hidden flex py-3 items-center gap-3 hover:opacity-80 transition-all hover:translate-y-0.5"
+                  >
+                    <p className='font-neulissans tracking-tight text-lg'>Reset Filters</p>
+                    <RotateCcw className="h-5 w-5" />
+                  </button>
+                )}
+              </div>
               {/* Active Filters */}
               {activeFilters.length > 0 && (
-                <div className="flex flex-wrap gap-4">
-                  <span className="w-1 h-1 rounded-full bg-[#808381] self-center"></span>
+                <div className="flex max-md:w-full justify-center flex-wrap gap-2 md:gap-4">
                   {activeFilters.map((filter, index) => (
-                    <div key={index} className="flex items-center py-2 px-3 bg-primary-100 border border-primary-900/30 rounded-[15px] font-neulissans gap-3">
+                    <div key={index} className="flex max-md:text-sm items-center py-2 px-3 bg-primary-100 border border-primary-900/30 rounded-[15px] font-neulissans gap-3">
                       {filter.label}
                       <button
                         onClick={() => removeFilter(filter.type, filter.value)}
@@ -697,9 +707,9 @@ export default function ProductsPage() {
             {hasActiveFilters && (
               <button
                 onClick={resetFilters}
-                className="flex py-3 px-6 items-center gap-3 hover:opacity-80 transition-all"
+                className="hidden md:flex py-3 px-6 items-center gap-3 hover:opacity-80 transition-all hover:translate-y-0.5"
               >
-                <p className='font-neulissans tracking-tight text-xl'>Reset Filters</p>
+                <p className='font-neulissans tracking-tight text-lg'>Reset Filters</p>
                 <RotateCcw className="h-5 w-5" />
               </button>
             )}
@@ -708,17 +718,13 @@ export default function ProductsPage() {
 
       </section>
       {/* Products Grid */}
-      <section className="col-span-full pt-0 py-12 px-24">
+      <section className="col-span-full pt-0 py-12 px-4 md:px-24">
         <div className="">
-          {/* Results Info and Active Filters */}
-
-
-          {/* Products Grid - Changed to 3 columns */}
           {currentProducts.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 ">
                 {currentProducts.map((product) => (
-                  <div key={product.id} className="group hover:translate-y-1 transition-all duration-500">
+                  <div key={product.id} className="group hover:translate-y-1 transition-all duration-500 max-md:pb-4 ">
                     <a href={`/products/${product.slug}`}>
                       <div className="p-0">
                         <div className="aspect-square bg-primary-100 rounded-[15px] border-2 border-primary-900/30 overflow-hidden">
@@ -729,11 +735,11 @@ export default function ProductsPage() {
                           />
                         </div>
                       </div>
-                      <div className="flex flex-col p-4">
-                        <h4 className="group-hover:text-primary-800 transition-all text-2xl font-neulissans font-medium tracking-tighter">{product.name}</h4>
-                        <div className="flex text-gray-600 font-medium">
+                      <div className="flex flex-col max-md:px-2 p-4 gap-2">
+                        <h4 className="group-hover:text-primary-800 transition-all text-base md:text-2xl font-neulissans font-medium tracking-tight leading-tight">{product.name}</h4>
+                        <div className="flex text-gray-400 font-medium">
                           {product.brand && (
-                            <p className='text-lg font-medium font-neulissans tracking-tight'>{product.brand} · {categories.find(c => c.id === product.category)?.name} </p>
+                            <p className='text-sm md:text-lg font-medium font-neulissans tracking-tight leading-tight'>{product.brand} · {categories.find(c => c.id === product.category)?.name} </p>
                           )}
                         </div>
                       </div>

@@ -25,7 +25,7 @@ export default function SolutionsSection() {
         "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus. Tincidunt nunc venenatis quam viverra adipiscing at in non.",
       icon: <Icon width={24} height={24} name="rainwater" className="fill-primary-500" />,
       image: Rwh,
-      link: "/solutions/rainwater-harvesting",
+      link: "/solutions/rainwater-management",
     },
     {
       title: "Pools & Water Features",
@@ -65,16 +65,11 @@ export default function SolutionsSection() {
   }
 
   return (
-    <section className="col-span-full grid grid-cols-4 md:grid-cols-12 gap-8 md:gap-16 py-24 md:pt-32 border-t border-primary-900/15 mt-8 bg-primary-100 rounded-[45px_45px_0px_0px]" id="solutions">
-      <div className="md:col-span-10 md:col-start-2 max-md:px-8">
-        <h2>Solutions</h2>
-      </div>
-
-      <div className="col-span-full flex max-md:flex-col gap-5 px-4 md:px-14"> {/* min-h is bc autoplay changes container height constantly*/}
+      <section className="col-span-full flex max-md:flex-col gap-5 px-4 md:px-14"> {/* min-h is bc autoplay changes container height constantly*/}
         {solutions.map((solution, index) => {
           const isOpen = expandedIndex === index
           return (
-            <a href={solution.link} key={index} className="group relative flex-1 flex flex-col  gap-6  bg-black hover:rounded-[60px] rounded-[30px] min-h-[360px] md:min-h-[500px] overflow-hidden transition-all duration-300">
+            <a href={solution.link} key={index} className="group relative flex-1 flex flex-col  gap-6 bg-black hover:rounded-[60px] rounded-[30px] min-h-[360px] md:min-h-[500px] overflow-hidden transition-all duration-300 border-2 border-white/40">
               {/* Base image */}
               <img className="absolute w-full h-full inset-0 object-cover object-bottom z-0 group-hover:scale-[1.05] transition-all duration-700" src={solution.image.src} />
               {/* Dark gradient overlay - flipped */}
@@ -91,7 +86,6 @@ export default function SolutionsSection() {
             </a>
           )
         })}
-      </div>
-    </section>
+      </section>
   )
 }

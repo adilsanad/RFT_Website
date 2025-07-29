@@ -122,30 +122,6 @@ const RelatedProductsCarousel: React.FC<RelatedProductsCarouselProps> = ({
   }, [products, currentProduct, targetBrand, targetCategory, relationType, maxProducts]);
 
   // Generate dynamic title based on relation type and available data
-  const dynamicTitle = useMemo(() => {
-    if (title) return title;
-    
-    switch (relationType) {
-      case 'category':
-        return targetCategory ? `More in ${targetCategory}` : "Related Products";
-      
-      case 'brand':
-        return targetBrand ? `More from ${targetBrand}` : "Related Products";
-      
-      case 'both':
-        if (targetBrand && targetCategory) {
-          return "You might also like";
-        } else if (targetBrand) {
-          return `More from ${targetBrand}`;
-        } else if (targetCategory) {
-          return `More in ${targetCategory}`;
-        }
-        return "Related Products";
-      
-      default:
-        return "Related Products";
-    }
-  }, [title, targetBrand, targetCategory, relationType]);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -166,8 +142,8 @@ const RelatedProductsCarousel: React.FC<RelatedProductsCarouselProps> = ({
 
   return (
     <div className="col-span-full flex flex-col gap-12 py-20">
-      <div className="flex items-center justify-between mb- pr-4 md:pr-24">
-        <h3 className="">{dynamicTitle}</h3>
+      <div className="flex items-center justify-between pr-4 md:pr-24">
+        <h3 className="">Related Products</h3>
         
         {/* Navigation Buttons */}
         <div className="flex gap-2">
@@ -210,9 +186,9 @@ const RelatedProductsCarousel: React.FC<RelatedProductsCarouselProps> = ({
                 </div>
               </div>
               <div className="flex flex-col p-4">
-                <h4 className="group-hover:text-primary-800 transition-all text-2xl font-neulissans font-medium tracking-tighter line-clamp-2">
+                <h5 className="group-hover:text-primary-800 transition-all text-2xl font-neulissans font-medium tracking-tighter line-clamp-2">
                   {product.name}
-                </h4>
+                </h5>
                 <div className="flex text-gray-600 font-medium">
                   {product.brand && (
                     <p className='text-lg font-medium font-neulissans tracking-tight'>
