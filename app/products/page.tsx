@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -25,7 +25,8 @@ interface TempFilterState {
   sortBy: string
 }
 
-export default function ProductsPage() {
+// Separate component for the main products content
+function ProductsContent() {
   const { products, categories } = productsData
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -198,6 +199,7 @@ export default function ProductsPage() {
     }
     return active
   }, [filters, categories])
+  
   // Handle search input
   const handleSearchChange = (value: string) => {
     const newFilters = { ...filters, search: value }
@@ -765,5 +767,30 @@ export default function ProductsPage() {
 
       <ContactSection bgColor='white' />
     </div>
+  )
+}
+
+// Loading component for Suspense fallback
+function ProductsLoading() {
+  return (
+    <div className="grid grid-cols-12 pt-20 max-md:gap-y-8">
+      <section className="relative col-span-full flex flex-col px-4 md:px-24 py-16 pb-0 gap-24">
+        <div className="px-4">
+          <h1 className="font-neulisneue">All Products</h1>
+        </div>
+        <div className="flex justify-center items-center py-20">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+// Main component with Suspense wrapper
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<ProductsLoading />}>
+      <ProductsContent />
+    </Suspense>
   )
 }
