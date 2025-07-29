@@ -754,8 +754,8 @@ function ProductsContent() {
               <PaginationComponent />
             </>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-500 text-lg mb-4">No products found matching your criteria</p>
+            <div className="text-center items-center flex flex-col py-12 px-12 gap-6">
+              <p className="text-gray-500 text-2xl mb-4">No products found.</p>
               <Button onClick={resetFilters} variant="light">
                 <RotateCcw className="h-4 w-4 mr-2" />
                 Clear All Filters
@@ -765,7 +765,6 @@ function ProductsContent() {
         </div>
       </section>
 
-      <ContactSection bgColor='white' />
     </div>
   )
 }
