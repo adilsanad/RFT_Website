@@ -82,17 +82,25 @@ export default function Solutions() {
     }
 
     return (
-        <main className="grid grid-cols-4 md:grid-cols-12 gap-24 bg-white font-neulissans tracking-tight py-[5.5rem]">
-            <section className="md:px-8 py-12 md:py-16 col-span-full relative flex w-full min-h-[50vh] md:min-h-[58vh]  items-center ">
-                <div className="flex flex-col w-full px-4 z-10">
-                    <div className=" flex flex-col gap-4 md:max-w-27xl ">
-                        <h1 className="">Built for India's landscapes.</h1>
-                        <p className="">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+        <main className="grid grid-cols-4 md:grid-cols-12 gap-20 bg-white font-neulissans tracking-tight py-[5.5rem]">
+            <section className="md:pl-16 md:pr-0 col-span-full relative flex w-full min-h-[50vh] md:min-h-[58vh] items-center bg-primary-100">
+                <div className="flex max-md:flex-col gap-12 w-full pr-0 z-10 items-end">
+                    <div className="flex flex-1 flex-col gap-4 md:py-16 md:order-1 order-2 max-md:text-center max-w-xl max-md:pb-12 ">
+                        <h1 className="">Built for Indian landscapes.</h1>
+                        <p className="max-md:px-6">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding urban spaces.</p>
+                    </div>
+                    <div className="flex-1 grid grid-cols-3 w-full md:order-2 order-1">
+                        <div className="aspect-square bg-primary-500 rounded-[0px_0px_0px_240px] hover:rounded-[240px_0px_0px_0px] transition-all duration-500" />
+                        <div className="aspect-square bg-primary-500 rounded-[0px_0px_240px_0px] hover:rounded-[0px_240px_240px_0px] transition-all duration-500" />
+                        <div className="aspect-square bg-primary-300 rounded-[0px_0px_0px_240px] hover:rounded-[240px_0px_240px_0px] transition-all duration-500" />
+                        <div className="aspect-square bg-primary-900 rounded-[240px_0px_0px_0px] hover:rounded-[0px_0px_0px_240px] transition-all duration-500" />
+                        <div className="aspect-square bg-primary-900 rounded-[0px_240px_0px_0px] hover:rounded-[240px_0px_240px_0px] transition-all duration-500" />
+                        <div className="aspect-square bg-primary-700 rounded-[240px_0px_0px_0px] hover:rounded-[240px_0px_0px_240px] transition-all duration-500" />
                     </div>
                 </div>
             </section >
             <SolutionsSection />
-            <section className="col-span-full relative flex flex-col md:grid grid-cols-12 gap-24 gap-y-20 md:gap-y-28 px-8 md:px-24">
+            <section className="col-span-full relative flex flex-col md:grid grid-cols-12 gap-24 gap-y-20 md:py-24 md:gap-y-28 px-8 md:px-24">
                 <div className="col-span-6 flex flex-col gap-8">
                     <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 ">
                         <Icon name="pool" className="fill-primary-600 w-5 md:w-6" />

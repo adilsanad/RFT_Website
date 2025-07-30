@@ -18,7 +18,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants = {
       default: "bg-primary-500 text-primary-900 border-primary-900 hover:bg-primary-400 hover:translate-y-[2px] ",
-      defaultnobg: "bg-transparent text-primary-900 border-opacity-0 hover:bg-primary-400 hover:translate-y-[2px] ",
+      defaultnobg: "bg-transparent text-primary-900 border-0 hover:bg-primary-400 hover:translate-y-[2px] ",
       light: "bg-primary-100 text-primary-700 border-primary-700 hover:bg-primary-200 hover:translate-y-[2px]",
       dark: "bg-primary-900 text-primary-600 border-primary-900",
       footer: "bg-[#202020] text-primary-600 border-white/15 hover:bg-primary-900 hover:translate-y-[2px]",

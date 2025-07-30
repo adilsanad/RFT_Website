@@ -42,7 +42,7 @@ export default function Home() {
         <SolutionsSection />
       </section>
 
-      <MarqueeSection data={clients} imageClass="h-20 px-20" gradientColor="#F3F4F6" title={<p className="text-2xl text-gray-500">our <span className="font-bold">clients</span></p>} className="bg-primary-100" />
+      <MarqueeSection data={clients} imageClass="h-20 px-16" gradientColor="#F3F4F6" title={<p className="text-2xl text-gray-500">our <span className="font-bold">clients</span></p>} className="bg-primary-100" />
       <TestimonialsSection />
       <ContactSection />
     </main>

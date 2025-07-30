@@ -1,16 +1,11 @@
 "use client"
-
 import { useState, useEffect, useMemo, useRef, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Search, Filter, X, Check, RotateCcw, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import productsData from '@/data/products.json'
 import Icon from '@/public/assets/vectors'
-import ContactSection from '@/components/contact-section'
+import { RotateCcw, X } from 'lucide-react'
 
 interface FilterState {
   search: string
@@ -420,7 +415,7 @@ function ProductsContent() {
                   <div className='flex items-center justify-center gap-2'>
                     <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveBrand ? 'opacity-100' : 'opacity-0'}`}>{filters.brands.length > 0 && `${filters.brands.length}`}</span>
 
-                    <ChevronDown className={`h-4 w-4 transition-transform ${brandDropdownOpen ? 'rotate-180' : ''}`} />
+                    <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${brandDropdownOpen ? 'rotate-180' : ''}`} />
                   </div>
                 </button>
 
@@ -486,7 +481,7 @@ function ProductsContent() {
                   <h5 className=''>Category</h5>
                   <div className='flex items-center justify-center gap-2'>
                     <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveCategory ? 'opacity-100' : 'opacity-0'}`}>{filters.categories.length > 0 && `${filters.categories.length}`}</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
+                    <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
                   </div>
                 </button>
 
@@ -561,7 +556,7 @@ function ProductsContent() {
                     </span>
                   </div>
 
-                  <ChevronDown className={`h-4 w-4 transition-transform ${sortDropdownOpen ? 'rotate-180' : ''}`} />
+                  <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${sortDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {sortDropdownOpen && (

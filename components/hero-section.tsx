@@ -83,8 +83,8 @@ const CarouselComponent = () => {
               <path d="M6.17572 7.27186C3.99972 7.27186 2.59172 5.67186 2.87972 3.52786C3.13572 1.70386 4.73572 0.359863 6.55972 0.359863C8.73572 0.359863 10.1437 1.95986 9.85572 4.10386C9.59972 5.95986 8.03172 7.27186 6.17572 7.27186ZM0.511719 24.9999L2.81572 8.67986H8.57572L6.27172 24.9999H0.511719Z" fill="#ECF7EF" />
             </svg>
           </div>
-          <div className="grid grid-cols-[auto_1fr] md:flex flex-col md:gap-2 max-md:bg-primary-100 items-end max-md:border-2 border-primary-90/30 overflow-hidden max-md:rounded-[15px_15px_60px_60px]">
-            <div className="flex flex-col gap-3 md:bg-primary-100 md:rounded-[15px_60px_15px_15px] p-7 md:pr-10 md:shadow-lg md:max-w-xs">
+          <div className="flex flex-col gap-2 items-end max-md:-space-y-28  ">
+            <div className="hidden md:flex flex-col gap-3 md:bg-primary-100 md:rounded-[15px_60px_15px_15px] p-7 md:pr-10 md:shadow-lg md:max-w-xs z-10">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -102,18 +102,36 @@ const CarouselComponent = () => {
                   </p>
                 </motion.div>
               </AnimatePresence >
-
             </div>
-            <div className="flex h-full justify-center max-md:flex-col max-md:p-6 max-md:px-4 gap-4 md:gap-1 max-md:bg-primary-200 max-md:border-l border-primary-900/30">
+            <div className="flex h-full justify-center text-center items-end gap-2 md:gap-1 z-20">
               <button
                 onClick={goToPrevious}
-                className="p-4 px-5 md:p-3 md:px-4 w-fit max-md:rotate-90 bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900"
+                className="p-4 px-[18px] max-md:mb-4 md:p-[0.9rem]  w-fit bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 active:bg-primary-400 transition-all"
               >
                 <Icon width={20} name="roundedArrow" className="fill-primary-900 rotate-180" />
               </button>
+              <div className="md:hidden flex flex-col gap-3 bg-gradient-to-b from-primary-200/80 to-primary-200 backdrop-blur-sm rounded-[30px_30px_15px_15px] pt-6 p-6 border border-primary-900/30">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -10 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="w-full flex flex-col gap-2.5"
+                  >
+                    <h4 className=" text-2xl font-neulisneue tracking-tighter font-medium leading-tight text-gray-900 ">
+                      {currentItem.title}
+                    </h4>
+                    <p className="leading-tight text-gray-600 font-manrope font-medium">
+                      {currentItem.description}
+                    </p>
+                  </motion.div>
+                </AnimatePresence >
+              </div>
               <button
                 onClick={goToNext}
-                className="p-4 px-5 md:p-3 md:px-4 w-fit max-md:rotate-90 bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900"
+                className="p-4 px-[18px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 transition-all"
               >
                 <Icon width={20} name="roundedArrow" className="fill-primary-900" />
               </button>
@@ -128,10 +146,10 @@ const CarouselComponent = () => {
 
 export default function HeroSection() {
   return (
-    <section className="col-span-full relative flex flex-col w-full py-20 pt-36 ">
+    <section className="col-span-full relative flex flex-col w-full py-20 pt-24 ">
       <div className="absolute -top-12 md:-top-24 md:right-0 -left-36 right-0 md:left-0">
         <svg className="hidden md:flex w-full -z-10" viewBox="0 0 1540 859" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.45">
+          <g opacity="0.65">
             <path d="M1124.72 286.03C1143.57 285.842 1160.34 291.989 1172.73 306.752C1198.34 337.266 1248.81 410.608 1269.45 469.774C1274.6 484.548 1277.86 498.34 1278.44 510.299C1279.02 522.269 1276.92 532.2 1271.58 539.483C1266.28 546.714 1257.55 551.645 1244.22 553.177C1230.85 554.713 1212.95 552.804 1189.61 546.42C1095.15 520.587 997.32 545.567 928.811 564.377C911.647 569.09 896.359 573.407 883.369 576.471C870.341 579.544 859.842 581.299 852.212 580.991C848.407 580.838 845.48 580.175 843.352 579.033C841.286 577.925 839.906 576.336 839.168 574.104C838.407 571.802 838.285 568.679 839.062 564.503C839.838 560.339 841.482 555.261 844.104 549.136C865.176 499.925 888.75 479.074 910.925 461.936C933.203 444.717 954.517 430.974 970.071 396.128C985.159 362.328 1023.44 324.858 1064.4 303.476C1084.85 292.796 1105.81 286.219 1124.72 286.03Z" stroke="black" strokeOpacity="0.1" strokeWidth="4" />
             <path d="M1112.13 336.029C1117.62 336.092 1122.15 337.271 1125.55 339.612C1128.9 341.922 1131.34 345.49 1132.45 350.725C1134.9 362.213 1140.96 379.889 1147.53 399.25C1154.14 418.69 1161.3 439.932 1166.08 458.758C1168.46 468.169 1170.24 476.925 1171.05 484.514C1171.86 492.143 1171.68 498.407 1170.3 502.93C1168.95 507.351 1166.55 509.902 1162.87 510.726C1158.97 511.601 1153.18 510.642 1144.92 506.764C1127.78 498.712 1107.84 496.133 1087.45 496.293C1067.05 496.454 1046.06 499.358 1026.76 502.381C1007.38 505.417 989.822 508.55 976.03 509.258C969.142 509.612 963.353 509.349 958.839 508.23C954.341 507.115 951.324 505.209 949.622 502.433C945.841 496.268 945.77 490.43 948.129 484.289C950.546 477.998 955.5 471.436 961.809 464.094C974.281 449.579 991.771 432.372 1001.91 409.669C1006.73 398.872 1016.78 387.015 1029.45 375.971C1042.1 364.954 1057.22 354.876 1072 347.594C1086.83 340.289 1101.11 335.903 1112.13 336.029Z" stroke="black" strokeOpacity="0.1" strokeWidth="4" />
             <path d="M1078.69 391.94C1083.09 391.791 1085.91 393.045 1087.24 395.454C1091.03 402.291 1096.37 410.996 1098.61 421.306C1100.82 431.485 1099.99 443.243 1091.18 456.131C1082.59 468.702 1066.5 473.138 1051.32 472.954C1043.78 472.862 1036.61 471.625 1030.98 469.78C1028.16 468.857 1025.76 467.796 1023.9 466.678C1022.02 465.543 1020.83 464.434 1020.24 463.479C1018.94 461.363 1018.66 458.762 1019.27 455.555C1019.89 452.323 1021.39 448.665 1023.41 444.643C1025.43 440.628 1027.9 436.399 1030.41 431.983C1032.9 427.597 1035.41 423.052 1037.44 418.523C1039.25 414.468 1042.87 410.187 1047.55 406.229C1052.2 402.29 1057.77 398.776 1063.32 396.213C1068.9 393.64 1074.32 392.088 1078.69 391.94Z" stroke="black" strokeOpacity="0.1" strokeWidth="4" />
@@ -169,8 +187,8 @@ export default function HeroSection() {
         </svg>
 
       </div>
-      <div className="flex flex-col gap-12 md:gap-16 w-full z-10">
-        <div className="flex flex-col px-8 md:items-center md:text-center md:px-4">
+      <div className="flex flex-col gap-4 md:gap-16 w-full z-10">
+        <div className="flex flex-col  py-12 px-8 md:items-center md:text-center md:px-4 bg-white/1 backdrop-blur-[2px] rounded-[60px]">
           <h1 className=" max-w-2xl mb-6">
             Smart, efficient water systems - from source to soil
           </h1>

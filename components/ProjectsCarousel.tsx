@@ -85,39 +85,37 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
   const translateX = -(currentIndex * 480) // Move by one card width (100% / 3 cards)
 
   return (
-    <section className="col-span-full grid grid-cols-12 pl-4 md:pl-24 gap-8 py-16">
+    <section className="col-span-full grid grid-cols-12 pl-4 md:pl-24 gap-8 py-16 ">
       <div className="col-span-full flex flex-col gap-4 md:gap-12">
         <div className="flex items-center justify-between">
-          <h2 className='max-md:pl-4'>
+          <h2 className='pl-4'>
             Our Projects
           </h2>
 
           {/* Navigation Controls*/}
           <div className='flex flex-col gap-2'>
 
-            <div className="flex gap-2 pr-4 md:pr-24">
+            <div className="flex gap-1 md:gap-2 pr-6 md:pr-24">
               <button
                 onClick={goToPrev}
                 disabled={currentIndex === 0 || isTransitioning}
-                className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-primary-600 hover:bg-primary-50 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent"
+                className="p-[14px] px-[18px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900/50 md:hover:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:translate-y-0"
               >
-                <ChevronLeft className="w-5 h-5 text-gray-600" />
+                <Icon name="roundedArrow" className="fill-primary-900 rotate-180 w-[18px] md:w-5" />
               </button>
               <button
                 onClick={goToNext}
                 disabled={currentIndex >= maxIndex || isTransitioning}
-                className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-primary-600 hover:bg-primary-50 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent"
+                className="p-[14px] px-[18px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900/50 md:hover:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:translate-y-0"
               >
-                <ChevronRight className="w-5 h-5 text-gray-600" />
+                <Icon name="roundedArrow" className="fill-primary-900 w-[18px] md:w-5" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Carousel Container */}
-        <div className="flex relative overflow-x-auto snap-x snap-start no-scrollbar">
-
-          {/* Desktop Carousel */}
+        <div className="flex relative overflow-x-auto snap-x snap-start scrollbar-hide">
           <div
             className="flex transition-transform duration-300 ease-in-out  "
             style={{ transform: `translateX(${translateX}px)` }}
@@ -127,7 +125,7 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
                 key={project.id}
                 className="w-[260px] md:w-[480px] px-2 py-5 "
               >
-                <div className="bg-primary-100 border-2 border-primary-900/40 hover:border-primary-900 rounded-[15px] md:rounded-[30px] overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+                <div className="bg-primary-100 border-2 border-primary-900/30 hover:border-primary-900/50 rounded-[15px] md:rounded-[30px] overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
                   {/* Project Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img

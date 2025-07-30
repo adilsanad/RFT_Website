@@ -166,7 +166,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ showMenu, setShowMenu, categori
   return (
     <AnimatePresence>
       {showMenu && (
-        <div className="flex flex-col font-neulissans">
+        <div className="flex flex-col font-neulisneue">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
