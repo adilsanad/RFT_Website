@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 interface ProductImageGalleryProps {
   product: {
-    name: string;
+    title: string;
     images: string[];
   };
 }
@@ -20,7 +20,7 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
         <div className="bg-primary-200 border-2 border-primary-900/15 rounded-lg overflow-hidden h-full">
           <img
             src={product.images[selectedImageIndex] || '/placeholder.svg'}
-            alt={`${product.name} - Image ${selectedImageIndex + 1}`}
+            alt={`${product.title} - Image ${selectedImageIndex + 1}`}
             className="w-full h-full object-cover cursor-zoom-in"
           />
         </div>
@@ -39,7 +39,7 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
               >
                 <img
                   src={image}
-                  alt={`${product.name} - Thumbnail ${index + 1}`}
+                  alt={`${product.title} - Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -59,7 +59,7 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
             >
               <img
                 src={image}
-                alt={`${product.name} - Image ${index + 1}`}
+                alt={`${product.title} - Image ${index + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>

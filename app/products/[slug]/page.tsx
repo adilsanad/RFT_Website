@@ -32,10 +32,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: product.metaTitle || `${product.name} | Rainfield`,
+    title: product.metaTitle || `${product.title} | Rainfield`,
     description: product.metaDescription || product.description,
     openGraph: {
-      title: product.name,
+      title: product.title,
       description: product.description,
       images: product.images,
     },
@@ -113,7 +113,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
             </nav>
           </div>
           <div className="flex flex-col gap-8">
-            <h3 >{product.name}</h3>
+            <h3 >{product.title}</h3>
             <div className="">
               <p className=''>{product.description}</p>
             </div>
@@ -130,7 +130,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
               </DialogTrigger>
               <DialogContent className="sm:max-w-[500px]">
                 <DialogHeader>
-                  <DialogTitle>Request Quote for {product.name}</DialogTitle>
+                  <DialogTitle>Request Quote for {product.title}</DialogTitle>
                   <DialogDescription>
                     Fill out the form below and we'll get back to you within 24 hours with a detailed quote.
                   </DialogDescription>
@@ -148,7 +148,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
         <ProductDropdowns product={product} />
       </section>
 
-      <section className='col-span-full flex flex-col px-8 md:px-24 pr-0 overflow-x-auto'>
+      <section className='col-span-full flex flex-col px-8 md:px-24 pr-0 md:pr-0 overflow-x-auto'>
         {/* Related Products */}
           <RelatedProductsCarousel
             products={productsData.products}

@@ -10,19 +10,21 @@ import { RotateCcw, X } from 'lucide-react'
 interface FilterState {
   search: string
   categories: string[]
+  productType: string[]
   brands: string[]
   sortBy: string
 }
 
 interface TempFilterState {
   categories: string[]
+  productType: string[]
   brands: string[]
   sortBy: string
 }
 
 // Separate component for the main products content
 function ProductsContent() {
-  const { products, categories } = productsData
+  const { products, categories, productTypes } = productsData
   const searchParams = useSearchParams()
   const router = useRouter()
 
@@ -30,6 +32,7 @@ function ProductsContent() {
   const [filters, setFilters] = useState<FilterState>({
     search: '',
     categories: [],
+    productType: [],
     brands: [],
     sortBy: 'name-asc'
   })
@@ -38,26 +41,30 @@ function ProductsContent() {
   const [tempFilters, setTempFilters] = useState<TempFilterState>({
     categories: [],
     brands: [],
+    productType: [],
     sortBy: 'name-asc'
   })
 
   // Dropdown open states
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false)
   const [brandDropdownOpen, setBrandDropdownOpen] = useState(false)
+  const [productTypeDropdownOpen, setProductTypeDropdownOpen] = useState(false)
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false)
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 6
+  const itemsPerPage = 12
 
   // Refs for dropdown positioning
   const categoryRef = useRef<HTMLDivElement>(null)
   const brandRef = useRef<HTMLDivElement>(null)
+  const productTypeRef = useRef<HTMLDivElement>(null)
   const sortRef = useRef<HTMLDivElement>(null)
 
   // Initialize filters from URL parameters
   useEffect(() => {
     const categoriesParam = searchParams.getAll('categories')
+    const productTypeParam = searchParams.getAll('productType')
     const brandsParam = searchParams.getAll('brands')
     const searchParam = searchParams.get('search')
     const sortParam = searchParams.get('sort')
@@ -65,6 +72,7 @@ function ProductsContent() {
     const initialFilters: FilterState = {
       search: searchParam || '',
       categories: categoriesParam || [],
+      productType: productTypeParam || [],
       brands: brandsParam || [],
       sortBy: sortParam || 'name-asc'
     }
@@ -72,6 +80,7 @@ function ProductsContent() {
     setFilters(initialFilters)
     setTempFilters({
       categories: initialFilters.categories,
+      productType: initialFilters.productType,
       brands: initialFilters.brands,
       sortBy: initialFilters.sortBy
     })
@@ -87,6 +96,13 @@ function ProductsContent() {
     if (newFilters.categories.length > 0) {
       newFilters.categories.forEach(category => {
         params.append('categories', category)
+      })
+    }
+
+    // Handle multiple product types
+    if (newFilters.productType.length > 0) {
+      newFilters.productType.forEach(productType => {
+        params.append('productType', productType)
       })
     }
 
@@ -122,7 +138,7 @@ function ProductsContent() {
     if (filters.search) {
       const searchLower = filters.search.toLowerCase()
       filtered = filtered.filter(product =>
-        product.name.toLowerCase().includes(searchLower) ||
+        product.title.toLowerCase().includes(searchLower) ||
         product.description.toLowerCase().includes(searchLower) ||
         product.sku.toLowerCase().includes(searchLower) ||
         product.brand?.toLowerCase().includes(searchLower)
@@ -134,6 +150,11 @@ function ProductsContent() {
       filtered = filtered.filter(product => filters.categories.includes(product.category))
     }
 
+    // Apply product type filter
+    if (filters.productType.length > 0) {
+      filtered = filtered.filter(product => filters.productType.includes(product.subcategory))
+    }
+
     // Apply brand filter
     if (filters.brands.length > 0) {
       filtered = filtered.filter(product => product.brand && filters.brands.includes(product.brand))
@@ -143,9 +164,9 @@ function ProductsContent() {
     filtered.sort((a, b) => {
       switch (filters.sortBy) {
         case 'name-asc':
-          return a.name.localeCompare(b.name)
+          return a.title.localeCompare(b.title)
         case 'name-desc':
-          return b.name.localeCompare(a.name)
+          return b.title.localeCompare(a.title)
         default:
           return 0
       }
@@ -166,8 +187,9 @@ function ProductsContent() {
   }, [filters])
 
   // Check if any filters are active
-  const hasActiveFilters = filters.search || filters.categories.length > 0 || filters.brands.length > 0 || filters.sortBy !== 'name-asc'
+  const hasActiveFilters = filters.search || filters.categories.length > 0 || filters.productType.length > 0 || filters.brands.length > 0 || filters.sortBy !== 'name-asc'
   const hasActiveCategory = filters.categories.length > 0
+  const hasActiveProductType = filters.productType.length > 0
   const hasActiveBrand = filters.brands.length > 0
 
   // Get active filters for display
@@ -182,6 +204,12 @@ function ProductsContent() {
         active.push({ type: 'category', value: categoryId, label: category.name })
       }
     })
+    filters.productType.forEach(productTypeId => {
+      const productType = productTypes.find(pt => pt.id === productTypeId)
+      if (productType) {
+        active.push({ type: 'productType', value: productTypeId, label: productType.name })
+      }
+    })
     filters.brands.forEach(brand => {
       active.push({ type: 'brand', value: brand, label: brand })
     })
@@ -193,8 +221,8 @@ function ProductsContent() {
       active.push({ type: 'sort', value: filters.sortBy, label: `Sort: ${sortLabels[filters.sortBy]}` })
     }
     return active
-  }, [filters, categories])
-  
+  }, [filters, categories, productTypes])
+
   // Handle search input
   const handleSearchChange = (value: string) => {
     const newFilters = { ...filters, search: value }
@@ -208,6 +236,13 @@ function ProductsContent() {
     setFilters(newFilters)
     updateURL(newFilters)
     setCategoryDropdownOpen(false)
+  }
+
+  const handleProductTypeConfirm = () => {
+    const newFilters = { ...filters, productType: tempFilters.productType }
+    setFilters(newFilters)
+    updateURL(newFilters)
+    setProductTypeDropdownOpen(false)
   }
 
   const handleBrandConfirm = () => {
@@ -229,12 +264,14 @@ function ProductsContent() {
     const newFilters = {
       search: '',
       categories: [],
+      productType: [],
       brands: [],
       sortBy: 'name-asc'
     }
     setFilters(newFilters)
     setTempFilters({
       categories: [],
+      productType: [],
       brands: [],
       sortBy: 'name-asc'
     })
@@ -253,6 +290,11 @@ function ProductsContent() {
       case 'category':
         if (value) {
           newFilters.categories = newFilters.categories.filter(c => c !== value)
+        }
+        break
+      case 'productType':
+        if (value) {
+          newFilters.productType = newFilters.productType.filter(pt => pt !== value)
         }
         break
       case 'brand':
@@ -279,6 +321,15 @@ function ProductsContent() {
     }))
   }
 
+  const handleProductTypeChange = (productTypeId: string, checked: boolean) => {
+    setTempFilters(prev => ({
+      ...prev,
+      productType: checked
+        ? [...prev.productType, productTypeId]
+        : prev.productType.filter(pt => pt !== productTypeId)
+    }))
+  }
+
   const handleBrandChange = (brand: string, checked: boolean) => {
     setTempFilters(prev => ({
       ...prev,
@@ -294,6 +345,12 @@ function ProductsContent() {
       setTempFilters(prev => ({ ...prev, categories: [...filters.categories] }))
     }
   }, [categoryDropdownOpen, filters.categories])
+
+  useEffect(() => {
+    if (productTypeDropdownOpen) {
+      setTempFilters(prev => ({ ...prev, productType: [...filters.productType] }))
+    }
+  }, [productTypeDropdownOpen, filters.productType])
 
   useEffect(() => {
     if (brandDropdownOpen) {
@@ -315,6 +372,9 @@ function ProductsContent() {
       }
       if (brandRef.current && !brandRef.current.contains(event.target as Node)) {
         setBrandDropdownOpen(false)
+      }
+      if (productTypeRef.current && !productTypeRef.current.contains(event.target as Node)) {
+        setProductTypeDropdownOpen(false)
       }
       if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
         setSortDropdownOpen(false)
@@ -403,7 +463,7 @@ function ProductsContent() {
         </div>
         {/* Filtering Option Bar */}
         <div className='flex flex-col'>
-          <div className={`flex max-md:flex-col h-fit border-2 border-primary-900/30 ${brandDropdownOpen ? 'md:rounded-[15px_15px_15px_0px]' : 'md:rounded-[15px]'} ${sortDropdownOpen ? 'max-md:rounded-[15px_15px_15px_0px]' : 'max-md:rounded-[15px]'} transition-all `}>
+          <div className={`flex max-md:flex-col h-fit border-2 border-primary-900/30 ${brandDropdownOpen ? 'md:rounded-[15px_15px_15px_0px]' : 'md:rounded-[15px]'} ${productTypeDropdownOpen ? 'max-md:rounded-[15px_15px_15px_0px]' : 'max-md:rounded-[15px]'} transition-all `}>
             <div className='flex flex-[2] font-neulissans max-md:border-b-2 border-primary-900/30'>
               {/* Brand Filter Dropdown */}
               <div className="relative h-fit flex-1 flex" ref={brandRef}>
@@ -540,7 +600,72 @@ function ProductsContent() {
               <div className='h-full hidden md:flex w-[2px] bg-primary-900/30' />
             </div>
             <div className='flex flex-[3] font-neulissans'>
-              {/* Sort By Dropdown */}
+              {/* Product Type Dropdown */}
+              <div className="relative h-full flex-[3] flex" ref={productTypeRef}>
+                <button
+                  className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveProductType ? 'bg-primary-300' : 'bg-primary-100'} ${productTypeDropdownOpen ? 'rounded-[0px]' : 'rounded-[0px_0px_0px_14.5px]'}`}
+                  onClick={() => setProductTypeDropdownOpen(!productTypeDropdownOpen)}
+                >
+                  <h5 className=''>Product Type</h5>
+                  <div className='flex items-center justify-center gap-2'>
+                    <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveProductType ? 'opacity-100' : 'opacity-0'}`}>{filters.productType.length > 0 && `${filters.productType.length}`}</span>
+                    <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${productTypeDropdownOpen ? 'rotate-180' : ''}`} />
+                  </div>
+                </button>
+
+                {productTypeDropdownOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
+                    className="absolute top-[94%] -left-[1%] md:-left-[0.5%] mt-1 w-56 md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
+                    <div className="flex flex-col">
+                      <div className="flex flex-col max-h-64 overflow-y-auto">
+                        {productTypes.map((productType) => (
+                          <label key={productType.id} className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.productType.includes(productType.id) ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
+                            <span className="text-base md:text-lg text-[#35463A] tracking-tight">{productType.name}</span>
+                            {/* Custom Checkbox */}
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                checked={tempFilters.productType.includes(productType.id)}
+                                onChange={(e) => handleProductTypeChange(productType.id, e.target.checked)}
+                                className="sr-only" // Hide default checkbox
+                              />
+                              <div
+                                className={`
+                                  w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center
+                                  ${tempFilters.productType.includes(productType.id)
+                                    ? 'bg-primary-600 border-primary-600'
+                                    : 'bg-white border-gray-300 hover:border-primary-400'
+                                  }
+                                    `}
+                              >
+                                {tempFilters.productType.includes(productType.id) && (
+                                  <Icon name='check' className='h-3 w-3 fill-white' />
+                                )}
+                              </div>
+                            </div>
+                          </label>
+
+                        ))}
+                      </div>
+                      <div className="flex w-full p-4 gap-4">
+                        <button
+                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-base md:text-lg items-center justify-center px-3 md:px-5 py-3 transition-all'
+                          onClick={() => setProductTypeDropdownOpen(false)}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          className='flex font-medium tracking-tighter text-base md:text-lg items-center justify-center rounded-[15px] px-3 md:px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
+                          onClick={handleProductTypeConfirm}>
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+              {/* Sort By Dropdown 
               <div className="relative h-full flex-[3] flex" ref={sortRef}>
                 <button
                   className={`flex justify-between h-full w-full items-center p-6 py-4 bg-primary-100 ${sortDropdownOpen ? 'max-md:rounded-[0px]' : 'max-md:rounded-[0px_0px_0px_14.5px]'} `}
@@ -647,6 +772,7 @@ function ProductsContent() {
                   </motion.div>
                 )}
               </div>
+              */}
               <div className='h-full flex w-[2px] bg-primary-900/30' />
               <div className={`flex gap-4 flex-[5] items-center rounded-[0px_15px_15px_0px] ${filters.search ? 'bg-primary-300 ' : 'bg-primary-100 '} transition-all `}>
                 <Icon name="search" width={20} className="ml-6" />
@@ -726,17 +852,20 @@ function ProductsContent() {
                       <div className="p-0">
                         <div className="aspect-square bg-primary-100 rounded-[15px] border-2 border-primary-900/30 overflow-hidden">
                           <img
-                            src={product.images[0] || '/placeholder.svg'}
-                            alt={product.name}
+                            src={product.images[0] || '/assets/images/noimage.jpg'}
+                            alt={product.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).src = '/assets/images/noimage.jpg';
+                            }}
                           />
                         </div>
                       </div>
                       <div className="flex flex-col max-md:px-2 p-4 gap-2">
-                        <h4 className="group-hover:text-primary-800 transition-all text-base md:text-2xl font-neulissans font-medium tracking-tight leading-tight">{product.name}</h4>
+                        <h4 className="group-hover:text-primary-800 transition-all text-base md:text-xl font-neulissans font-medium tracking-tight leading-tight">{product.title}</h4>
                         <div className="flex text-gray-400 font-medium">
                           {product.brand && (
-                            <p className='text-sm md:text-lg font-medium font-neulissans tracking-tight leading-tight'>{product.brand} · {categories.find(c => c.id === product.category)?.name} </p>
+                            <p className='text-sm md:text-lg font-medium font-neulissans tracking-tight leading-tight'>{product.brand} · {productTypes.find(c => c.id === product.subcategory)?.name} · {product.subtitle} </p>
                           )}
                         </div>
                       </div>

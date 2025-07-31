@@ -337,7 +337,7 @@ export default function Header() {
             ? "px-6 py-3 bg-white/60 border border-gray-300 rounded-[15px] shadow-md backdrop-blur-lg"
             : "px-8 py-4 bg-gradient-to-b from-white/80 to-white/0 rounded-none shadow-none backdrop-blur-sm"
           }`}>
-          <Link href='/' className="flex items-center py-2">
+          <Link href='/' onClick={() => setShowMenu(false)} className="flex items-center py-2">
             <Logo className={scrolled && !showMenu ? 'w-[124px] md:w-[140px]' : 'w-[136px] md:w-[160px]'} />
           </Link>
 

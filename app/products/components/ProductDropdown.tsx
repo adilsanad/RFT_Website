@@ -22,7 +22,7 @@ interface OpenSections {
 const ProductDropdowns: React.FC<ProductDropdownsProps> = ({ product }) => {
   const [openSections, setOpenSections] = useState<OpenSections>({
     description: true,
-    specifications: false,
+    specifications: true,
     features: false,
   });
 
