@@ -40,7 +40,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       if (link === 'back' && mounted) {
-        router.back();
+        // If we're on a product page, navigate back to products page to restore state
+        if (window.location.pathname.includes('/products/') && !window.location.pathname.endsWith('/products')) {
+          router.push('/products');
+        } else {
+          router.back();
+        }
       } else if (link && link !== 'back') {
         window.open(link, "_blank");
       } else if (props.onClick) {

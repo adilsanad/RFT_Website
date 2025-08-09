@@ -231,7 +231,7 @@
       "subtitle": "CHECK VALVE",
       "title": "PGP CHECK VALVE",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "CHECK VALVE"
       ],
@@ -679,7 +679,7 @@
       "subtitle": "TURFCUPKITI40",
       "title": "Turf Cup Kit for I-40 Rotors, fits adjustable and opposing nozzle models",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "TURFCUPKITI40"
       ],
@@ -967,7 +967,7 @@
       "subtitle": "517600SP",
       "title": "ST Rotor Service Tool for removing gear drive",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "517600SP"
       ],
@@ -1031,7 +1031,7 @@
       "subtitle": "MP800SR90",
       "title": "MP Rotator Nozzle, 20 mm/hr precipitation rate, 1.8 m to 3.5 m radius, 90\u00b0 to 210\u00b0 adjustable arc, female thread, grey and orange",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP800SR90"
       ],
@@ -1063,7 +1063,7 @@
       "subtitle": "MP800SR360",
       "title": "MP Rotator Nozzle, 20 mm/hr precipitation rate, 1.8 m to 3.5 m radius, 360\u00b0 arc, female thread, grey and lime green",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP800SR360"
       ],
@@ -1095,7 +1095,7 @@
       "subtitle": "MP100090",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 2.5 m to 4.5 m radius, 90\u00b0 to 210\u00b0 adjustable arc, female thread, maroon",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP100090"
       ],
@@ -1127,7 +1127,7 @@
       "subtitle": "MP1000210",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 2.5 m to 4.5 m radius, 210\u00b0 to 270\u00b0 adjustable arc, female thread, light blue",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP1000210"
       ],
@@ -1159,7 +1159,7 @@
       "subtitle": "MP1000360",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 2.5 m to 4.5 m radius, 360\u00b0 arc, female thread, olive",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP1000360"
       ],
@@ -1191,7 +1191,7 @@
       "subtitle": "MP200090",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 4 m to 6.4 m radius, 90\u00b0 to 210\u00b0 adjustable arc, female thread, black",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP200090"
       ],
@@ -1223,7 +1223,7 @@
       "subtitle": "MP2000210",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 4 m to 6.4 m radius, 210\u00b0 to 270\u00b0 adjustable arc, female thread, green",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP2000210"
       ],
@@ -1255,7 +1255,7 @@
       "subtitle": "MP2000360",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 4 m to 6.4 m radius, 360\u00b0 arc, female thread, red",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP2000360"
       ],
@@ -1287,7 +1287,7 @@
       "subtitle": "MP300090",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 6.7 m to 9 m radius, 90\u00b0 to 210\u00b0 adjustable arc, female thread, blue",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP300090"
       ],
@@ -1319,7 +1319,7 @@
       "subtitle": "MP3000210",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 6.7 m to 9 m radius, 210\u00b0 to 270\u00b0 adjustable arc, female thread, yellow",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP3000210"
       ],
@@ -1351,7 +1351,7 @@
       "subtitle": "MP3000360",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 6.7 m to 9 m radius, 360\u00b0 arc, female thread, grey",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP3000360"
       ],
@@ -1383,7 +1383,7 @@
       "subtitle": "MP350090",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 9.4 m to 10.5 m radius, 90\u00b0 to 210\u00b0 adjustable arc, female thread, tan",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MP350090"
       ],
@@ -1415,7 +1415,7 @@
       "subtitle": "MPCORNER",
       "title": "MP Rotator Nozzle, 10 mm/hr precipitation rate, 2.5 m to 4.5 m radius, 45\u00b0 to 105\u00b0 adjustable arc, female thread, turquoise",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPCORNER"
       ],
@@ -1447,7 +1447,7 @@
       "subtitle": "MP-TOOL",
       "title": "Spare Part: Adjustment Tool for Arc & Radius",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MP-TOOL"
       ],
@@ -1479,7 +1479,7 @@
       "subtitle": "MPLCS515",
       "title": "MP Rotator Nozzle, left corner strip, 1.5 m x 4.5 m pattern, female threaded, ivory",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPLCS515"
       ],
@@ -1511,7 +1511,7 @@
       "subtitle": "MPRCS515",
       "title": "MP Rotator Nozzle, right corner strip, 1.5 m x 4.5 m pattern, female threaded, copper",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPRCS515"
       ],
@@ -1543,7 +1543,7 @@
       "subtitle": "MPSS530",
       "title": "MP Rotator Nozzle, side strip, 1.5 m x 9 m pattern, female threaded, brown",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPSS530"
       ],
@@ -1575,7 +1575,7 @@
       "subtitle": "MPSTAKE",
       "title": "MP Stake Kit, 66 cm preassembled staking kit, 0.345\" tubing to \u00bd\" male fitting, and PROS-00 Shrub Adapter (total height: 71 cm)",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MPSTAKE"
       ],
@@ -1607,7 +1607,7 @@
       "subtitle": "MPSTAKEPRS40CV",
       "title": "MP Stake Kit, 66 cm preassembled staking kit, 0.345\" tubing to \u00bd\" male fitting, HCV Check Valve, and pressure-regulated PROS-00-PRS40 Shrub Adapter (total height: 86 cm)",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MPSTAKEPRS40CV"
       ],
@@ -1639,7 +1639,7 @@
       "subtitle": "ECOROTATOR: ROTARY SPRINKLER COMBINATION",
       "title": "MODEL ECOROTATOR, 10 CM (4\") POPUP SPRINKLER WITH INTEGRAL MP ROTATOR NOZZLE AND \u00bd\" INLET",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "ECOROTATOR: ROTARY SPRINKLER COMBINATION"
       ],
@@ -1671,7 +1671,7 @@
       "subtitle": "ECO041090",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP1000-90 Nozzle, 2.5 m to 4.5 m radius, 90\u00b0 to 210\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO041090"
       ],
@@ -1703,7 +1703,7 @@
       "subtitle": "ECO042090",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP2000-90 Nozzle, 4 m to 6.4 m radius, 90\u00b0 to 210\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO042090"
       ],
@@ -1735,7 +1735,7 @@
       "subtitle": "ECO043090",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP3000-90 Nozzle, 6.7 m to 9 m radius, 90\u00b0 to 210\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO043090"
       ],
@@ -1767,7 +1767,7 @@
       "subtitle": "ECO0410360",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP1000-360 Nozzle, 2.5 m to 4.5 m radius, 360\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO0410360"
       ],
@@ -1799,7 +1799,7 @@
       "subtitle": "ECO0420360",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP2000-360 Nozzle, 4 m to 6.4 m radius, 360\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO0420360"
       ],
@@ -1831,7 +1831,7 @@
       "subtitle": "ECO0430360",
       "title": "Eco-Rotator Sprinkler, 10 cm pop-up with MP3000-360 Nozzle, 6.7 m to 9 m radius, 360\u00b0, large inlet filter screen, and \u00bd\" inlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ECO0430360"
       ],
@@ -1863,7 +1863,7 @@
       "subtitle": "PS ULTRA: SPRAYS WITH PREINSTALLED NOZZLE",
       "title": "MODEL PS ULTRA, 5 CM (2\") POPUP SPRAYS WITH PREINSTALLED NOZZLE OR FLUSH PLUG AND \u00bd\" INLET",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PS ULTRA: SPRAYS WITH PREINSTALLED NOZZLE"
       ],
@@ -1895,7 +1895,7 @@
       "subtitle": "PSU02",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with flush plug and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "PSU02"
       ],
@@ -1927,7 +1927,7 @@
       "subtitle": "PSU0210A",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with preinstalled nozzle, 3 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0210A"
       ],
@@ -1959,7 +1959,7 @@
       "subtitle": "PSU0212A",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with preinstalled nozzle, 3.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0212A"
       ],
@@ -1991,7 +1991,7 @@
       "subtitle": "PSU0215A",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with preinstalled nozzle, 4.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0215A"
       ],
@@ -2023,7 +2023,7 @@
       "subtitle": "PSU0217A",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with preinstalled nozzle, 5.2 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0217A"
       ],
@@ -2055,7 +2055,7 @@
       "subtitle": "PSU025SS",
       "title": "PS Ultra Sprinkler Body, 5 cm slim pop-up with preinstalled nozzle, 1.5 m x 9 m side strip, and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU025SS"
       ],
@@ -2087,7 +2087,7 @@
       "subtitle": "PSU04",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with flush plug and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "PSU04"
       ],
@@ -2119,7 +2119,7 @@
       "subtitle": "PSU0410A",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 3 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0410A"
       ],
@@ -2151,7 +2151,7 @@
       "subtitle": "PSU0412A",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 3.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0412A"
       ],
@@ -2183,7 +2183,7 @@
       "subtitle": "PSU0415A",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 4.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0415A"
       ],
@@ -2215,7 +2215,7 @@
       "subtitle": "PSU0417A",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 5.2 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0417A"
       ],
@@ -2247,7 +2247,7 @@
       "subtitle": "PSU045SS",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 1.5 m x 9 m side strip, \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU045SS"
       ],
@@ -2279,7 +2279,7 @@
       "subtitle": "PSU0410ANFO",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 3 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0410ANFO"
       ],
@@ -2311,7 +2311,7 @@
       "subtitle": "PSU0412ANFO",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 3.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0412ANFO"
       ],
@@ -2343,7 +2343,7 @@
       "subtitle": "PSU0415ANFO",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 4.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0415ANFO"
       ],
@@ -2375,7 +2375,7 @@
       "subtitle": "PSU0417ANFO",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 5.2 m radius, adjustable arc (0\u00b0 to 360\u00b0), and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0417ANFO"
       ],
@@ -2407,7 +2407,7 @@
       "subtitle": "PSU045SSNFO",
       "title": "PS Ultra Sprinkler Body, 10 cm slim pop-up with preinstalled nozzle, 1.5 m x 9 m side strip, and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU045SSNFO"
       ],
@@ -2439,7 +2439,7 @@
       "subtitle": "PSU06",
       "title": "PS Ultra Sprinkler Body, 15 cm slim pop-up with flush plug and \u00bd\" inlet; no large filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "PSU06"
       ],
@@ -2471,7 +2471,7 @@
       "subtitle": "PSU0610A",
       "title": "PS Ultra Sprinkler Body, 15 cm slim pop-up with preinstalled nozzle, 3 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0610A"
       ],
@@ -2503,7 +2503,7 @@
       "subtitle": "PSU0612A",
       "title": "PS Ultra Sprinkler Body, 15 cm slim pop-up with preinstalled nozzle, 3.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0612A"
       ],
@@ -2535,7 +2535,7 @@
       "subtitle": "PSU0615A",
       "title": "PS Ultra Sprinkler Body, 15 cm slim pop-up with preinstalled nozzle, 4.5 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0615A"
       ],
@@ -2567,7 +2567,7 @@
       "subtitle": "PSU0617A",
       "title": "PS Ultra Sprinkler Body, 15 cm slim pop-up with preinstalled nozzle, 5.2 m radius, adjustable arc (0\u00b0 to 360\u00b0), \u00bd\" inlet, and large inlet filter screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PSU0617A"
       ],
@@ -2599,7 +2599,7 @@
       "subtitle": "462237",
       "title": "QTY 25, CHECK VALVE, PS ULTRA",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "462237"
       ],
@@ -2631,7 +2631,7 @@
       "subtitle": "PROSPRAY",
       "title": "PROSPRAY SPRINKLER BODIES WITH \u00bd\" INLET",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "PROSPRAY"
       ],
@@ -2663,7 +2663,7 @@
       "subtitle": "PROS00",
       "title": "Pro-Spray Sprinkler Body, shrub adapter with \u00bd\" inlet; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS00"
       ],
@@ -2695,7 +2695,7 @@
       "subtitle": "PROS02",
       "title": "Pro-Spray Sprinkler Body, 5 cm pop-up with \u00bd\" inlet; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS02"
       ],
@@ -2727,7 +2727,7 @@
       "subtitle": "PROS03",
       "title": "Pro-Spray Sprinkler Body, 7.5 cm pop-up with check valve and \u00bd\" inlet; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS03"
       ],
@@ -2759,7 +2759,7 @@
       "subtitle": "PROS04",
       "title": "Pro-Spray Sprinkler Body, 10 cm pop-up with \u00bd\" inlet; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS04"
       ],
@@ -2791,7 +2791,7 @@
       "subtitle": "PROS06",
       "title": "Pro-Spray Sprinkler Body, 15 cm pop-up with \u00bd\" inlet; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS06"
       ],
@@ -2823,7 +2823,7 @@
       "subtitle": "PROS12",
       "title": "Pro-Spray Sprinkler Body, 30 cm pop-up with \u00bd\" inlet; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS12"
       ],
@@ -2855,7 +2855,7 @@
       "subtitle": "PROS04CV",
       "title": "Pro-Spray Sprinkler Body, 10 cm pop-up with check valve and \u00bd\" inlet; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS04CV"
       ],
@@ -2887,7 +2887,7 @@
       "subtitle": "PROS06CV",
       "title": "Pro-Spray Sprinkler Body, 15 cm pop-up with check valve and \u00bd\" inlet; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS06CV"
       ],
@@ -2919,7 +2919,7 @@
       "subtitle": "PROS12CV",
       "title": "Pro-Spray Sprinkler Body, 30 cm pop-up with check valve and \u00bd\" inlet; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS12CV"
       ],
@@ -2951,7 +2951,7 @@
       "subtitle": "PROS00PRS30",
       "title": "Pro-Spray PRS30 Sprinkler Body, shrub adapter with 2.1 bar; 210 kPa pressure regulator and \u00bd\" inlet, brown; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS00PRS30"
       ],
@@ -2983,7 +2983,7 @@
       "subtitle": "PROS04PRS30",
       "title": "Pro-Spray PRS30 Sprinkler Body, 10 cm pop-up with 2.1 bar; 210 kPa bar pressure regulator, \u00bd\" inlet, and brown cap; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS04PRS30"
       ],
@@ -3015,7 +3015,7 @@
       "subtitle": "PROS06PRS30",
       "title": "Pro-Spray PRS30 Sprinkler Body, 15 cm pop-up with 2.1 bar; 210 kPa pressure regulator, \u00bd\" inlet, and brown cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS06PRS30"
       ],
@@ -3047,7 +3047,7 @@
       "subtitle": "PROS12PRS30",
       "title": "Pro-Spray PRS30 Sprinkler Body, 30 cm pop-up with 2.1 bar; 210 kPa pressure regulator, \u00bd\" inlet, and brown cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS12PRS30"
       ],
@@ -3079,7 +3079,7 @@
       "subtitle": "PROS04PRS30CV",
       "title": "Pro-Spray PRS30 Sprinkler Body, 10 cm pop-up with 2.1 bar; 210 kPa bar pressure regulator, check valve, \u00bd\" inlet, and brown cap; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS04PRS30CV"
       ],
@@ -3111,7 +3111,7 @@
       "subtitle": "PROS06PRS30CV",
       "title": "Pro-Spray PRS30 Sprinkler Body, 15 cm pop-up with 2.1 bar; 210 kPa pressure regulator, check valve, \u00bd\" inlet, and brown cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS06PRS30CV"
       ],
@@ -3143,7 +3143,7 @@
       "subtitle": "PROS12PRS30CV",
       "title": "Pro-Spray PRS30 Sprinkler Body, 30 cm pop-up with 2.1 bar; 210 kPa pressure regulator, check valve, \u00bd\" inlet, and brown cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS12PRS30CV"
       ],
@@ -3175,7 +3175,7 @@
       "subtitle": "PROS00PRS40",
       "title": "Pro-Spray PRS40 Sprinkler Body, shrub adapter, 2.8 bar; 280 kPa pressure regulator, and \u00bd\" inlet, grey; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "PROS00PRS40"
       ],
@@ -3207,7 +3207,7 @@
       "subtitle": "PROS04PRS40CV",
       "title": "Pro-Spray PRS40 Sprinkler Body, 10 cm pop-up with 2.8 bar; 280 kPa pressure regulator, check valve, \u00bd\" inlet, and grey cap; accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS04PRS40CV"
       ],
@@ -3239,7 +3239,7 @@
       "subtitle": "PROS06PRS40CV",
       "title": "Pro-Spray PRS40 Sprinkler Body, 15 cm pop-up with 2.8 bar; 280 kPa pressure regulator, check valve, \u00bd\" inlet, and grey cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS06PRS40CV"
       ],
@@ -3271,7 +3271,7 @@
       "subtitle": "PROS12PRS40CV",
       "title": "Pro-Spray PRS40 Sprinkler Body, 30 cm pop-up with 2.8 bar; 280 kPa pressure regulator, check valve, \u00bd\" inlet, and grey cap; no side inlet, accepts female thread nozzles",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PROS12PRS40CV"
       ],
@@ -3303,7 +3303,7 @@
       "subtitle": "4A",
       "title": "Pro Adjustable Nozzle, 1.2 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "4A"
       ],
@@ -3335,7 +3335,7 @@
       "subtitle": "6A",
       "title": "Pro Adjustable Nozzle, 1.8 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "6A"
       ],
@@ -3367,7 +3367,7 @@
       "subtitle": "8A",
       "title": "Pro Adjustable Nozzle, 2.5 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "8A"
       ],
@@ -3399,7 +3399,7 @@
       "subtitle": "10A",
       "title": "Pro Adjustable Nozzle, 3 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "10A"
       ],
@@ -3431,7 +3431,7 @@
       "subtitle": "12A",
       "title": "Pro Adjustable Nozzle, 3.5 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "12A"
       ],
@@ -3463,7 +3463,7 @@
       "subtitle": "15A",
       "title": "Pro Adjustable Nozzle, 4.6 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "15A"
       ],
@@ -3495,7 +3495,7 @@
       "subtitle": "17A",
       "title": "Pro Adjustable Nozzle, 5.2 m radius, adjustable arc from 0\u00b0 to 360\u00b0, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "17A"
       ],
@@ -3527,7 +3527,7 @@
       "subtitle": "2Q",
       "title": "Short-Radius Micro Spray Nozzle, 0.6 m radius, 90\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "2Q"
       ],
@@ -3559,7 +3559,7 @@
       "subtitle": "4Q",
       "title": "Short-Radius Micro Spray Nozzle, 1.2 m radius, 90\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "4Q"
       ],
@@ -3591,7 +3591,7 @@
       "subtitle": "6Q",
       "title": "Short-Radius Micro Spray Nozzle, 1.8 m radius, 90\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "6Q"
       ],
@@ -3623,7 +3623,7 @@
       "subtitle": "2H",
       "title": "Short-Radius Micro Spray Nozzle, 0.6 m radius, 180\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "2H"
       ],
@@ -3655,7 +3655,7 @@
       "subtitle": "4H",
       "title": "Short-Radius Micro Spray Nozzle, 1.2 m radius, 180\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "4H"
       ],
@@ -3687,7 +3687,7 @@
       "subtitle": "6H",
       "title": "Short-Radius Micro Spray Nozzle, 1.8 m radius, 180\u00b0, fixed arc, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "6H"
       ],
@@ -3719,7 +3719,7 @@
       "subtitle": "CS530",
       "title": "Strip Pattern Nozzle, 1.5 m x 9 m center strip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "CS530"
       ],
@@ -3751,7 +3751,7 @@
       "subtitle": "ES515",
       "title": "Strip Pattern Nozzle, 1.5 m x 5 m end strip, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "ES515"
       ],
@@ -3783,7 +3783,7 @@
       "subtitle": "LCS515",
       "title": "Strip Pattern Nozzle, 1.5 m x 4.5 m corner strip, left",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "LCS515"
       ],
@@ -3815,7 +3815,7 @@
       "subtitle": "RCS515",
       "title": "Strip Pattern Nozzle, 1.5 m x 4.5 m corner strip pattern, right",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "RCS515"
       ],
@@ -3847,7 +3847,7 @@
       "subtitle": "SS530",
       "title": "Strip Pattern Nozzle, 1.5 m x 9 m side strip pattern, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "SS530"
       ],
@@ -3879,7 +3879,7 @@
       "subtitle": "SS918",
       "title": "Strip Pattern Nozzle, 2.75 m x 5.5 m side strip pattern, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "nozzles",
       "variants": [
         "SS918"
       ],
@@ -3911,7 +3911,7 @@
       "subtitle": "PCN25",
       "title": "Pressure-Compensating Bubbler Nozzle, flood pattern, 0.9 l/min, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "PCN25"
       ],
@@ -3943,7 +3943,7 @@
       "subtitle": "PCN50",
       "title": "Pressure-Compensating Bubbler Nozzle, flood pattern, 1.9 l/min, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "PCN50"
       ],
@@ -3975,7 +3975,7 @@
       "subtitle": "PCN10",
       "title": "Pressure-Compensating Bubbler Nozzle, flood pattern, 3.8 l/min, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "PCN10"
       ],
@@ -4007,7 +4007,7 @@
       "subtitle": "PCN20",
       "title": "Pressure-Compensating Bubbler Nozzle, flood pattern, 7.6 l/min, female thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "PCN20"
       ],
@@ -4039,7 +4039,7 @@
       "subtitle": "AFB",
       "title": "Adjustable Flood Bubbler Nozzle, pressure-compensating, flood pattern, 7.6 l/min maximum flow, \u00bd\" thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "AFB"
       ],
@@ -4071,7 +4071,7 @@
       "subtitle": "PGV101GB",
       "title": "PGV Valve, screw-top, 1\" (25 mm) BSP valve with flow control and female thread inlet / outlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "PGV101GB"
       ],
@@ -4103,7 +4103,7 @@
       "subtitle": "PGV151B",
       "title": "PGV Valve, screw-top, 1\u00bd\" (40 mm) BSP combination globe/angle valve with flow control and female thread inlet / outlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "PGV151B"
       ],
@@ -4135,7 +4135,7 @@
       "subtitle": "PGV201B",
       "title": "PGV Valve, screw-top, 2\" (50 mm) BSP combination globe / angle valve with flow control and female thread inlet / outlet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "PGV201B"
       ],
@@ -4167,7 +4167,7 @@
       "subtitle": "606800",
       "title": "24 V AC COIL",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "606800"
       ],
@@ -4199,7 +4199,7 @@
       "subtitle": "ICV101GB",
       "title": "ICV Valve, 1\" (25 mm) BSP glass-filled nylon globe valve with flow control",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "ICV101GB"
       ],
@@ -4231,7 +4231,7 @@
       "subtitle": "ICV151GB",
       "title": "ICV Valve, 1\u00bd\" (40 mm) BSP glass-filled nylon globe valve with flow control",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "ICV151GB"
       ],
@@ -4263,7 +4263,7 @@
       "subtitle": "ICV201GB",
       "title": "ICV Valve, 2\" (50 mm) BSP glass-filled nylon globe valve with flow control",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "ICV201GB"
       ],
@@ -4295,7 +4295,7 @@
       "subtitle": "ICV301B",
       "title": "ICV Valve, 3\" (80 mm) BSP glass-filled nylon globe / angle valve with flow control",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "ICV301B"
       ],
@@ -4327,7 +4327,7 @@
       "subtitle": "ACCUSYNCADJ",
       "title": "Accu Sync Pressure Regulator, 1.4 to 6.9 bar; 137 to 690 kPa adjustable pressure model includes solenoid adapter; works with any Hunter valve",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ACCUSYNCADJ"
       ],
@@ -4359,7 +4359,7 @@
       "subtitle": "DBRY100",
       "title": "Connector Kit, 100 bulk",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "DBRY100"
       ],
@@ -4391,7 +4391,7 @@
       "subtitle": "HQ3RC",
       "title": "HQ Quick Coupler, \u00be\" female inlet, 2 slots, 1-piece body; compatible with HK-33 Quick Coupler Key, HS-0 Hose Swivel, and yellow lid",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HQ3RC"
       ],
@@ -4423,7 +4423,7 @@
       "subtitle": "HQ44RC",
       "title": "HQ Quick Coupler, 1\" (25 mm) female inlet, 1 slot, 2-piece body; compatible with HK-44 Quick Coupler Key, HS-1 or HS-2 Hose Swivel, and yellow lid",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HQ44RC"
       ],
@@ -4455,7 +4455,7 @@
       "subtitle": "HK33",
       "title": "HK Quick Coupler Key, \u00be\" double lug inlet, combination \u00be\" male / \u00bd\" female outlet; compatible with HQ-3 and HQ-33 Valves plus HS-0 Hose Swivel",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "HK33"
       ],
@@ -4487,7 +4487,7 @@
       "subtitle": "HK44",
       "title": "HK Quick Coupler Key, 1\" (25 mm) single stainless lug inlet, combination 1\" (25 mm) male / \u00be\" female outlet; compatible with HQ-44 Valves plus HS-1 and HS-2 Hose Swivels",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "HK44"
       ],
@@ -4519,7 +4519,7 @@
       "subtitle": "HS0",
       "title": "Hose Swivel, \u00be\" NPT female inlet, \u00be\" hose outlet; compatible with HK-33 Quick Coupler Key",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HS0"
       ],
@@ -4551,7 +4551,7 @@
       "subtitle": "HS2",
       "title": "Hose Swivel, 1\" (25 mm) NPT female inlet, 1\" (25 mm) hose outlet; compatible with HK-44, HK-44A, and HK-55 Quick Coupler Keys",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HS2"
       ],
@@ -4583,7 +4583,7 @@
       "subtitle": "XC401IE",
       "title": "X-Core Controller, 4-station, indoor, 230 VAC with lead and European plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "XC401IE"
       ],
@@ -4615,7 +4615,7 @@
       "subtitle": "XC601IE",
       "title": "X-Core Controller, 6-station, indoor, 230 VAC with lead and European plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "XC601IE"
       ],
@@ -4647,7 +4647,7 @@
       "subtitle": "XC801IE",
       "title": "X-Core Controller, 8-station, indoor, 230 VAC with lead and European plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "XC801IE"
       ],
@@ -4679,7 +4679,7 @@
       "subtitle": "X2401E",
       "title": "X2 Controller, fixed 4-station, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "X2401E"
       ],
@@ -4711,7 +4711,7 @@
       "subtitle": "X2601E",
       "title": "X2 Controller, fixed 6-station, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "X2601E"
       ],
@@ -4743,7 +4743,7 @@
       "subtitle": "X2801E",
       "title": "X2 Controller, fixed 8-station, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "X2801E"
       ],
@@ -4775,7 +4775,7 @@
       "subtitle": "X21401E",
       "title": "X2 Controller, fixed 14-station, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "X21401E"
       ],
@@ -4807,7 +4807,7 @@
       "subtitle": "WAND",
       "title": "WAND Module, adds Wi-Fi and Bluetooth to enable Hydrawise Software for the X2 Controller",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "WAND"
       ],
@@ -4839,7 +4839,7 @@
       "subtitle": "HC075FLOWB",
       "title": "HC Flow Meter with \u00be\" (20 mm) male BSP thread, metric litres",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "HC075FLOWB"
       ],
@@ -4871,7 +4871,7 @@
       "subtitle": "HC100FLOWB",
       "title": "HC Flow Meter with 1\" (25 mm) male BSP thread, metric litres",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "HC100FLOWB"
       ],
@@ -4903,7 +4903,7 @@
       "subtitle": "HC150FLOWB",
       "title": "HC Flow Meter with 1\u00bd\" (40 mm) male BSP thread, metric litres",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "HC150FLOWB"
       ],
@@ -4935,7 +4935,7 @@
       "subtitle": "HC200FLOWB",
       "title": "HC Flow Meter with 2\" (50 mm) male BSP thread, metric litres",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "HC200FLOWB"
       ],
@@ -4967,7 +4967,7 @@
       "subtitle": "PHC601E",
       "title": "Pro-HC Controller, Hydrawise-enabled with Wi-Fi connection, fixed 6-station model, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PHC601E"
       ],
@@ -4999,7 +4999,7 @@
       "subtitle": "PHC1201E",
       "title": "Pro-HC Controller, Hydrawise-enabled with Wi-Fi connection, fixed 12-station model, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PHC1201E"
       ],
@@ -5031,7 +5031,7 @@
       "subtitle": "PHC2401E",
       "title": "Pro-HC Controller, Hydrawise-enabled with Wi-Fi connection, fixed 24-station model, plastic wall mount cabinet, 230 VAC with European connection and no plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PHC2401E"
       ],
@@ -5063,7 +5063,7 @@
       "subtitle": "HPC401E",
       "title": "HPC Controller, Hydrawise-enabled with Wi-Fi connection, 4-station base model, plastic wall mount cabinet, 230 VAC with European connection and plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HPC401E"
       ],
@@ -5095,7 +5095,7 @@
       "subtitle": "PCM300",
       "title": "Output Module for HPC and Pro-C Controllers, 3-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PCM300"
       ],
@@ -5127,7 +5127,7 @@
       "subtitle": "PCM900",
       "title": "Output Module for HPC and Pro-C Controllers, 9-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PCM900"
       ],
@@ -5159,7 +5159,7 @@
       "subtitle": "PCM1600",
       "title": "Output Module for HPC and Pro-C Controllers, 16-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PCM1600"
       ],
@@ -5191,7 +5191,7 @@
       "subtitle": "HPCFP",
       "title": "HPC retrofit front panel to upgrade Pro-C Controllers to Wi-Fi enabled Hydrawise control",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HPCFP"
       ],
@@ -5223,7 +5223,7 @@
       "subtitle": "PCWIFI",
       "title": "Plug-in Wi-Fi Module for Pro-C Controller",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PCWIFI"
       ],
@@ -5255,7 +5255,7 @@
       "subtitle": "HCC800PL",
       "title": "HCC Controller, Hydrawise-enabled with Wi-Fi connection, 8-station base model, plastic wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HCC800PL"
       ],
@@ -5287,7 +5287,7 @@
       "subtitle": "ICM400",
       "title": "Output Module for HCC and ICC2 Controllers, 4-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICM400"
       ],
@@ -5319,7 +5319,7 @@
       "subtitle": "ICM800",
       "title": "Output Module for HCC and ICC2 Controllers, 8-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICM800"
       ],
@@ -5351,7 +5351,7 @@
       "subtitle": "ICM2200",
       "title": "Output Module for HCC and ICC2 Controllers, 22-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICM2200"
       ],
@@ -5383,7 +5383,7 @@
       "subtitle": "HCCFPUP",
       "title": "HCC Retrofit Upgrade Kit for ICC and ICC2 Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HCCFPUP"
       ],
@@ -5415,7 +5415,7 @@
       "subtitle": "HCC800M",
       "title": "HCC Controller, Hydrawise-enabled with Wi-Fi connection, 8-station base model, grey metal wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HCC800M"
       ],
@@ -5447,7 +5447,7 @@
       "subtitle": "PCDM",
       "title": "EZ Decoder Output Module for HPC and Pro-C Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PCDM"
       ],
@@ -5479,7 +5479,7 @@
       "subtitle": "EZDM",
       "title": "EZ Decoder Output Module for ICC2 and HCC Controllers, up to 54 stations",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "EZDM"
       ],
@@ -5511,7 +5511,7 @@
       "subtitle": "EZ1",
       "title": "EZ-1 Decoder, 1-station, for use with HPC, HCC, ICC2, and Pro-C Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "EZ1"
       ],
@@ -5543,7 +5543,7 @@
       "subtitle": "EZDT",
       "title": "EZ-DT Diagnostic Tool, handheld, wireless, for use with the EZ Decoder System",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "EZDT"
       ],
@@ -5575,7 +5575,7 @@
       "subtitle": "P2C401",
       "title": "Pro-C Controller, 4-station base model, plastic wall mount cabinet, 230 VAC with European cable and plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "P2C401"
       ],
@@ -5607,7 +5607,7 @@
       "subtitle": "I2C800PL",
       "title": "ICC2 Controller, 8-station base model, plastic wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "I2C800PL"
       ],
@@ -5639,7 +5639,7 @@
       "subtitle": "I2C800M",
       "title": "ICC2 Controller, 8-station base model, grey metal wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "I2C800M"
       ],
@@ -5671,7 +5671,7 @@
       "subtitle": "WIFIKIT",
       "title": "ICC2 Wi-Fi Communication Module for Centralus Software",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "WIFIKIT"
       ],
@@ -5703,7 +5703,7 @@
       "subtitle": "LANKIT",
       "title": "ICC2 LAN (Ethernet) Communication Module for Centralus Software",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "LANKIT"
       ],
@@ -5735,7 +5735,7 @@
       "subtitle": "WVL100E",
       "title": "Wireless Valve Link Battery-Operated Controller, 1-station, international",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "WVL100E"
       ],
@@ -5767,7 +5767,7 @@
       "subtitle": "WVL200E",
       "title": "Wireless Valve Link Battery-Operated Controller, 2-station, international",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "WVL200E"
       ],
@@ -5799,7 +5799,7 @@
       "subtitle": "WVL400E",
       "title": "Wireless Valve Link Battery-Operated Controller, 4-station, international",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "WVL400E"
       ],
@@ -5831,7 +5831,7 @@
       "subtitle": "WVOME",
       "title": "Wireless Valve Output Module for use with Wireless Valve Link System for ICC2 and HCC controllers, international",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "WVOME"
       ],
@@ -5863,7 +5863,7 @@
       "subtitle": "SPWVL",
       "title": "Solar Panel Kit for WVL Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "SPWVL"
       ],
@@ -5895,7 +5895,7 @@
       "subtitle": "ANTEXTKIT",
       "title": "Universal Antenna Extension Kit for Wi-Fi, cellular, and LoRa communication hardware (2.75 m cable and mounting hardware)",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ANTEXTKIT"
       ],
@@ -5927,7 +5927,7 @@
       "subtitle": "A2C1200M",
       "title": "ACC2 Conventional Controller, 12-station base model, grey metal wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C1200M"
       ],
@@ -5959,7 +5959,7 @@
       "subtitle": "A2C1200P",
       "title": "ACC2 Conventional Controller, 12-station base model, plastic wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C1200P"
       ],
@@ -5991,7 +5991,7 @@
       "subtitle": "A2C1200PP",
       "title": "ACC2 Conventional Controller, 12-station base model, plastic pedestal",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C1200PP"
       ],
@@ -6023,7 +6023,7 @@
       "subtitle": "A2M600",
       "title": "Output Module for conventional ACC and ACC2 Controllers, 6-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2M600"
       ],
@@ -6055,7 +6055,7 @@
       "subtitle": "A2CF3",
       "title": "Flow Sensor Expansion Module for ACC2 Controller",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2CF3"
       ],
@@ -6087,7 +6087,7 @@
       "subtitle": "A2CWIFI",
       "title": "ACC2 Wi-Fi Communication Module",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "A2CWIFI"
       ],
@@ -6119,7 +6119,7 @@
       "subtitle": "A2CLAN",
       "title": "ACC2 LAN (Ethernet) Communication Module for Centralus Software",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "A2CLAN"
       ],
@@ -6151,7 +6151,7 @@
       "subtitle": "A2C75DSBKIT",
       "title": "ACC2 Decoder StrongBox Kit, for SB16SS stainless steel pedestal installations",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "A2C75DSBKIT"
       ],
@@ -6183,7 +6183,7 @@
       "subtitle": "A2C75DP",
       "title": "ACC2 Decoder Controller, 75-station base model, plastic wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C75DP"
       ],
@@ -6215,7 +6215,7 @@
       "subtitle": "A2C75DM",
       "title": "ACC2 Decoder Controller, 75-station base model, grey metal wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C75DM"
       ],
@@ -6247,7 +6247,7 @@
       "subtitle": "A2C75DSS",
       "title": "ACC2 Decoder Controller, 75-station base model, stainless steel wall mount cabinet",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2C75DSS"
       ],
@@ -6279,7 +6279,7 @@
       "subtitle": "A2CD75",
       "title": "Decoder Expansion Module for ACC2 Decoder Controller, 75-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2CD75"
       ],
@@ -6311,7 +6311,7 @@
       "subtitle": "PEDSS",
       "title": "Stainless steel pedestal for use with matching stainless steel I-Core, ACC, and ACC2 Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "PEDSS"
       ],
@@ -6343,7 +6343,7 @@
       "subtitle": "ICD100",
       "title": "ICD Decoder for use with ACC and ACC2 Controllers, 1-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICD100"
       ],
@@ -6375,7 +6375,7 @@
       "subtitle": "ICD200",
       "title": "ICD Decoder for use with ACC and ACC2 Controllers, 2-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICD200"
       ],
@@ -6407,7 +6407,7 @@
       "subtitle": "ICD400",
       "title": "ICD Decoder for use with ACC and ACC2 Controllers, 4-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICD400"
       ],
@@ -6439,7 +6439,7 @@
       "subtitle": "ICD600",
       "title": "ICD Decoder for use with ACC and ACC2 Controllers, 6-station",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICD600"
       ],
@@ -6471,7 +6471,7 @@
       "subtitle": "ICDSEN",
       "title": "Sensor Decoder for ICD Decoder systems, 2-input",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "ICDSEN"
       ],
@@ -6503,7 +6503,7 @@
       "subtitle": "A2CLTEM",
       "title": "Cellular Communication Module (4G LTE) for ACC2 Controllers (monthly service plan required)",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "A2CLTEM"
       ],
@@ -6535,7 +6535,7 @@
       "subtitle": "FS1000",
       "title": "Automation Field Server, 1,000 data points",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "FS1000"
       ],
@@ -6567,7 +6567,7 @@
       "subtitle": "FS3000",
       "title": "Automation Field Server, 3,000 data points",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "FS3000"
       ],
@@ -6599,7 +6599,7 @@
       "subtitle": "H360",
       "title": "Hunter 360 Software (on USB 2 or USB 3 flash drive) for irrigation management",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "H360"
       ],
@@ -6631,7 +6631,7 @@
       "subtitle": "H360ET",
       "title": "Hunter 360 Software (on USB 2 or USB 3 flash drive) for advanced ET irrigation management",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "H360ET"
       ],
@@ -6663,7 +6663,7 @@
       "subtitle": "WS360CELL",
       "title": "Weather station with cellular/cloud communication",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "WS360CELL"
       ],
@@ -6695,7 +6695,7 @@
       "subtitle": "WS360TCP",
       "title": "Weather station with Modbus TCP communication",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "WS360TCP"
       ],
@@ -6727,7 +6727,7 @@
       "subtitle": "WSSM1",
       "title": "Soil moisture sensor for TCP communication",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WSSM1"
       ],
@@ -6759,7 +6759,7 @@
       "subtitle": "WSSM3",
       "title": "WS-360-CELL soil moisture array; includes 3 moisture sensors and a temperature probe",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WSSM3"
       ],
@@ -6791,7 +6791,7 @@
       "subtitle": "WSSMTEMP",
       "title": "Soil temperature probe for TCP communication",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "WSSMTEMP"
       ],
@@ -6823,7 +6823,7 @@
       "subtitle": "ICDHP",
       "title": "ICD-HP Programmer, handheld wireless diagnostic tool for ICD Decoder systems",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "ICDHP"
       ],
@@ -6855,7 +6855,7 @@
       "subtitle": "NODE100",
       "title": "NODE Battery-Operated Controller, 1-station, with solenoid",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODE100"
       ],
@@ -6887,7 +6887,7 @@
       "subtitle": "NODE100LS",
       "title": "NODE Battery-Operated Controller, 1-station, solenoid not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODE100LS"
       ],
@@ -6919,7 +6919,7 @@
       "subtitle": "NODE200",
       "title": "NODE Battery-Operated Controller, 2-station, solenoids not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODE200"
       ],
@@ -6951,7 +6951,7 @@
       "subtitle": "NODE400",
       "title": "NODE Battery-Operated Controller, 4-station, solenoids not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODE400"
       ],
@@ -6983,7 +6983,7 @@
       "subtitle": "NODE600",
       "title": "NODE Battery Controller, 6-station, solenoids not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODE600"
       ],
@@ -7015,7 +7015,7 @@
       "subtitle": "SPNODE",
       "title": "Solar Panel Kit for NODE Controllers",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "SPNODE"
       ],
@@ -7047,7 +7047,7 @@
       "subtitle": "458200",
       "title": "DC-Latching solenoid for all Hunter irrigation valves",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "458200"
       ],
@@ -7079,7 +7079,7 @@
       "subtitle": "NODEBT100",
       "title": "NODE Bluetooth Battery-Operated Controller, 1-station, with solenoid",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODEBT100"
       ],
@@ -7111,7 +7111,7 @@
       "subtitle": "NODEBT100LS",
       "title": "NODE Bluetooth Battery-Operated Controller, 1-station, solenoid not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODEBT100LS"
       ],
@@ -7143,7 +7143,7 @@
       "subtitle": "NODEBT200",
       "title": "NODE Bluetooth Battery-Operated Controller, 2-station, solenoids not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODEBT200"
       ],
@@ -7175,7 +7175,7 @@
       "subtitle": "NODEBT400",
       "title": "NODE Bluetooth Battery-Operated Controller, 4-station, solenoids not included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "NODEBT400"
       ],
@@ -7207,7 +7207,7 @@
       "subtitle": "BTT101",
       "title": "Bluetooth Tap Timer, 1-zone, 1\" (25 mm) BSP and \u00be\" hose thread, with quick coupler adapter",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "BTT101"
       ],
@@ -7239,7 +7239,7 @@
       "subtitle": "BTT201",
       "title": "Bluetooth Tap Timer, 2-zone, 1\" (25 mm) BSP and \u00be\" hose thread, with quick coupler adapter",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "BTT201"
       ],
@@ -7271,7 +7271,7 @@
       "subtitle": "ROAMXLKIT",
       "title": "ROAM XL Remote Kit, includes transmitter, receiver, SmartPort Wiring Harness, 4 x AAA batteries, and plastic carrying case",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMXLKIT"
       ],
@@ -7303,7 +7303,7 @@
       "subtitle": "ROAMXLR",
       "title": "ROAM XL Remote, receiver unit only",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMXLR"
       ],
@@ -7335,7 +7335,7 @@
       "subtitle": "ROAMXLTR",
       "title": "ROAM XL Remote, handheld transmitter only, 4 x AAA batteries included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMXLTR"
       ],
@@ -7367,7 +7367,7 @@
       "subtitle": "ROAMWH",
       "title": "SmartPort Wiring Harness for ROAM and ROAM XL Remote connections, 1.8 m cable",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMWH"
       ],
@@ -7399,7 +7399,7 @@
       "subtitle": "ROAMKIT",
       "title": "ROAM Remote Kit, includes transmitter, receiver, SmartPort Wiring Harness, and 4 x AAA batteries",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMKIT"
       ],
@@ -7431,7 +7431,7 @@
       "subtitle": "ROAMTR",
       "title": "ROAM Remote handheld transmitter only, 4 x AAA batteries included",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMTR"
       ],
@@ -7463,7 +7463,7 @@
       "subtitle": "ROAMR",
       "title": "ROAM Remote, receiver unit only",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ROAMR"
       ],
@@ -7495,7 +7495,7 @@
       "subtitle": "MINICLIK",
       "title": "Mini-Clik Sensor, wired rain sensor, adjustable from 3 mm to 19 mm of rainfall, includes 7.5 m wire and aluminium mount",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "MINICLIK"
       ],
@@ -7527,7 +7527,7 @@
       "subtitle": "MINICLIKNO",
       "title": "Mini-Clik Sensor, wired rain sensor, adjustable from 3 mm to 19 mm of rainfall, includes 7.5 m wire, aluminium mount, and normally open switch",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "MINICLIKNO"
       ],
@@ -7559,7 +7559,7 @@
       "subtitle": "RAINCLIK",
       "title": "Rain-Clik\u00ae Sensor, wired rain sensor with Quick Response\u00ae Technology shutoff; includes sensor, 7.5 m wire, and aluminum mount",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "RAINCLIK"
       ],
@@ -7591,7 +7591,7 @@
       "subtitle": "WRCLIK",
       "title": "Wireless Rain-Clik Sensor Kit with Quick Response Technology shutoff; includes sensor, receiver, and aluminum mount",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WRCLIK"
       ],
@@ -7623,7 +7623,7 @@
       "subtitle": "WRCLIKR",
       "title": "Wireless Rain-Clik Sensor, receiver only",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WRCLIKR"
       ],
@@ -7655,7 +7655,7 @@
       "subtitle": "WRCLIKTR",
       "title": "Wireless Rain-Clik Sensor, transmitter only",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WRCLIKTR"
       ],
@@ -7687,7 +7687,7 @@
       "subtitle": "MWS",
       "title": "Mini-Weather Station, combines wind and rain sensors in one unit",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "MWS"
       ],
@@ -7719,7 +7719,7 @@
       "subtitle": "SOILCLIK",
       "title": "Soil-Clik Sensor, soil moisture sensor system; includes sensor and receiver module",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "SOILCLIK"
       ],
@@ -7751,7 +7751,7 @@
       "subtitle": "WINDCLIK",
       "title": "Wind-Clik Sensor, adjustable wind control, high-wind shutdown from 13 to 38 kph, 24 VAC, 5 A",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WINDCLIK"
       ],
@@ -7783,7 +7783,7 @@
       "subtitle": "HFS",
       "title": "Flow-Sync Sensor, use with ACC2, ICC2, and legacy ACC and I-Core Controllers; requires FCT fitting for pipe installation",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "controllers",
       "variants": [
         "HFS"
       ],
@@ -7815,7 +7815,7 @@
       "subtitle": "FCT100",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 40, 1\" (25 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT100"
       ],
@@ -7847,7 +7847,7 @@
       "subtitle": "FCT150",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 40, 1\u00bd\" (40 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT150"
       ],
@@ -7879,7 +7879,7 @@
       "subtitle": "FCT158",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 80, 1\u00bd\" (40 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT158"
       ],
@@ -7911,7 +7911,7 @@
       "subtitle": "FCT200",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 40, 2\" (50 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT200"
       ],
@@ -7943,7 +7943,7 @@
       "subtitle": "FCT208",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 80, 2\" (50 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT208"
       ],
@@ -7975,7 +7975,7 @@
       "subtitle": "FCT300",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 40, 3\" (80 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT300"
       ],
@@ -8007,7 +8007,7 @@
       "subtitle": "FCT308",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 80, 3\" (80 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT308"
       ],
@@ -8039,7 +8039,7 @@
       "subtitle": "FCT400",
       "title": "FCT tee fitting for Flow-Sync Sensor, Schedule 40, 4\" (100 mm) slip x slip",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "FCT400"
       ],
@@ -8071,7 +8071,7 @@
       "subtitle": "SOLARSYNCSEN",
       "title": "Solar Sync Sensor, wired, includes 7.5 m wire and gutter mount",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "SOLARSYNCSEN"
       ],
@@ -8103,7 +8103,7 @@
       "subtitle": "WSSSEN",
       "title": "Solar Sync Sensor, wireless, includes receiver and gutter mount",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WSSSEN"
       ],
@@ -8135,7 +8135,7 @@
       "subtitle": "WSSR",
       "title": "Solar Sync Sensor, wireless, receiver only",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WSSR"
       ],
@@ -8167,7 +8167,7 @@
       "subtitle": "WSSTR",
       "title": "Solar Sync Sensor, wireless, transmitter",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "sensors",
       "variants": [
         "WSSTR"
       ],
@@ -8199,7 +8199,7 @@
       "subtitle": "SJ506",
       "title": "SJ Swing Joint, \u00bd\" x 15 cm, standard, preassembled, with four swing elbows",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SJ506"
       ],
@@ -8231,7 +8231,7 @@
       "subtitle": "SJ706",
       "title": "SJ Swing Joint, \u00be\" x 15 cm, standard, preassembled, with four swing elbows",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SJ706"
       ],
@@ -8263,7 +8263,7 @@
       "subtitle": "SJ512",
       "title": "SJ Swing Joint, \u00bd\" x 30 cm, standard, preassembled, with four swing elbows",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SJ512"
       ],
@@ -8295,7 +8295,7 @@
       "subtitle": "SJ712",
       "title": "SJ Swing Joint, \u00be\" x 30 cm, standard, preassembled, with four swing elbows",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SJ712"
       ],
@@ -8327,7 +8327,7 @@
       "subtitle": "HSJ165212",
       "title": "HSJ Swing Joint, 1\" heavy-duty swing joint, 1\" (25 mm) male BSP inlet, 1\" (25 mm) male BSP outlet, single top-out, 30 cm lay arm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HSJ165212"
       ],
@@ -8359,7 +8359,7 @@
       "subtitle": "HSJ248218",
       "title": "HSJ Swing Joint, 1\u00bc\" (30 mm) heavy-duty swing joint, 1\u00bc\" (30 mm) male Acme inlet, 1\u00bd\" (40 mm) male Acme outlet, single top-out, 45 cm lay arm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HSJ248218"
       ],
@@ -8391,7 +8391,7 @@
       "subtitle": "HSJ360212",
       "title": "HSJ Swing Joint, 1\u00bd\" (40 mm) heavy-duty swing joint, 1\u00bd\" (40 mm) male BSP inlet, 1\u00bd\" (40 mm) male Acme outlet, single top-out, 30 cm lay arm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HSJ360212"
       ],
@@ -8423,7 +8423,7 @@
       "subtitle": "PLD05016",
       "title": "Barb, \u00bd\" MPT x 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLD05016"
       ],
@@ -8455,7 +8455,7 @@
       "subtitle": "PLDCPL16",
       "title": "Barb x barb coupling, 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDCPL16"
       ],
@@ -8487,7 +8487,7 @@
       "subtitle": "PLDELB16",
       "title": "Barb x barb, 90\u00b0 elbow, 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDELB16"
       ],
@@ -8519,7 +8519,7 @@
       "subtitle": "PLDTEE16",
       "title": "Barb x barb tee, 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDTEE16"
       ],
@@ -8551,7 +8551,7 @@
       "subtitle": "PLDBV16",
       "title": "Barb ball valve, 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "PLDBV16"
       ],
@@ -8583,7 +8583,7 @@
       "subtitle": "PLDAVR",
       "title": "Air/Vacuum Relief Valve, \u00bd\" male thread",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "valves",
       "variants": [
         "PLDAVR"
       ],
@@ -8615,7 +8615,7 @@
       "subtitle": "ECOMAT16",
       "title": "Eco-Mat System, subsurface fleece-wrapped dripline and mat, 16 mm, 80 cm x 100 m roll",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ECOMAT16"
       ],
@@ -8647,7 +8647,7 @@
       "subtitle": "ECOWRAP16",
       "title": "Eco-Wrap System, subsurface fleece-wrapped dripline, 16 mm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "ECOWRAP16"
       ],
@@ -8679,7 +8679,7 @@
       "subtitle": "PLDLOCTEE",
       "title": "LOC Fitting, tee",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOCTEE"
       ],
@@ -8711,7 +8711,7 @@
       "subtitle": "PLDLOCCPL",
       "title": "LOC Fitting, coupling",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOCCPL"
       ],
@@ -8743,7 +8743,7 @@
       "subtitle": "PLDLOCELB",
       "title": "LOC Fitting, elbow",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOCELB"
       ],
@@ -8775,7 +8775,7 @@
       "subtitle": "PLDLOC050",
       "title": "LOC Fitting, \u00bd\" MPT",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOC050"
       ],
@@ -8807,7 +8807,7 @@
       "subtitle": "PLDLOC075",
       "title": "LOC Fitting, \u00be\" MPT",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOC075"
       ],
@@ -8839,7 +8839,7 @@
       "subtitle": "PLDLOCCAP",
       "title": "LOC Fitting, cap",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PLDLOCCAP"
       ],
@@ -8871,7 +8871,7 @@
       "subtitle": "MLD0506100BL",
       "title": "MLD Dripline, \u00bc\" x 30 m at 15 cm spacing, black",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MLD0506100BL"
       ],
@@ -8903,7 +8903,7 @@
       "subtitle": "MLD0506100",
       "title": "MLD Dripline, \u00bc\" x 30 m at 15 cm spacing, brown",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MLD0506100"
       ],
@@ -8935,7 +8935,7 @@
       "subtitle": "MLD0512100BL",
       "title": "MLD Dripline, \u00bc\" x 30 m at 30 cm spacing, black",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MLD0512100BL"
       ],
@@ -8967,7 +8967,7 @@
       "subtitle": "MLD0512100",
       "title": "MLD Dripline, \u00bc\" x 30 m at 30 cm spacing, brown",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "MLD0512100"
       ],
@@ -8999,7 +8999,7 @@
       "subtitle": "HDL2230400COP",
       "title": "Hunter Copper Dripline, pressure-compensating, check valve, 2.2 l/hr, 30 cm spacing, 400 m",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HDL2230400COP"
       ],
@@ -9031,7 +9031,7 @@
       "subtitle": "HDL2130400PC",
       "title": "Hunter Dripline, pressure-compensating, 2.1 l/hr, 30 cm spacing, 400 m",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HDL2130400PC"
       ],
@@ -9063,7 +9063,7 @@
       "subtitle": "HDL2430400PC",
       "title": "16MM DRIP PC 2.4 LPH 30cm 400M",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HDL2430400PC"
       ],
@@ -9095,7 +9095,7 @@
       "subtitle": "HDL3845400PC",
       "title": "16MM DRIP PC 3.8 LPH 45cm 400M",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HDL3845400PC"
       ],
@@ -9127,7 +9127,7 @@
       "subtitle": "QBTEE",
       "title": "Barb fittings: tee, \u00bc\"",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "QBTEE"
       ],
@@ -9159,7 +9159,7 @@
       "subtitle": "QBELB",
       "title": "Barb fittings: elbow, \u00bc\"",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "QBELB"
       ],
@@ -9191,7 +9191,7 @@
       "subtitle": "QBCPL",
       "title": "Barb fittings: coupling, \u00bc\"",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "QBCPL"
       ],
@@ -9223,7 +9223,7 @@
       "subtitle": "QBCRS",
       "title": "Barb fittings: cross, \u00bc\"",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "QBCRS"
       ],
@@ -9255,7 +9255,7 @@
       "subtitle": "GP025",
       "title": "\u00bc\" barb fittings: goof plug",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "GP025"
       ],
@@ -9287,7 +9287,7 @@
       "subtitle": "HEB05",
       "title": "Point-Source Emitter, 2 l/hr, \u00bd\" female thread, blue, bag of 25",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEB05"
       ],
@@ -9319,7 +9319,7 @@
       "subtitle": "HEB10",
       "title": "Point-Source Emitter, 4 l/hr, \u00bd\" female thread, black",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEB10"
       ],
@@ -9351,7 +9351,7 @@
       "subtitle": "HEB20",
       "title": "Point-Source Emitter, 8 l/hr, \u00bd\" female thread, red",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEB20"
       ],
@@ -9383,7 +9383,7 @@
       "subtitle": "HEB40",
       "title": "Point-Source Emitter, 15 l/hr, \u00bd\" female thread, tan",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEB40"
       ],
@@ -9415,7 +9415,7 @@
       "subtitle": "HEB60",
       "title": "Point-Source Emitter, 23 l/hr, \u00bd\" female thread, orange",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEB60"
       ],
@@ -9447,7 +9447,7 @@
       "subtitle": "HEDIFF",
       "title": "Point-Source Emitter diffuser cap",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HEDIFF"
       ],
@@ -9479,7 +9479,7 @@
       "subtitle": "MPE05",
       "title": "Multi-Port Emitter, 2 l/hr",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPE05"
       ],
@@ -9511,7 +9511,7 @@
       "subtitle": "MPE10",
       "title": "Multi-Port Emitter, 4 l/hr",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPE10"
       ],
@@ -9543,7 +9543,7 @@
       "subtitle": "MPE20",
       "title": "Multi-Port Emitter, 8 l/hr",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "mp-rotators",
       "variants": [
         "MPE20"
       ],
@@ -9575,7 +9575,7 @@
       "subtitle": "IHRISER12",
       "title": "IH Riser, 30 cm, with preglued \u00bd\" fittings",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "IHRISER12"
       ],
@@ -9607,7 +9607,7 @@
       "subtitle": "IHRISER24",
       "title": "IH Riser, 60 cm, with preglued \u00bd\" fittings",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "IHRISER24"
       ],
@@ -9639,7 +9639,7 @@
       "subtitle": "SCREENCV",
       "title": "Screen check valve",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SCREENCV"
       ],
@@ -9671,7 +9671,7 @@
       "subtitle": "RR12",
       "title": "Rigid Riser, 30 cm",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "RR12"
       ],
@@ -9703,7 +9703,7 @@
       "subtitle": "RR12T",
       "title": "Rigid Riser, 30 cm, with \u00bd\" MPT base",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "RR12T"
       ],
@@ -9735,7 +9735,7 @@
       "subtitle": "RR12B",
       "title": "Rigid Riser, 30 cm, with \u00bc\" barb base",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "RR12B"
       ],
@@ -9767,7 +9767,7 @@
       "subtitle": "SOLODRIP",
       "title": "MICROSPRAYS & STREAM DRIPPERS",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "SOLODRIP"
       ],
@@ -9799,7 +9799,7 @@
       "subtitle": "SDT",
       "title": "Solo-Drip, #10\u201332 thread, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SDT"
       ],
@@ -9831,7 +9831,7 @@
       "subtitle": "SDB",
       "title": "Barb, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SDB"
       ],
@@ -9863,7 +9863,7 @@
       "subtitle": "SDBSTK",
       "title": "Barb with stake, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "SDBSTK"
       ],
@@ -9895,7 +9895,7 @@
       "subtitle": "HST",
       "title": "Halo Spray, #10\u201332 thread, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "HST"
       ],
@@ -9927,7 +9927,7 @@
       "subtitle": "HSB",
       "title": "Halo Spray, barb, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "HSB"
       ],
@@ -9959,7 +9959,7 @@
       "subtitle": "HSBSTK",
       "title": "Halo Spray, barb with stake, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "HSBSTK"
       ],
@@ -9991,7 +9991,7 @@
       "subtitle": "TSTF",
       "title": "Trio-Spray, #10\u201332 thread, 360\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "TSTF"
       ],
@@ -10023,7 +10023,7 @@
       "subtitle": "TSTH",
       "title": "Trio-Spray, #10\u201332 thread, 180\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "TSTH"
       ],
@@ -10055,7 +10055,7 @@
       "subtitle": "TSTQ",
       "title": "Trio-Spray, #10\u201332 thread, 90\u00b0",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "spray-heads",
       "variants": [
         "TSTQ"
       ],
@@ -10087,7 +10087,7 @@
       "subtitle": "FLEXSG",
       "title": "FlexSG Tubing, soft-grip, 30 m coil",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "FLEXSG"
       ],
@@ -10119,7 +10119,7 @@
       "subtitle": "HSBE050",
       "title": "\u00bd\" male thread x spiral barb elbow, black",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HSBE050"
       ],
@@ -10151,7 +10151,7 @@
       "subtitle": "HSBE075",
       "title": "\u00be\" male x spiral barb elbow, grey",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HSBE075"
       ],
@@ -10183,7 +10183,7 @@
       "subtitle": "PCZ10125B",
       "title": "PCZ Drip Control Zone Kit, 1\" (25 mm) x \u00be\" BSP, 1.7 bar; 170 kPa regulation, 2 to 55 l/min",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PCZ10125B"
       ],
@@ -10215,7 +10215,7 @@
       "subtitle": "PCZ10140B",
       "title": "PCZ Drip Control Zone Kit, 1\" (25 mm) x \u00be\" BSP, 2.8 bar; 280 kPa regulation, 2 to 55 l/min",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "PCZ10140B"
       ],
@@ -10247,7 +10247,7 @@
       "subtitle": "HY075",
       "title": "Filter, \u00be\", 150-mesh (100 microns), with stainless steel screen",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "micro-irrigation",
       "variants": [
         "HY075"
       ],
@@ -10279,7 +10279,7 @@
       "subtitle": "HFR07525",
       "title": "Filter, pressure-regulating, \u00be\" inlet and outlet, 1.7 bar; 170 kPa regulation",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HFR07525"
       ],
@@ -10311,7 +10311,7 @@
       "subtitle": "HFR07540",
       "title": "Filter, pressure-regulating, \u00be\" inlet and outlet, 2.8 bar; 280 kPa regulation",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "accessories",
       "variants": [
         "HFR07540"
       ],
@@ -10343,7 +10343,7 @@
       "subtitle": "RZWS10",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 25 cm; no swing joint, bubbler, or check valve",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS10"
       ],
@@ -10375,7 +10375,7 @@
       "subtitle": "RZWS1025",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 25 cm, 0.9 l/min Bubbler, and \u00bd\" swing joint",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS1025"
       ],
@@ -10407,7 +10407,7 @@
       "subtitle": "RZWS18",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 45 cm, locking cap; no swing joint, bubbler, or check valve",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS18"
       ],
@@ -10439,7 +10439,7 @@
       "subtitle": "RZWS1825",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 45 cm, 0.9 l/min Bubbler, and \u00bd\" swing joint",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS1825"
       ],
@@ -10471,7 +10471,7 @@
       "subtitle": "RZWS36",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 90 cm, locking cap; no swing joint, bubbler, or check valve",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS36"
       ],
@@ -10503,7 +10503,7 @@
       "subtitle": "RZWS3625",
       "title": "Root Zone Watering System with StrataRoot Baffle System, 90 cm, 0.9 l/min Bubbler, and \u00bd\" swing joint",
       "category": "irrigation-systems",
-      "subcategory": "rotors",
+      "subcategory": "bubblers",
       "variants": [
         "RZWS3625"
       ],

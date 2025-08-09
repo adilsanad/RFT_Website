@@ -13,11 +13,11 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
 
   return (
-    <div className="flex flex-col gap-8 h-full">
+    <div className="flex flex-col gap-8 h-full max-h-[85vh]">
       {/* Desktop Layout */}
       <div className="hidden md:grid grid-cols-[3fr_1fr] gap-4 h-full">
         {/* Main Image Viewer - 3/4 width, full height */}
-        <div className="bg-primary-200 border-2 border-primary-900/15 rounded-lg overflow-hidden h-full">
+        <div className="bg-primary-200 border-2 border-primary-900/15 rounded-[15px] overflow-hidden h-full">
           <img
             src={product.images[selectedImageIndex] || '/placeholder.svg'}
             alt={`${product.title} - Image ${selectedImageIndex + 1}`}
@@ -30,9 +30,9 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
             {product.images.map((image, index) => (
               <div
                 key={index}
-                className={`aspect-square h-40 bg-primary-200 rounded-lg overflow-hidden cursor-pointer transition-all duration-200 flex-shrink-0 ${
+                className={`aspect-square h-42 bg-primary-200 rounded-[10px] border-[3px] border-primary-900/15 overflow-hidden cursor-pointer transition-all duration-200 flex-shrink-0 ${
                   index === selectedImageIndex
-                    ? 'ring-2 ring-primary-500 ring-offset-2'
+                    ? 'border-b-8 border-b-primary-900/30'
                     : 'hover:opacity-80'
                 }`}
                 onClick={() => setSelectedImageIndex(index)}
@@ -40,7 +40,7 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
                 <img
                   src={image}
                   alt={`${product.title} - Thumbnail ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ))}

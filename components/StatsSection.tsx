@@ -1,6 +1,7 @@
 "use client"
 import { useCountUpOnView } from "@/hooks/use-countup"
 import StatCounter from "./ui/StatCounter"
+import { motion } from "motion/react"
 
 export default function StatsSection() {
 
@@ -23,14 +24,18 @@ export default function StatsSection() {
       </div>
       <div className="grid grid-cols-4 md:grid-cols-12 w-full gap-32 z-20 px-4">
         <div className="col-span-full md:col-span-10 md:col-start-2 flex w-full justify-center">
-          <p className="text-center md:max-w-6xl font-neulisneue md:text-4xl text-2xl leading-snug tracking-tight flex text-gray-600">
-            Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus. Tincidunt nunc venenatis quam viverra aenean at in non.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{duration: 0.5, delay: 0.2}}
+            className="text-center md:max-w-5xl font-neulisneue md:text-4xl text-2xl md:leading-tight tracking-tight flex text-gray-600">
+            We deliver trusted water solutions at scale. From planning to installation, we bring expertise and attention to detail to every project.
+          </motion.p>
         </div>
         <StatCounter duration={1500} StatData={[
-          { title: "projects executed", count: 100 },
-          { title: "gallons of water saved", count: 50000 },
-          { title: "products sold", count: 200 }
+          { title: "projects executed", count: 127 },
+          { title: "litres of water saved", count: 5000000 },
+          { title: "product catalogue", count: 400 }
         ]} />
       </div>
     </section>

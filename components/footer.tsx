@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation"
 export default function Footer() {
   const location = usePathname()
   return (
-    <footer className="col-span-full font-neulissans grid-cols-4 md:grid-cols-12 grid gap-y-32 md:gap-y-44 relative w-full bg-[#242424] text-white py-16 pt-20 overflow-hidden md:bg-[url('../public/assets/images/footerbg.png')] bg-[url('../public/assets/images/footerbg-mobile.png')] md:bg-right-top bg-right-bottom bg-no-repeat">
+    <footer id="footer" className="col-span-full font-neulissans grid-cols-4 md:grid-cols-12 grid gap-y-32 md:gap-y-44 relative w-full bg-[#242424] text-white py-16 pt-20 overflow-hidden md:bg-[url('../public/assets/images/footerbg.png')] bg-[url('../public/assets/images/footerbg-mobile.png')] md:bg-right-top bg-right-bottom bg-no-repeat">
       <div className="col-span-full flex flex-col md:grid grid-cols-2 px-11 md:px-20 gap-28 md:gap-8">
         <div className="flex flex-col gap-10">
           <Logo theme="dark" className="w-[220px] md:w-[240px]" />

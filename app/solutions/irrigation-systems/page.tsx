@@ -18,15 +18,15 @@ const IrrigationPage = () => {
                     </svg>
                     <div className="absolute inset-0 flex flex-col gap-8 max-md:justify-end max-md:items-center md:p-16 md:pr-44 max-md:text-center max-md:px-8 max-md:pb-8 ">
                         <div className="flex flex-col max-md:p-8 max-md:pb-10 gap-8 max-md:bg-primary-300 max-md:items-center rounded-[60px_60px_90px_90px]">
-                            <h5 className="bg-primary-500 text-primary-900/80 px-8 py-3 md:py-4 rounded-full w-fit font-medium tracking-tight">
+                            <h5 className="text-xl bg-primary-500 text-primary-900/70 px-6 py-3 md:py-4 rounded-full w-fit font-semibold tracking-tight">
                                 Irrigation Systems
                             </h5>
-                            <div className="flex flex-col gap-4">
-                                <h2 className="">
+                            <div className="flex flex-col gap-6">
+                                <h1 className="">
                                     Smarter systems,
                                     zero-waste irrigation.
-                                </h2>
-                                <p className='max-md:px-4'>
+                                </h1>
+                                <p className='max-md:px-4 subtitle'>
                                     Advanced irrigation systems designed to optimize water usage and enhance agricultural productivity.
                                 </p>
                             </div>
@@ -36,8 +36,10 @@ const IrrigationPage = () => {
                 </div>
                 <div className="max-md:hidden relative w-full">
                     <img className=" w-full h-auto" src="/assets/images/irrigationmask.png" alt="Rainwater Harvesting Mask" />
+                    {/*
                     <div className="absolute bottom-36 left-20 bg-white/60 backdrop-blur-sm px-8 py-4 rounded-full text-xl font-medium tracking-tight">automated irrigation systems</div>
                     <div className="absolute opacity-40 hover:opacity-100 transition-all top-36 right-32 bg-white/60 backdrop-blur-sm px-8 py-4 rounded-full text-xl font-medium tracking-tight">rainfall monitoring</div>
+                    */}
                 </div>
 
             </section>
@@ -48,36 +50,34 @@ const IrrigationPage = () => {
                     <h2 className="">What we deliver</h2>
                     <div className="flex max-md:flex-col gap-20">
                         <div className="flex-1 flex flex-col gap-8">
-                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
-
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="design" className="fill-primary-600" /></div>
+                            <h3>Precision Irrigation Design</h3>
+                            <p className="body-text">We create custom layouts engineered for maximum coverage and efficiency, ensuring every square inch gets the right amount of water without waste.</p>
                         </div>
                         <div className="flex-1 flex flex-col gap-8">
-                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
+                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="cpu" className="fill-primary-600" /></div>
 
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <h3>Automated Control Systems</h3>
+                            <p className="body-text">Smart timers, weather-based sensors, and app-connected controllers let you manage watering with zero guesswork, saving time and resources.</p>
                         </div>
                         <div className="flex-1 flex flex-col gap-8">
-                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
-
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="engineer" className="fill-primary-600" /></div>
+                            <h3>Expert Installation & Support</h3>
+                            <p className="body-text">From trenching to testing, our team handles the full install with minimal disruption and provides ongoing maintenance to keep systems performing flawlessly.</p>
                         </div>
                     </div>
 
                 </div>
             </section>
-            <section className="col-span-full md:col-span-12 grid grid-cols-4 md:grid-cols-12 max-md:gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
-                <div className="col-span-6 flex flex-col gap-9 px-3 md:pr-12">
-                    <h2>Rainwater Harvesting & Management Solutions</h2>
+            <section className="col-span-full md:col-span-12 flex w-full  max-md:gap-12 gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
+                <div className="flex flex-col flex-1 gap-9 px-3 md:pr-12">
+                    <h2 className="">Irrigation Systems & Automation</h2>
                     <div className="h-1 rounded-full bg-primary-600 px-2 pr-6"></div>
-                    <p className="font-neulissans opacity-75 text-xl">Whether you're tackling water scarcity or reducing utility costs, Rainfield delivers smart rainwater management solutions tailored to your site.</p>
+                    <p className="font-neulissans opacity-75 text-xl">From home gardens to large-scale landscapes to commercial installations , Rainfield delivers reliable irrigation systems that work year after year.</p>
                 </div>
-                <div className="col-span-6 flex  flex-col gap-9 p-10 md:px-14 md:py-12 rounded-[30px] border-[3px] bg-white border-primary-600 shadow-[inset_0_0_24px_24px_rgba(216,255,226,0.4)] ">
-                    <p className="font-neulissans opacity-75 text-xl pt-3">Rainfield offers advanced rainwater harvesting solutions in India, helping homes, businesses, and industries manage water sustainably. Based in Bangalore, we design and install custom systems for rooftop harvesting, groundwater recharge, and stormwater management.</p>
-                    <p className="font-neulissans opacity-75 text-xl pt-9 pb-3 border-t-2 border-black/20">Our end-to-end service includes filtration, storage, distribution, and automation—built for maximum efficiency and minimal maintenance. Projects completed across Karnataka, Tamil Nadu, Maharashtra, Telangana, and other states.</p>
+                <div className="flex flex-col flex-1  gap-9 p-10 md:px-14 md:py-12 rounded-[30px] border-[3px] bg-white border-primary-600 shadow-[inset_0_0_24px_24px_rgba(216,255,226,0.4)] ">
+                    <p className="font-neulissans opacity-75 text-xl pt-3">Rainfield is a top provider of custom irrigation systems in Bangalore, India, serving residential, commercial, and industrial clients. We specialize in drip irrigation, sprinkler setups, and fully automated watering systems using smart controllers and soil sensors.</p>
+                    <p className="font-neulissans opacity-75 text-xl pt-9 pb-3 border-t-2 border-black/20">Our irrigation solutions are designed for water efficiency, long-term performance, and hassle-free maintenance. We’ve successfully delivered projects pan-India, including Karnataka, Tamil Nadu, Maharashtra, Kerala, Telangana, and more.</p>
                 </div>
             </section>
             <ProjectsCarousel />

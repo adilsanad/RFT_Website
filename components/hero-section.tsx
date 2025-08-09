@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import Icon from "@/public/assets/vectors"
 import Image from "next/image"
 import AnimatedTopographicSection from "./testanimation"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { AnimatePresence } from "motion/react";
 import { motion } from "motion/react";
 
@@ -13,36 +13,53 @@ const CarouselComponent = () => {
   const carouselItems = [
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet.",
-      description: "Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop"
+      title: "Modular Rainwater Harvesting Solutions",
+      description: "We plan and deploy high-capacity, space-efficient rainwater harvesting systems for commercial and industrial needs.",
+      image: "/images/landingpage/modulartankcommercial.png",
+      metadata: "Recharge Tank Modular Polypropylene Tank"
     },
     {
       id: 2,
-      title: "Consectetur adipiscing elit.",
-      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
-      image: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=800&fit=crop"
+      title: "Heavy-Duty Irrigation for Large Landscape Areas.",
+      description: "We implement high-coverage irrigation systems suited for commercial plantings, ensuring efficient watering across expansive zones.",
+      image: "/images/landingpage/impactirrigation.png"
     },
     {
       id: 3,
-      title: "Sed do eiusmod tempor.",
-      description: "Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.",
-      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&h=800&fit=crop"
+      title: "Efficient Irrigation for Landscaped Spaces",
+      description: "We integrate spray rotor systems to deliver reliable, zone-specific coverage for commercial planting beds.",
+      image: "/images/landingpage/plantbedirrigation.png"
     },
     {
       id: 4,
-      title: "Ut enim ad minim veniam.",
-      description: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&h=800&fit=crop"
+      title: "Urban Rainwater Harvesting Systems",
+      description: "We design and execute below-ground modular tank installations for urban sites, optimizing for space, accessibility, and long-term efficiency.",
+      image: "/images/landingpage/modulartankurban.png"
+    },
+    {
+      id: 4,
+      title: "Irrigation Systems for Large Turf Areas",
+      description: "Designed to cover wide spans with minimal overlap, suitable for golf courses and open landscapes.",
+      image: "/images/landingpage/golfcourseirrigation.png"
+    },
+    {
+      id: 4,
+      title: "Irrigation Design for Stadiums & Sports Fields",
+      description: "We support stadium projects with turf irrigation systems built for durability, coverage, and performance under pressure.",
+      image: "/images/landingpage/stadiumirrigation.png"
     }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1
     );
+    // Pause autoplay for 5 seconds when user manually navigates
+    handleManualNavigation();
   };
 
   const goToNext = () => {
@@ -51,24 +68,54 @@ const CarouselComponent = () => {
     );
   };
 
+  const handleManualNavigation = () => {
+    setIsPaused(true);
+    // Clear existing timeout if any
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    // Resume autoplay after 5 seconds
+    setTimeout(() => {
+      setIsPaused(false);
+    }, 5000);
+  };
+
+  const handleManualNext = () => {
+    goToNext();
+    handleManualNavigation();
+  };
+
+  useEffect(() => {
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        goToNext();
+      }, 4000);
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPaused]);
+
   const currentItem = carouselItems[currentIndex];
 
   return (
     <div className="relative flex flex-col gap-3 px-2 md:px-2">
-
-      <div className="w-full min-h-[540px] md:h-[800px] rounded-[60px_60px_30px_30px] md:rounded-[120px_120px_30px_30px] bg-primary-100 overflow-hidden ">
+      <div className="w-full min-h-[540px] md:h-[800px] rounded-[60px_60px_30px_30px] bg-primary-900 border-2 border-white/70 overflow-hidden ">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="w-full h-full "
           >
             <img
               src={currentItem.image}
-              alt={currentItem.title}
+              alt={currentItem.metadata || currentItem.title}
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -76,7 +123,7 @@ const CarouselComponent = () => {
       </div>
 
       {/* Info Card Overlay */}
-      <div className="md:absolute md:top-16 md:right-16" >
+      <div className="md:absolute md:top-10 md:right-10" >
         <div className="flex items-start md:gap-x-3">
           <div className="hidden md:flex w-10 h-10 my-3 bg-info-500 rounded-full items-center justify-center flex-shrink-0">
             <svg width="7" viewBox="0 0 10 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +131,7 @@ const CarouselComponent = () => {
             </svg>
           </div>
           <div className="flex flex-col gap-2 items-end max-md:-space-y-28  ">
-            <div className="hidden md:flex flex-col gap-3 md:bg-primary-100 md:rounded-[15px_60px_15px_15px] p-7 md:pr-10 md:shadow-lg md:max-w-xs z-10">
+            <div className="hidden md:flex flex-col gap-3 md:bg-primary-100 md:rounded-[20px] p-7 md:pr-10 md:shadow-lg md:max-w-sm z-10 md:hover:scale-[0.99] transition-all duration-300 ">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -130,7 +177,7 @@ const CarouselComponent = () => {
                 </AnimatePresence >
               </div>
               <button
-                onClick={goToNext}
+                onClick={handleManualNext}
                 className="p-4 px-[18px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 transition-all"
               >
                 <Icon width={20} name="roundedArrow" className="fill-primary-900" />
@@ -187,17 +234,16 @@ export default function HeroSection() {
         </svg>
 
       </div>
-      <div className="flex flex-col gap-4 md:gap-16 w-full z-10">
-        <div className="flex flex-col  py-12 px-8 md:items-center md:text-center md:px-4 bg-white/1 backdrop-blur-[2px] rounded-[60px]">
+      <div className="flex flex-col gap-4 md:gap-8 w-full z-10">
+        <div className="flex flex-col py-10 px-8 md:items-center md:text-center md:px-4 bg-white/1 backdrop-blur-[2px] rounded-[60px]">
           <h1 className=" max-w-2xl mb-6">
             Smart, efficient water systems - from source to soil
           </h1>
           <p className="md:text-xl leading-tight text-gray-600 mb-8 md:max-w-xl max-md:pr-8">
             From automated irrigation to rainwater harvesting to swimming pools— we handle water end-to-end for any space.
           </p>
-          <Button className="w-fit max-md:text-lg max-md:py-2 max-md:px-5">Send an inquiry</Button>
+          <Button className="w-fit max-md:text-lg py-2 md:py-3 max-md:px-5 tracking-tighter">Speak to our experts</Button>
         </div>
-
         <CarouselComponent />
       </div>
     </section>

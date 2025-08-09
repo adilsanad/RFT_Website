@@ -21,7 +21,7 @@ interface MobileMenuProps {
 
 const ProductsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeCategory, setActiveCategory] = useState("rainwater-harvesting")
+  const [activeCategory, setActiveCategory] = useState("irrigation-systems")
 
   const { products, categories } = productsData
 
@@ -337,25 +337,25 @@ export default function Header() {
             ? "px-6 py-3 bg-white/60 border border-gray-300 rounded-[15px] shadow-md backdrop-blur-lg"
             : "px-8 py-4 bg-gradient-to-b from-white/80 to-white/0 rounded-none shadow-none backdrop-blur-sm"
           }`}>
-          <Link href='/' onClick={() => setShowMenu(false)} className="flex items-center py-2">
+          <Link href='/' onClick={() => setShowMenu(false)} className="flex items-center py-2 hover:scale-[0.98] transition-all">
             <Logo className={scrolled && !showMenu ? 'w-[124px] md:w-[140px]' : 'w-[136px] md:w-[160px]'} />
           </Link>
 
           <nav className="relative hidden md:flex items-center space-x-8">
-            <Link href="/about" className="text-black hover:text-gray-900 transition-colors">
+            <Link href="/about" className="text-black hover:text-primary-900 hover:font-bold transition-all">
               About
             </Link>
-            <Link href="/solutions" className="text-black hover:text-gray-900 transition-colors">
+            <Link href="/solutions" className="text-black hover:text-primary-900 hover:font-bold transition-all">
               Solutions
             </Link>
             <ProductsDropdown />
-            <Link href="#contact" className="text-black  hover:text-gray-900 transition-colors">
+            <Link href="#footer" className="text-black hover:text-primary-900 hover:font-bold transition-all">
               Contact
             </Link>
 
           </nav>
 
-          <Button className="max-md:hidden" size="compact">Get Started</Button>
+          <Button className="max-md:hidden" size="compact">Send an inquiry</Button>
 
           <button onClick={() => {setShowMenu(prev => !prev), setExpandedProducts(false)}} className="relative flex flex-col gap-1 md:hidden bg-primary-200 rounded-full items-center p-3">
             <div className={`${showMenu ? 'rotate-45 w-5 h-[3px] translate-y-[7.5px]' : 'w-3 h-1'} rounded-full bg-primary-900 transition-all duration-300`} />

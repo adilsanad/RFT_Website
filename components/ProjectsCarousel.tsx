@@ -125,7 +125,7 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
                 key={project.id}
                 className="w-[260px] md:w-[480px] px-2 py-5 "
               >
-                <div className="bg-primary-100 border-2 border-primary-900/30 hover:border-primary-900/50 rounded-[15px] md:rounded-[30px] overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+                <div className="bg-primary-100 border-[3px] border-primary-900/15 hover:border-primary-900/50 rounded-[15px] md:rounded-[20px] overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
                   {/* Project Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -146,12 +146,13 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
 
                   {/* Project Details */}
                   <div className="flex flex-col gap-3 p-6 md:p-10 px-3 md:px-8">
-                    <h4 className="">
+                    <h3 className="">
                       {project.title}
-                    </h4>
+                    </h3>
 
-                    <div className="flex flex-wrap gap-2 gap-y-0 items-center">
-                      <span className="text-base md:text-lg font-medium text-black/90 leading-tight">{project.service} · <h5 className="font-bold inline-block leading-tight text-primary-700">{project.organization}</h5></span>
+                    <div className="flex flex-col gap-1 ">
+                      <h5 className="font-semibold text-lg inline-block leading-tight text-primary-900">{project.organization}</h5>
+                      <span className="text-base md:text-lg tracking-tight font-medium text-black/60 leading-tight">{project.service}</span>
                     </div>
                   </div>
 

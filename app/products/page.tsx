@@ -55,13 +55,24 @@ function ProductsContent() {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 12
 
+  // Save state to localStorage when navigating to a product
+  const saveProductsPageState = () => {
+    const state = {
+      filters,
+      currentPage,
+      scrollPosition: window.scrollY,
+      timestamp: Date.now()
+    }
+    localStorage.setItem('productsPageState', JSON.stringify(state))
+  }
+
   // Refs for dropdown positioning
   const categoryRef = useRef<HTMLDivElement>(null)
   const brandRef = useRef<HTMLDivElement>(null)
   const productTypeRef = useRef<HTMLDivElement>(null)
   const sortRef = useRef<HTMLDivElement>(null)
 
-  // Initialize filters from URL parameters
+  // Initialize filters from URL parameters and restore saved state
   useEffect(() => {
     const categoriesParam = searchParams.getAll('categories')
     const productTypeParam = searchParams.getAll('productType')
@@ -77,6 +88,42 @@ function ProductsContent() {
       sortBy: sortParam || 'name-asc'
     }
 
+    // Check if we should restore saved state (coming back from a product page)
+    const savedState = localStorage.getItem('productsPageState')
+    const isFromProductPage = document.referrer.includes('/products/') && !document.referrer.includes('/products?') && !document.referrer.endsWith('/products')
+    
+    if (savedState && isFromProductPage) {
+      try {
+        const state = JSON.parse(savedState)
+        // Only restore if state is recent (within 5 minutes) and has no URL params (direct navigation)
+        const isRecentState = (Date.now() - state.timestamp) < 5 * 60 * 1000
+        const hasNoUrlParams = !searchParam && categoriesParam.length === 0 && productTypeParam.length === 0 && brandsParam.length === 0 && !sortParam
+        
+        if (isRecentState && hasNoUrlParams) {
+          setFilters(state.filters)
+          setTempFilters({
+            categories: state.filters.categories,
+            productType: state.filters.productType,
+            brands: state.filters.brands,
+            sortBy: state.filters.sortBy
+          })
+          setCurrentPage(state.currentPage)
+          
+          // Restore scroll position after a short delay to allow rendering
+          setTimeout(() => {
+            window.scrollTo(0, state.scrollPosition)
+          }, 100)
+          
+          // Clear the saved state after using it
+          localStorage.removeItem('productsPageState')
+          return
+        }
+      } catch (error) {
+        console.error('Error restoring products page state:', error)
+      }
+    }
+
+    // Default initialization
     setFilters(initialFilters)
     setTempFilters({
       categories: initialFilters.categories,
@@ -390,7 +437,7 @@ function ProductsContent() {
     if (totalPages <= 1) return null
 
     const getVisiblePages = () => {
-      const delta = 2
+      const delta = 1
       const range = []
       const rangeWithDots = []
 
@@ -848,7 +895,10 @@ function ProductsContent() {
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 ">
                 {currentProducts.map((product) => (
                   <div key={product.id} className="group hover:translate-y-1 transition-all duration-500 max-md:pb-4 ">
-                    <a href={`/products/${product.slug}`}>
+                    <a 
+                      href={`/products/${product.slug}`}
+                      onClick={saveProductsPageState}
+                    >
                       <div className="p-0">
                         <div className="aspect-square bg-primary-100 rounded-[15px] border-2 border-primary-900/30 overflow-hidden">
                           <img

@@ -1,8 +1,6 @@
 "use client"
 import { useState } from "react"
 import Icon from "@/public/assets/vectors";
-import { Button } from '../../../components/ui/button'
-import StatsSection from "@/components/StatsSection";
 import StatCounter from "@/components/ui/StatCounter";
 import productsData from '@/data/products.json'
 import RelatedProductsCarousel from "@/app/products/components/RelatedProducts";
@@ -56,9 +54,9 @@ export default function Hunter() {
                     </div>
                 </div>
                 <StatCounter duration={1500} darkColor={darkColor} lightColor={lightColor} StatData={[
-                    { title: "projects executed", count: 100 },
-                    { title: "gallons of water saved", count: 500000 },
-                    { title: "products sold", count: 200 }
+                    { title: "projects executed", count: 127 },
+                    { title: "litres of water saved", count: 5000000 },
+                    { title: "product catalogue", count: 400 }
                 ]} />
             </section>
 

@@ -15,15 +15,15 @@ const RainwaterPage = () => {
                 <div className="flex flex-col max-md:items-end md:absolute top-96 left-10 md:w-[49.5vw] h-auto z-10">
                     <div className="max-md:absolute inset-0 flex flex-col gap-8 justify-end items-start p-8 md:p-16 max-md:text-center md:rounded-[45px_136px_90px_45px] md:bg-primary-300 md:border-2 border-primary-900/15">
                         <div className="flex flex-col max-md:p-8 max-md:pb-10 gap-8 max-md:bg-primary-300 items-start max-md:items-center rounded-[60px_60px_90px_90px]">
-                            <div className="bg-primary-500 text-lg md:text-xl text-primary-900/80 px-8 py-3 md:py-4 rounded-full w-fit font-medium tracking-tight">
-                                Pools & Water features
+                            <div className="text-xl bg-primary-500 text-primary-900/70 px-6 py-3 md:py-4 rounded-full w-fit font-semibold tracking-tight">
+                                Pools & Water Features
                             </div>
-                            <div className="flex flex-col gap-4">
-                                <h2 className="">
-                                    Water bender type shit, pools
-                                </h2>
-                                <p className="max-md:px-4">
-                                    Turpis erat nulla pharetra rutrum commodo purus quis. Tristique neque cras aliquet cursus lacus.
+                            <div className="flex flex-col gap-6">
+                                <h1 className="">
+                                    Bespoke Pools & Water Experiences
+                                </h1>
+                                <p className="max-md:px-4 subtitle">
+                                   Water features & Pools built to last, designed to impress, and tailored to your exact requirements.
                                 </p>
                             </div>
                         </div>
@@ -45,35 +45,33 @@ const RainwaterPage = () => {
                     <div className="flex max-md:flex-col gap-20">
                         <div className="flex-1 flex flex-col gap-8">
                             <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
-
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <h3>Residential Pools</h3>
+                            <p className="body-text">We create tailored residential pools that integrate seamlessly with your home. Whether it’s a serene plunge pool or a family-friendly leisure space, each build prioritizes beauty, safety, and long-term performance.</p>
                         </div>
                         <div className="flex-1 flex flex-col gap-8">
-                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
+                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="swimming" className="fill-primary-600" /></div>
 
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <h3>Professional Pools</h3>
+                            <p className="body-text">Our professional-grade pools are designed for heavy use in hotels, resorts, sports facilities, and institutions and are built to exacting standards.</p>
                         </div>
                         <div className="flex-1 flex flex-col gap-8">
-                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="pool" className="fill-primary-600" /></div>
-
-                            <h1 className="text-4xl font-medium tracking-tighter ">Built for India's landscapes.</h1>
-                            <p className="text-xl font-manrope">Smart, scalable, and sustainable—our water systems are trusted across India’s toughest climates and most demanding spaces.</p>
+                            <div className="z-10 p-2 flex w-fit rounded-full border-4 border-primary-600 "><Icon width={24} height={24} name="fountain" className="fill-primary-600" /></div>
+                            <h3>Water features</h3>
+                            <p className="body-text">From elegant reflecting pools to striking fountains and waterfalls, our custom water features bring movement, texture, and visual drama to any environment — indoors or outdoors.</p>
                         </div>
                     </div>
 
                 </div>
             </section>
-            <section className="col-span-full md:col-span-12 grid grid-cols-4 md:grid-cols-12 max-md:gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
-                <div className="col-span-6 flex flex-col gap-9 px-3 md:pr-12">
-                    <h2>Rainwater Harvesting & Management Solutions</h2>
+            <section className="col-span-full md:col-span-12 flex w-full  max-md:gap-12 gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
+                <div className="flex flex-col flex-1 gap-9 px-3 md:pr-12">
+                    <h2 className="">Custom Pools & Water Features</h2>
                     <div className="h-1 rounded-full bg-primary-600 px-2 pr-6"></div>
-                    <p className="font-neulissans opacity-75 text-xl">Whether you're tackling water scarcity or reducing utility costs, Rainfield delivers smart rainwater management solutions tailored to your site.</p>
+                    <p className="font-neulissans opacity-75 text-xl">Whether it’s a serene garden pond or a professional olympic-size swimming pool, Rainfield brings your vision for water features to life.</p>
                 </div>
-                <div className="col-span-6 flex  flex-col gap-9 p-10 md:px-14 md:py-12 rounded-[30px] border-[3px] bg-white border-primary-600 shadow-[inset_0_0_24px_24px_rgba(216,255,226,0.4)] ">
-                    <p className="font-neulissans opacity-75 text-xl pt-3">Rainfield offers advanced rainwater harvesting solutions in India, helping homes, businesses, and industries manage water sustainably. Based in Bangalore, we design and install custom systems for rooftop harvesting, groundwater recharge, and stormwater management.</p>
-                    <p className="font-neulissans opacity-75 text-xl pt-9 pb-3 border-t-2 border-black/20">Our end-to-end service includes filtration, storage, distribution, and automation—built for maximum efficiency and minimal maintenance. Projects completed across Karnataka, Tamil Nadu, Maharashtra, Telangana, and other states.</p>
+                <div className="flex flex-col flex-1  gap-9 p-10 md:px-14 md:py-12 rounded-[30px] border-[3px] bg-white border-primary-600 shadow-[inset_0_0_24px_24px_rgba(216,255,226,0.4)] ">
+                    <p className="font-neulissans opacity-75 text-xl pt-3">Rainfield designs and builds custom pools and water features in India, serving residential and commercial spaces across Bangalore and beyond. We handle everything from decorative fountains and reflecting pools to large-scale water installations and swimming pools.</p>
+                    <p className="font-neulissans opacity-75 text-xl pt-9 pb-3 border-t-2 border-black/20">Our systems combine aesthetic design with technical precision—ensuring long-term performance, efficient water use, and easy upkeep. We've delivered projects throughout Karnataka, Tamil Nadu, Maharashtra, Telangana, and more.</p>
                 </div>
             </section>
             <ProjectsCarousel />
