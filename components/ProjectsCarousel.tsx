@@ -20,43 +20,51 @@ interface ProjectsCarouselProps {
 const sampleProjects: Project[] = [
   {
     id: '1',
-    image: '/images/projects/dsu-campus.jpg',
-    location: 'Dayananda Sagar University, Harohalli, Bengaluru',
-    title: 'Dayananda Sagar University',
+    image: '/images/assets/projectimages/boeing.png',
+    location: 'Hitech Defence and Aerospace Park, Devanahalli, Bengaluru, Karnataka',
+    title: 'Boeing India Engg. & Research Centre',
     service: 'Automated Irrigation Systems',
-    organization: 'DSU'
+    organization: 'Boeing India'
   },
   {
     id: '2',
-    image: '/images/projects/tech-park.jpg',
-    location: 'Electronic City, Bengaluru',
-    title: 'Tech Park Water Management',
-    service: 'Rainwater Harvesting & Treatment',
-    organization: 'Infosys Limited'
+    image: '/images/assets/projectimages/bial.png',
+    location: 'Kempegowda International Airport, Bengaluru',
+    title: 'Bengaluru Airport Forest Belt (T2)',
+    service: 'Automated Irrigation Systems',
+    organization: 'BIAL ltd.'
   },
   {
     id: '3',
-    image: '/images/projects/residential.jpg',
-    location: 'Whitefield, Bengaluru',
-    title: 'Luxury Residential Complex',
-    service: 'Complete Water Management Solution',
-    organization: 'Prestige Group'
+    image: '/images/assets/projectimages/reliancejamnagar.png',
+    location: 'Reliance Jamnagar Refinery, Motikhavdi, Jamnagar, Gujarat',
+    title: 'Jamnagar Refinery',
+    service: 'Automated Irrigation Systems',
+    organization: 'Reliance Industries Ltd.'
   },
   {
     id: '4',
-    image: '/images/projects/hospital.jpg',
-    location: 'Koramangala, Bengaluru',
-    title: 'Multi-Specialty Hospital',
-    service: 'Water Purification & Storage',
-    organization: 'Manipal Hospitals'
+    image: '/images/assets/projectimages/intellion.png',
+    location: 'Sector 72, Gurugram, Haryana',
+    title: 'Intellion Park',
+    service: 'Rainwater Harvesting & Treatment',
+    organization: 'Tata Realty'
   },
   {
     id: '5',
-    image: '/images/projects/factory.jpg',
-    location: 'Tumkur Industrial Area',
-    title: 'Manufacturing Plant',
-    service: 'Industrial Water Treatment',
-    organization: 'Toyota Kirloskar'
+    image: '/images/assets/projectimages/lucknowairport.png',
+    location: 'Chaudhary Charan Singh International Airport, Lucknow, Uttar Pradesh',
+    title: 'Lucknow Airport Terminal 3',
+    service: 'Automated Irrigation Systems',
+    organization: 'Adani Airports'
+  },
+  {
+    id: '6',
+    image: '/images/assets/projectimages/dsu.png',
+    location: 'Dayananda Sagar University, Harohalli, Bengaluru, Karnataka',
+    title: 'Dayananda Sagar University',
+    service: 'Automated Irrigation Systems',
+    organization: 'DSU'
   }
 ]
 
@@ -137,27 +145,22 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
                   </div>
 
                   {/* Location Strip */}
-                  <div className="flex flex-col gap-2 bg-primary-300 px-3 md:px-8 py-5 md:py-6">
+                  <div className="flex flex-col gap-3 bg-primary-300 px-3 md:px-8 py-5 md:py-6">
                     <Icon className="w-4 h-4 stroke-primary-700 fill-transparent " name='location' />
-                    <span className="text-md md:text-xl font-medium text-primary-900 leading-tight">
+                    <span className="text-md md:text-lg font-medium text-primary-900/70 md:leading-6">
                       {project.location}
                     </span>
                   </div>
 
                   {/* Project Details */}
-                  <div className="flex flex-col gap-3 p-6 md:p-10 px-3 md:px-8">
-                    <h3 className="">
-                      {project.title}
-                    </h3>
-
-                    <div className="flex flex-col gap-1 ">
-                      <h5 className="font-semibold text-lg inline-block leading-tight text-primary-900">{project.organization}</h5>
-                      <span className="text-base md:text-lg tracking-tight font-medium text-black/60 leading-tight">{project.service}</span>
-                    </div>
+                  <div className="flex flex-col gap-2 p-6 md:p-8 px-3">
+                      <h5 className="font-semibold text-lg inline-block leading-tight text-primary-900/50">{project.organization}</h5>
+                      <h3 className="">
+                        {project.title}
+                      </h3>
+                    <span className="text-base md:text-lg tracking-tight font-medium text-black/60 leading-tight">{project.service}</span>
                   </div>
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </div>
             ))}

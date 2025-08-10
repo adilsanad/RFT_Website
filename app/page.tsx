@@ -26,6 +26,7 @@ const clients: MarqueeData[] = [
   { src: "/assets/images/logos/brigade.png", alt: "Brigade" },
   { src: "/assets/images/logos/bagmane.png", alt: "Bagmane" },
   { src: "/assets/images/logos/embassy.png", alt: "Embassy" },
+  { src: "/assets/images/logos/l&w.png", alt: "L&W Construction" },
 ];
 
 export default function Home() {

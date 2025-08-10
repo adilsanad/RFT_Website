@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Icon, { Logo } from "@/public/assets/vectors"
 import productsData from '@/data/products.json'
 import { AnimatePresence, motion, scale } from 'motion/react';
+import ProjectInquiryModal from './ProjectInquiryModal'
 
 interface Category {
   id: string;
@@ -300,6 +301,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [showMenu, setShowMenu] = useState(false);
   const [expandedProducts, setExpandedProducts] = useState(false)
+  const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false)
 
   const { categories }: { categories: Category[] } = productsData
 
@@ -355,7 +357,13 @@ export default function Header() {
 
           </nav>
 
-          <Button className="max-md:hidden" size="compact">Send an inquiry</Button>
+          <Button 
+            className="max-md:hidden" 
+            size="compact"
+            onClick={() => setIsInquiryModalOpen(true)}
+          >
+            Send an inquiry
+          </Button>
 
           <button onClick={() => {setShowMenu(prev => !prev), setExpandedProducts(false)}} className="relative flex flex-col gap-1 md:hidden bg-primary-200 rounded-full items-center p-3">
             <div className={`${showMenu ? 'rotate-45 w-5 h-[3px] translate-y-[7.5px]' : 'w-3 h-1'} rounded-full bg-primary-900 transition-all duration-300`} />
@@ -370,6 +378,12 @@ export default function Header() {
         categories={categories}
         expandedProducts={expandedProducts}
         setExpandedProducts={setExpandedProducts}
+      />
+      
+      <ProjectInquiryModal
+        isOpen={isInquiryModalOpen}
+        onClose={() => setIsInquiryModalOpen(false)}
+        title="General Inquiry"
       />
     </>
   )

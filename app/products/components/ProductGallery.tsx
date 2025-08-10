@@ -38,7 +38,7 @@ export default function ProductImageGallery({ product }: ProductImageGalleryProp
                 onClick={() => setSelectedImageIndex(index)}
               >
                 <img
-                  src={image}
+                  src={image  || '/assets/images/noimage.jpg'}
                   alt={`${product.title} - Thumbnail ${index + 1}`}
                   className="w-full h-full object-contain"
                 />

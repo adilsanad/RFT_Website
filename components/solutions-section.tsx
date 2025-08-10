@@ -76,11 +76,9 @@ export default function SolutionsSection() {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/60 via-black/1 via-50% to-transparent z-8" />
               <div className="flex flex-col gap-6 p-6 md:p-8 group-hover:md:p-8 group-hover:p-10 pb-6 group-hover:pb-8 transition-all bg-primary-100/10 backdrop-blur-sm border border-white/15 rounded-[15px] group-hover:rounded-[30px]">
                 <div className="z-10 p-2 flex w-fit rounded-full border-2 border-primary-500 bg-primary-900/15">{solution.icon}</div>
-                <div className="z-10 flex md:flex-col gap-3">
-                  <h3 className="text-[1.75rem] md:text-4xl leading-7 text-white">{solution.title}</h3>
-                  <Button variant="default" size="compact" className="max-md:hidden flex w-fit text-nowrap h-fit" link={solution.link}>
-                    Learn More
-                  </Button>
+                <div className="z-10 flex md:flex-col gap-4">
+                  <h4 className="font-medium font-neulisneue text-white">{solution.title}</h4>
+                
                 </div>
               </div>
             </a>

@@ -6,6 +6,7 @@ import AnimatedTopographicSection from "./testanimation"
 import { useState, useEffect, useRef } from "react"
 import { AnimatePresence } from "motion/react";
 import { motion } from "motion/react";
+import ProjectInquiryModal from './ProjectInquiryModal'
 
 
 const CarouselComponent = () => {
@@ -192,6 +193,8 @@ const CarouselComponent = () => {
 
 
 export default function HeroSection() {
+  const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false)
+  
   return (
     <section className="col-span-full relative flex flex-col w-full py-20 pt-24 ">
       <div className="absolute -top-12 md:-top-24 md:right-0 -left-36 right-0 md:left-0">
@@ -235,17 +238,28 @@ export default function HeroSection() {
 
       </div>
       <div className="flex flex-col gap-4 md:gap-8 w-full z-10">
-        <div className="flex flex-col py-10 px-8 md:items-center md:text-center md:px-4 bg-white/1 backdrop-blur-[2px] rounded-[60px]">
-          <h1 className=" max-w-2xl mb-6">
-            Smart, efficient water systems - from source to soil
+        <div className="flex flex-col gap-5 py-10 px-8 md:items-center md:text-center md:px-4 bg-white/1 backdrop-blur-[2px] rounded-[60px]">
+          <h1 className=" max-w-4xl">
+            Smart, efficient water <br className="max-md:hidden"/> systems - from source to soil
           </h1>
-          <p className="md:text-xl leading-tight text-gray-600 mb-8 md:max-w-xl max-md:pr-8">
+          <p className="subtitle max-w-xl max-md:pr-8 mb-2">
             From automated irrigation to rainwater harvesting to swimming pools— we handle water end-to-end for any space.
           </p>
-          <Button className="w-fit max-md:text-lg py-2 md:py-3 max-md:px-5 tracking-tighter">Speak to our experts</Button>
+          <Button 
+            className="w-fit max-md:text-lg py-2 md:py-3 max-md:px-5 tracking-tighter"
+            onClick={() => setIsInquiryModalOpen(true)}
+          >
+            Speak to our experts
+          </Button>
         </div>
         <CarouselComponent />
       </div>
+      
+      <ProjectInquiryModal
+        isOpen={isInquiryModalOpen}
+        onClose={() => setIsInquiryModalOpen(false)}
+        title="Expert Consultation"
+      />
     </section>
   )
 }

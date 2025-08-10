@@ -10,12 +10,6 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
-    text: "Lorem ipsum dolor sit amet consectetur. Pharetra molestie bibendum mauris pellentesque sit. Ut mauris mauris bibendum mauris.",
-    author: "Another Client",
-    company: "Another Company",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b5cc?w=150&h=150&fit=crop&crop=face"
-  },
-  {
     text: "Exceptional service and outstanding results. The team exceeded our expectations in every way possible.",
     author: "Third Client",
     company: "Third Company",

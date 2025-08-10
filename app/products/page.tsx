@@ -518,7 +518,7 @@ function ProductsContent() {
                   className={`flex justify-between w-full items-center p-6 py-4 ${hasActiveBrand ? 'bg-primary-300' : 'bg-primary-100'} ${brandDropdownOpen ? 'rounded-[14.5px_0px_0px_0px]' : 'rounded-[14.5px_0px_0px_0px] md:rounded-[14.5px_0px_0px_14.5px]'} transition-all`}
                   onClick={() => setBrandDropdownOpen(!brandDropdownOpen)}
                 >
-                  <h5 className=''>Brand</h5>
+                  <h5 className=' text-black/70 font-medium tracking-tight'>Brand</h5>
                   <div className='flex items-center justify-center gap-2'>
                     <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveBrand ? 'opacity-100' : 'opacity-0'}`}>{filters.brands.length > 0 && `${filters.brands.length}`}</span>
 
@@ -585,7 +585,7 @@ function ProductsContent() {
                   className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveCategory ? 'bg-primary-300' : 'bg-primary-100'} max-md:rounded-[0px_14.5px_0px_0px]`}
                   onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
                 >
-                  <h5 className=''>Category</h5>
+                  <h5 className='text-black/70 font-medium tracking-tight'>Category</h5>
                   <div className='flex items-center justify-center gap-2'>
                     <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveCategory ? 'opacity-100' : 'opacity-0'}`}>{filters.categories.length > 0 && `${filters.categories.length}`}</span>
                     <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
@@ -653,7 +653,7 @@ function ProductsContent() {
                   className={`flex justify-between h-full w-full items-center p-6 py-4 ${hasActiveProductType ? 'bg-primary-300' : 'bg-primary-100'} ${productTypeDropdownOpen ? 'rounded-[0px]' : 'rounded-[0px_0px_0px_14.5px]'}`}
                   onClick={() => setProductTypeDropdownOpen(!productTypeDropdownOpen)}
                 >
-                  <h5 className=''>Product Type</h5>
+                  <h5 className='text-black/70 font-medium tracking-tight text-left leading-tight'>Product Type</h5>
                   <div className='flex items-center justify-center gap-2'>
                     <span className={`flex items-center justify-center w-8 h-8 bg-primary-900 text-white text-sm font-bold rounded-[10px] transition-all ${hasActiveProductType ? 'opacity-100' : 'opacity-0'}`}>{filters.productType.length > 0 && `${filters.productType.length}`}</span>
                     <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${productTypeDropdownOpen ? 'rotate-180' : ''}`} />
@@ -712,116 +712,8 @@ function ProductsContent() {
                   </motion.div>
                 )}
               </div>
-              {/* Sort By Dropdown 
-              <div className="relative h-full flex-[3] flex" ref={sortRef}>
-                <button
-                  className={`flex justify-between h-full w-full items-center p-6 py-4 bg-primary-100 ${sortDropdownOpen ? 'max-md:rounded-[0px]' : 'max-md:rounded-[0px_0px_0px_14.5px]'} `}
-                  onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
-                >
-                  <div className='flex max-md:flex-col gap-2 md:items-center'>
-                    <h5 className='max-md:text-left'>Sort By:</h5>
-                    <span className='text-xs md:text-base max-md:text-left opacity-70'>
-                      {
-                        filters.sortBy === 'name-asc' ? 'Name (A-Z)' :
-                          filters.sortBy === 'name-desc' ? 'Name (Z-A)' : 'Newest First'
-                      }
-                    </span>
-                  </div>
-
-                  <Icon name='chevronDown' className={`h-4 w-4 transition-transform ${sortDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
-
-                {sortDropdownOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
-                    className="absolute top-[94%] -left-[1%] md:-left-[0.5%] mt-1 w-56 md:w-72 bg-primary-100 border-2 border-primary-900/30 rounded-[0px_15px_30px_30px] shadow-lg z-50 overflow-hidden">
-                    <div className="flex flex-col">
-                      <div className="flex flex-col max-h-64 overflow-y-auto">
-                        <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Name (A-Z)</span>
-                          <input
-                            type="radio"
-                            name="sort"
-                            value="name-asc"
-                            checked={tempFilters.sortBy === 'name-asc'}
-                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                            className="sr-only"
-                          />
-                          <div
-                            className={`
-                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
-                                  ${tempFilters.sortBy.includes('name-asc')
-                                ? 'bg-transparent '
-                                : 'bg-white border-gray-300 hover:border-primary-400'
-                              }`}
-                          >
-                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('name-asc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
-                          </div>
-                        </label>
-                        <label className={`flex font-neulissans items-center justify-between w-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-
-                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Name (Z-A)</span>
-                          <input
-                            type="radio"
-                            name="sort"
-                            value="name-desc"
-                            checked={tempFilters.sortBy === 'name-desc'}
-                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                            className="sr-only"
-                          />
-                          <div
-                            className={`
-                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
-                                  ${tempFilters.sortBy.includes('name-desc')
-                                ? 'bg-transparent '
-                                : 'bg-white border-gray-300 hover:border-primary-400'
-                              }`}
-                          >
-                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('name-desc') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
-                          </div>
-                        </label>
-                        <label className={`flex font-neulissans items-center justify-between w-full h-full cursor-pointer p-6 py-5 border-b-2 border-primary-900/15 ${tempFilters.sortBy.includes('newest') ? 'bg-primary-300' : 'bg-primary-100 hover:bg-primary-200'} transition-all`}>
-                          <span className="text-base md:text-lg text-[#35463A] tracking-tight">Newest First</span>
-                          <input
-                            type="radio"
-                            name="sort"
-                            value="newest"
-                            checked={tempFilters.sortBy === 'newest'}
-                            onChange={(e) => setTempFilters(prev => ({ ...prev, sortBy: e.target.value }))}
-                            className="sr-only"
-                          />
-                          <div
-                            className={`
-                                  w-5 h-5 p-[3px] md:w-6 md:h-6 md:p-[4px] rounded-[8px] md:rounded-[10px] border-2 transition-all duration-200 flex items-center justify-center border-primary-800
-                                  ${tempFilters.sortBy.includes('newest')
-                                ? 'bg-transparent '
-                                : 'bg-white border-gray-300 hover:border-primary-400'
-                              }`}
-                          >
-                            <div className={`w-full h-full rounded-[4px] md:rounded-[5px] ${tempFilters.sortBy.includes('newest') ? 'bg-primary-700 ' : 'bg-primary-700/0'} transition-all`} />
-                          </div>
-                        </label>
-                      </div>
-                      <div className="flex w-full p-4 gap-4">
-                        <button
-                          className='flex font-medium tracking-tighter text-primary-900/70 hover:text-primary-900 text-base md:text-lg items-center justify-center px-3 md:px-5 py-3 transition-all'
-                          onClick={() => setSortDropdownOpen(false)}
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          className='flex font-medium tracking-tighter text-base md:text-lg items-center justify-center rounded-[15px] px-3  md:px-5 py-3 w-full bg-primary-500 transition-all hover:bg-primary-400'
-                          onClick={handleSortConfirm}>
-                          Save
-                        </button>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-              */}
               <div className='h-full flex w-[2px] bg-primary-900/30' />
-              <div className={`flex gap-4 flex-[5] items-center rounded-[0px_15px_15px_0px] ${filters.search ? 'bg-primary-300 ' : 'bg-primary-100 '} transition-all `}>
+              <div className={`flex gap-4 md:flex-[5] flex-[3] items-center md:rounded-[0px_15px_15px_0px] rounded-[0px_0px_15px_0px] ${filters.search ? 'bg-primary-300 ' : 'bg-primary-100 '} transition-all `}>
                 <Icon name="search" width={20} className="ml-6" />
                 <input
                   className='
@@ -912,7 +804,7 @@ function ProductsContent() {
                         </div>
                       </div>
                       <div className="flex flex-col max-md:px-2 p-4 gap-2">
-                        <h4 className="group-hover:text-primary-800 transition-all text-base md:text-xl font-neulissans font-medium tracking-tight leading-tight">{product.title}</h4>
+                        <h4 className="group-hover:text-primary-800 transition-all text-base md:text-2xl font-neulissans font-medium text-black/70 tracking-tighter leading-tight text-ellipsis">{product.title}</h4>
                         <div className="flex text-gray-400 font-medium">
                           {product.brand && (
                             <p className='text-sm md:text-lg font-medium font-neulissans tracking-tight leading-tight'>{product.brand} · {productTypes.find(c => c.id === product.subcategory)?.name} · {product.subtitle} </p>

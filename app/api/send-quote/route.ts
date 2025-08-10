@@ -9,27 +9,33 @@ const RECIPIENT_EMAILS = [
 
 interface QuoteRequestData {
   subject: string;
-  productName: string;
-  sku: string;
+  productName?: string;
+  sku?: string;
+  inquiryType?: string;
   customerInfo: {
     name: string;
-    company: string;
+    company?: string;
     email: string;
-    phone: string;
-    quantity: string;
-    message: string;
-    budget: string;
+    phone?: string;
+    quantity?: string;
+    message?: string;
+    budget?: string;
+    projectDetails?: string;
+    location?: string;
   };
   timestamp: string;
 }
 
 function generateTemplateEmail(data: QuoteRequestData): string {
+  const isProjectInquiry = data.inquiryType === 'project';
+  const title = isProjectInquiry ? 'Project Inquiry' : 'Quote Request';
+  
   return `
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Quote Request</title>
+    <title>${title}</title>
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -112,12 +118,13 @@ function generateTemplateEmail(data: QuoteRequestData): string {
 </head>
 <body>
     <div class="content">
-        <h2>🔔 New Quote Request Received</h2>
+        <h1>${isProjectInquiry ? 'New Project Inquiry Received' : 'New Quote Request Received'}</h1>
         <p>Hello team,</p>
-        <p>We've received a new quote request. Please find the details below and respond promptly to this inquiry.</p>
+        <p>We've received a new ${isProjectInquiry ? 'project inquiry' : 'quote request'}. Please find the details below and respond promptly to this inquiry.</p>
         
+        ${!isProjectInquiry ? `
         <div class="product-info">
-            <h3>📦 Product Information</h3>
+            <h3>Product Information</h3>
             <div class="info-row">
                 <span class="info-label">Product:</span>
                 <span class="info-value"><strong>${data.productName}</strong></span>
@@ -127,9 +134,10 @@ function generateTemplateEmail(data: QuoteRequestData): string {
                 <span class="info-value">${data.sku}</span>
             </div>
         </div>
+        ` : ''}
 
         <div class="customer-info">
-            <h3>👤 Customer Details</h3>
+            <h3>Customer Details</h3>
             <div class="info-row">
                 <span class="info-label">Name:</span>
                 <span class="info-value">${data.customerInfo.name}</span>
@@ -146,6 +154,12 @@ function generateTemplateEmail(data: QuoteRequestData): string {
                 <span class="info-label">Phone:</span>
                 <span class="info-value">${data.customerInfo.phone || 'Not provided'}</span>
             </div>
+            ${isProjectInquiry ? `
+            <div class="info-row">
+                <span class="info-label">Location:</span>
+                <span class="info-value">${data.customerInfo.location || 'Not specified'}</span>
+            </div>
+            ` : `
             <div class="info-row">
                 <span class="info-label">Quantity:</span>
                 <span class="info-value">${data.customerInfo.quantity || 'Not specified'}</span>
@@ -154,12 +168,13 @@ function generateTemplateEmail(data: QuoteRequestData): string {
                 <span class="info-label">Budget:</span>
                 <span class="info-value">${data.customerInfo.budget || 'Not specified'}</span>
             </div>
+            `}
         </div>
         
-        ${data.customerInfo.message ? `
+        ${(data.customerInfo.message || data.customerInfo.projectDetails) ? `
         <div class="message-section">
-            <h3>💬 Additional Requirements</h3>
-            <p>${data.customerInfo.message}</p>
+            <h3>${isProjectInquiry ? 'Project Details' : 'Additional Requirements'}</h3>
+            <p>${data.customerInfo.projectDetails || data.customerInfo.message}</p>
         </div>
         ` : ''}
         
@@ -182,9 +197,24 @@ export async function POST(request: NextRequest) {
     const data: QuoteRequestData = await request.json();
 
     // Validate required fields
-    if (!data.customerInfo.name || !data.customerInfo.email || !data.productName) {
+    const isProjectInquiry = data.inquiryType === 'project';
+    if (!data.customerInfo.name || !data.customerInfo.email) {
       return NextResponse.json(
-        { error: 'Missing required fields: name, email, or product name' },
+        { error: 'Missing required fields: name or email' },
+        { status: 400 }
+      );
+    }
+    
+    if (!isProjectInquiry && !data.productName) {
+      return NextResponse.json(
+        { error: 'Missing required field: product name' },
+        { status: 400 }
+      );
+    }
+    
+    if (isProjectInquiry && !data.customerInfo.projectDetails) {
+      return NextResponse.json(
+        { error: 'Missing required field: project details' },
         { status: 400 }
       );
     }
@@ -204,7 +234,7 @@ export async function POST(request: NextRequest) {
     // Send email using Resend
     try {
       const emailResult = await resend.emails.send({
-        from: process.env.FROM_EMAIL || 'onboarding@resend.dev',
+        from: process.env.FROM_EMAIL || 'inquiries@info.rainfield.in',
         to: RECIPIENT_EMAILS,
         subject: data.subject,
         html: emailContent,
@@ -223,7 +253,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Quote request sent successfully',
+        message: `${isProjectInquiry ? 'Project inquiry' : 'Quote request'} sent successfully`,
         recipients: RECIPIENT_EMAILS.length
       },
       { status: 200 }
