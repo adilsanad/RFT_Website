@@ -261,7 +261,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ showMenu, setShowMenu, categori
 
                 {/* Contact */}
                 <Link
-                  href="#contact"
+                  href="#footer"
                   className="flex items-center justify-between py-6 px-5 text-xl text-gray-700 hover:text-primary-900 transition-colors "
                   onClick={handleLinkClick}
                 >

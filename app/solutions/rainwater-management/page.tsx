@@ -63,7 +63,7 @@ const RainwaterPage = () => {
 
                 </div>
             </section>
-            <section className="col-span-full md:col-span-12 flex w-full  max-md:gap-12 gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
+            <section className="col-span-full md:col-span-12 flex max-md:flex-col w-full  max-md:gap-12 gap-12 px-4 md:px-24 py-28 bg-primary-100 border-t-2 border-b-2 border-primary-900/10 items-center">
                 <div className="flex flex-col flex-1 gap-9 px-3 md:pr-12">
                     <h2 className="">Rainwater Harvesting & Management Solutions</h2>
                     <div className="h-1 rounded-full bg-primary-600 px-2 pr-6"></div>

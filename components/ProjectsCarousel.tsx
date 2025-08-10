@@ -147,18 +147,18 @@ export default function ProjectsCarousel({ projects = sampleProjects }: Projects
                   {/* Location Strip */}
                   <div className="flex flex-col gap-3 bg-primary-300 px-3 md:px-8 py-5 md:py-6">
                     <Icon className="w-4 h-4 stroke-primary-700 fill-transparent " name='location' />
-                    <span className="text-md md:text-lg font-medium text-primary-900/70 md:leading-6">
+                    <span className="text-sm md:text-lg font-medium text-primary-900/70 leading-tight md:leading-6">
                       {project.location}
                     </span>
                   </div>
 
                   {/* Project Details */}
                   <div className="flex flex-col gap-2 p-6 md:p-8 px-3">
-                      <h5 className="font-semibold text-lg inline-block leading-tight text-primary-900/50">{project.organization}</h5>
-                      <h3 className="">
+                      <h5 className="font-semibold text-lg max-md:text-sm max-md:leading-tight inline-block leading-tight text-primary-900/50">{project.organization}</h5>
+                      <h3 className="max-md:text-xl max-md:leading-tight">
                         {project.title}
                       </h3>
-                    <span className="text-base md:text-lg tracking-tight font-medium text-black/60 leading-tight">{project.service}</span>
+                    <span className="text-sm md:text-lg tracking-tight font-medium text-black/60 leading-tight">{project.service}</span>
                   </div>
 
                 </div>

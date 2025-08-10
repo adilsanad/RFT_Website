@@ -1,12 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ChevronDown, ChevronUp } from "lucide-react"
 import Icon from "@/public/assets/vectors"
 import Pools from "@/public/assets/images/rftpools.png"
 import Irrigation from "@/public/assets/images/rftirrigation.png"
-import Rwh from "@/public/assets/images/rftrwh.png"
+import Rwh from "@/public/images/component/rwhimg1.png"
 
 export default function SolutionsSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0)

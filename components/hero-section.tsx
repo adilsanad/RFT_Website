@@ -151,14 +151,14 @@ const CarouselComponent = () => {
                 </motion.div>
               </AnimatePresence >
             </div>
-            <div className="flex h-full justify-center text-center items-end gap-2 md:gap-1 z-20">
+            <div className="flex h-full justify-en text-center items-end gap-2 md:gap-1 z-20">
               <button
                 onClick={goToPrevious}
-                className="p-4 px-[18px] max-md:mb-4 md:p-[0.9rem]  w-fit bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 active:bg-primary-400 transition-all"
+                className="p-4 px-[12px] max-md:mb-4 md:p-[0.9rem]  w-fit bg-primary-300 rounded-[45px_15px_15px_45px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 active:bg-primary-400 transition-all"
               >
-                <Icon width={20} name="roundedArrow" className="fill-primary-900 rotate-180" />
+                <Icon width={18} name="roundedArrow" className="fill-primary-900 rotate-180" />
               </button>
-              <div className="md:hidden flex flex-col gap-3 bg-gradient-to-b from-primary-200/80 to-primary-200 backdrop-blur-sm rounded-[30px_30px_15px_15px] pt-6 p-6 border border-primary-900/30">
+              <div className="md:hidden flex flex-col gap-3 bg-gradient-to-b from-primary-200/80 to-primary-200 backdrop-blur-sm rounded-[30px_30px_15px_15px] pt-6 p-5 border border-primary-900/30">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
@@ -168,10 +168,10 @@ const CarouselComponent = () => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     className="w-full flex flex-col gap-2.5"
                   >
-                    <h4 className=" text-2xl font-neulisneue tracking-tighter font-medium leading-tight text-gray-900 ">
+                    <h4 className="text-xl md:text-2xl font-neulisneue tracking-tighter font-medium leading-tight text-gray-900 ">
                       {currentItem.title}
                     </h4>
-                    <p className="leading-tight text-gray-600 font-manrope font-medium">
+                    <p className="leading-tight text-black/60 font-manrope font-medium tracking-tight">
                       {currentItem.description}
                     </p>
                   </motion.div>
@@ -179,9 +179,9 @@ const CarouselComponent = () => {
               </div>
               <button
                 onClick={handleManualNext}
-                className="p-4 px-[18px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 transition-all"
+                className="p-4 px-[12px] max-md:mb-4 md:p-[0.9rem] w-fit bg-primary-300 rounded-[15px_45px_45px_15px] flex items-center justify-center border-2 border-primary-900/30 hover:border-primary-900 hover:translate-y-1 transition-all"
               >
-                <Icon width={20} name="roundedArrow" className="fill-primary-900" />
+                <Icon width={18} name="roundedArrow" className="fill-primary-900" />
               </button>
             </div>
           </div>

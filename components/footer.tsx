@@ -19,7 +19,7 @@ export default function Footer() {
               variant="footer" 
               size="footer" 
               className="group"
-              onClick={() => setIsInquiryModalOpen(true)}
+              link="mailto:info@rainfield.in"
             >
               <Icon name="mail" className="fill-primary-600 group-hover:fill-primary-300 transition-all w-6"/>
             </Button>
