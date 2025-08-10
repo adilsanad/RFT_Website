@@ -1,0 +1,25 @@
+{
+  "name": "Rainfield Technologies - Irrigation Systems & Water Management Solutions India",
+  "short_name": "Rainfield",
+  "description": "Expert irrigation systems, rainwater harvesting, and pool installation services across India. Professional water management solutions for residential and commercial projects.",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#002F0E",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["business", "utilities"]
+}

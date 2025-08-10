@@ -1,9 +1,41 @@
-'use client';
+import type { Metadata } from 'next'
 import ContactSection from "@/components/contact-section";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
-import { Button } from "@/components/ui/button";
 import Icon from "@/public/assets/vectors";
-import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: 'Rainwater Harvesting Systems India - Collection, Storage & Management Solutions',
+  description: 'Expert rainwater harvesting system installation across India. Modular storage tanks, collection systems, filtration, and water management solutions for commercial and residential projects. Sustainable water conservation.',
+  keywords: [
+    'rainwater harvesting India',
+    'rainwater collection systems',
+    'water harvesting Bangalore',
+    'modular rainwater tanks',
+    'commercial rainwater harvesting',
+    'residential water harvesting',
+    'rainwater storage systems',
+    'sustainable water management',
+    'water conservation systems India',
+    'rainwater filtration systems',
+    'underground water tanks',
+    'rainwater management solutions'
+  ],
+  openGraph: {
+    title: 'Rainwater Harvesting Systems India - Sustainable Water Collection',
+    description: 'Expert rainwater harvesting system installation across India. Modular tanks, collection systems, and sustainable water management solutions.',
+    images: [
+      {
+        url: '/og-rainwater.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rainfield Technologies - Rainwater Harvesting Systems',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://rainfield.in/solutions/rainwater-management',
+  },
+};
 
 const RainwaterPage = () => {
     return (

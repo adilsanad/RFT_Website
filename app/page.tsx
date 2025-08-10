@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import StatsSection from "@/components/StatsSection"
@@ -5,6 +6,38 @@ import SolutionsSection from "@/components/solutions-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import ContactSection from "@/components/contact-section"
 import MarqueeSection from "@/components/marquee-section"
+
+export const metadata: Metadata = {
+  title: 'Home · Rainfield Technologies',
+  description: 'Expert water management systems across India. Specializing in automated irrigation, rainwater harvesting, and swimming pool solutions for commercial, residential, and industrial projects. Get your free consultation today.',
+  keywords: [
+    'irrigation systems India',
+    'rainwater harvesting Bangalore',
+    'commercial water management',
+    'automated irrigation systems',
+    'swimming pool installation',
+    'Hunter irrigation dealer India',
+    'Jain irrigation systems',
+    'water management solutions',
+    'landscape irrigation contractor',
+    'drip irrigation systems India'
+  ],
+  openGraph: {
+    title: 'Smart Water Management Solutions - Irrigation, Rainwater Harvesting & Pool Systems',
+    description: 'Expert water management systems across India. Automated irrigation, rainwater harvesting, and swimming pool solutions for all project types.',
+    images: [
+      {
+        url: '/assets/images/logos/rft.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rainfield Technologies - Smart Water Management Solutions',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://rainfield.in',
+  },
+}
 
 interface MarqueeData {
   src: string;
