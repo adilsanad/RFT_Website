@@ -12,14 +12,17 @@ import ContactSection from "@/components/contact-section";
 interface TeamMemberProps {
     name: string;
     role: string;
+    image?: string;
 }
 
-const TeamMember = ({ name, role }: TeamMemberProps) => (
-    <div className="flex flex-col gap-4 items-center text-center">
-        <img src={avatar.src} alt={name} className="w-24 h-24 rounded-full object-cover" />
-        <div>
-            <h3 className="text-lg font-medium">{name}</h3>
-            <p className="text-gray-600">{role}</p>
+const TeamMember = ({ name, role, image }: TeamMemberProps) => (
+    <div className="flex h-fit flex-col gap-6 items-center md:items-start ">
+        <div className="flex items-center justify-center w-full h-80 rounded-[15px] bg-white border border-primary-900/15 ">
+            <img src={image || avatar.src} alt={name} className={`${image ? 'w-full' : 'w-36'} object-cover object-center `} />
+        </div>
+        <div className="flex flex-col max-md:text-center gap-1 px-4">
+            <h3 className="text-2xl md:text-3xl font-medium font-neulisneue tracking-tighter">{name}</h3>
+            <p className="text-primary-700 font-neulisneue text-lg md:text-xl font-medium">{role}</p>
         </div>
     </div>
 );
@@ -74,16 +77,14 @@ const AboutPageClient = () => {
                         </Button>
                     </div>
                     {/* Dynamic Content */}
-                    <AnimatePresence mode="wait">
-                        <motion.div key={activeTab} initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 100, translateY: 0 }} className="min-h-[120px] transition-all duration-300 ease-in-out flex max-md:flex-col gap-8">
-                            <p className="body-text">
-                                {content[activeTab].p1}
-                            </p>
-                            <p className="body-text">
-                                {content[activeTab].p2}
-                            </p>
-                        </motion.div>
-                    </AnimatePresence>
+                    <motion.div key={activeTab} initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 100, translateY: 0 }} className="min-h-[120px] transition-all duration-300 ease-in-out flex max-md:flex-col gap-8">
+                        <p className="body-text">
+                            {content[activeTab].p1}
+                        </p>
+                        <p className="body-text">
+                            {content[activeTab].p2}
+                        </p>
+                    </motion.div>
                 </div>
                 <StatCounter duration={1500} StatData={[
                     { title: "projects executed", count: 100 },
@@ -119,7 +120,7 @@ const AboutPageClient = () => {
                         />
                     </div>
                 </div>
-                <ContactSection  />
+                <ContactSection />
             </section>
         </main>
     )
