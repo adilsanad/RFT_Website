@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'Expert water management systems across India. Automated irrigation, rainwater harvesting, and swimming pool solutions for all project types.',
     images: [
       {
-        url: '/assets/images/logos/rft.png',
+        url: '/logos/rft.png',
         width: 1200,
         height: 630,
         alt: 'Rainfield Technologies - Smart Water Management Solutions',
@@ -45,7 +45,7 @@ interface MarqueeData {
 }
 const partners: MarqueeData[] = [
   { src: "/logos/amiad.png", alt: "Amiad" },
-  { src: "/logos/hunter.png", alt: "Hunter" },
+  { src: "/logos/Hunter.png", alt: "Hunter" },
   { src: "/logos/ecorain.png", alt: "Ecorain" },
   { src: "/logos/finolex.png", alt: "Finolex" },
   { src: "/logos/yuzuak.png", alt: "Yuzuak" },
@@ -54,12 +54,12 @@ const partners: MarqueeData[] = [
 ];
 
 const clients: MarqueeData[] = [
-  { src: "/assets/images/logos/sobha.png", alt: "Sobha" },
-  { src: "/assets/images/logos/prestige.png", alt: "Prestige" },
-  { src: "/assets/images/logos/brigade.png", alt: "Brigade" },
-  { src: "/assets/images/logos/bagmane.png", alt: "Bagmane" },
-  { src: "/assets/images/logos/embassy.png", alt: "Embassy" },
-  { src: "/assets/images/logos/l&w.png", alt: "L&W Construction" },
+  { src: "/logos/sobha.png", alt: "Sobha" },
+  { src: "/logos/prestige.png", alt: "Prestige" },
+  { src: "/logos/brigade.png", alt: "Brigade" },
+  { src: "/logos/bagmane.png", alt: "Bagmane" },
+  { src: "/logos/embassy.png", alt: "Embassy" },
+  { src: "/logos/l&w.png", alt: "L&W Construction" },
 ];
 
 export default function Home() {
