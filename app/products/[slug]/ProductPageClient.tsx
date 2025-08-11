@@ -7,10 +7,12 @@ import ProductImageGallery from '../components/ProductGallery'
 import ProductDropdowns from '../components/ProductDropdown'
 import RelatedProductsCarousel from '../components/RelatedProducts'
 import QuoteRequestModal from '@/components/QuoteRequestModal'
+import { useProductNavigation } from '../hooks/useProductNavigation'
 
 
 export default function ProductPageClient({ product, category, productsData }: { product: any, category: any, productsData: any }) {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const { navigateBackToProducts } = useProductNavigation();
 
   return (
     <>
@@ -20,7 +22,13 @@ export default function ProductPageClient({ product, category, productsData }: {
           {/* Product Info */}
           <div className='md:order-1 order-2 col-span-full md:col-span-5 md:col-start-1 h-fit flex flex-col gap-4 md:gap-16 text-white rounded-[15px] max-md:px-8 md:p-12 md:bg-primary-900'>
             <div className='flex flex-col gap-6'>
-              <Button size='compact' className='max-md:hidden w-fit py-3 rounded-[15px]' link='back'><Icon width={16} name='roundedArrow' className='rotate-180' /></Button>
+                <Button
+                size='compact'
+                className='max-md:hidden w-fit py-3 rounded-[15px]'
+                onClick={navigateBackToProducts}
+                >
+                <Icon width={16} name='roundedArrow' className='rotate-180' />
+                </Button>
               <nav className="col-span-full flex  py-3">
                 <ol className="flex items-center gap-2 text-base md:text-lg text-white/30 flex-wrap gap-y-0 ">
                   <li><Link href="/" className="hover:text-primary-600 transition-all">Home</Link></li>
@@ -33,8 +41,13 @@ export default function ProductPageClient({ product, category, productsData }: {
             </div>
             <div className="flex flex-col gap-8">
               <h3 >{product.title}</h3>
-              <div className="">
-                <p className='text-white/60 text-lg font-medium'>{product.description}</p>
+              <div className="flex flex-col gap-1">
+                <p className='flex w-full justify-between text-white/50 text-lg font-medium'><span className='text-white/70 font-semibold'>SKU</span> {product.subtitle}</p>
+                <p className='flex w-full justify-between text-white/50 text-lg font-medium'><span className='text-white/70 font-semibold'>Product Type</span>  {product.subcategory
+                  ? product.subcategory.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b\w/g, (c: string) => c.toUpperCase())
+                  : ' '}
+                </p>
+                <p className='flex w-full justify-between text-white/50 text-lg font-medium'><span className='text-white/70 font-semibold'>Brand</span> {product.brand}</p>
               </div>
             </div>
 
