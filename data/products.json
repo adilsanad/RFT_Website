@@ -1,6 +1,324 @@
 {
   "products": [
     {
+      "id": "EA-DC20",
+      "sku": "ECOAQUA-DC20",
+      "slug": "ecoaqua-draincell-20mm",
+      "subtitle": "Draincell 20mm",
+      "title": "EcoAqua Draincell 20mm",
+      "category": "irrigation-systems",
+      "subcategory": "drainage",
+      "variants": ["20mm"],
+      "description": "EcoAqua Draincell 20mm is a lightweight, high-strength drainage cell designed for subsurface water management in landscapes, podium gardens, planter boxes, and roof gardens. Its open-cell structure provides excellent water flow and root protection while reducing soil compaction. The 20mm profile is ideal for areas requiring low-height drainage layers without compromising performance.",
+      "specifications": {
+        "Thickness": "20 mm",
+        "Material": "Recycled polypropylene",
+        "Compressive Strength": "≥ 120 t/m²",
+        "Flow Rate": "High flow, multidirectional",
+        "Sheet Size": "500mm x 500mm",
+        "Warranty": "5 years"
+      },
+      "features": [
+        "Lightweight, high-strength polypropylene construction",
+        "Efficient drainage and aeration for healthy root growth",
+        "Prevents waterlogging and protects waterproofing layers",
+        "Easy installation with interlocking panels",
+        "Ideal for podiums, terraces, planter boxes, and green roofs"
+      ],
+      "images": ["/productImages/ecoaqua-draincell-20mm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "EcoAqua Draincell 20mm | Drainage Cell for Podiums & Landscapes India | Rainfield Technologies",
+      "metaDescription": "Buy EcoAqua Draincell 20mm for efficient subsoil drainage in podiums, terraces and planters. High-strength drainage cell for landscaping, green roofs and water management. Available pan-India including Bangalore, Mumbai, and Delhi.",
+      "seoTitle": "EcoAqua Draincell 20mm - High Strength Drainage Cell India",
+      "seoDescription": "EcoAqua 20mm Draincell for landscaping, podiums, and green roofs. Lightweight, durable drainage solution available across India.",
+      "seoKeywords": [
+        "Draincell 20mm",
+        "EcoAqua drainage cell",
+        "podium drainage India",
+        "roof garden drainage",
+        "landscape drainage Bangalore"
+      ],
+      "price": 275,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "DC20",
+      "applicationAreas": [
+        "podium drainage",
+        "roof gardens",
+        "planter boxes",
+        "landscape drainage"
+      ],
+      "coverage": "Dependent on design",
+      "installationType": "professional",
+      "warranty": "5 years"
+    },
+
+    {
+      "id": "EA-DC30",
+      "sku": "ECOAQUA-DC30",
+      "slug": "ecoaqua-draincell-30mm",
+      "subtitle": "Draincell 30mm",
+      "title": "EcoAqua Draincell 30mm",
+      "category": "irrigation-systems",
+      "subcategory": "drainage",
+      "variants": ["30mm"],
+      "description": "EcoAqua Draincell 30mm provides a higher void volume for improved subsurface drainage in podiums, landscapes, sports turfs, and planter systems. The 30mm thickness offers excellent load-bearing capacity while allowing rapid water discharge, protecting both soil and waterproofing layers from damage.",
+      "specifications": {
+        "Thickness": "30 mm",
+        "Material": "Recycled polypropylene",
+        "Compressive Strength": "≥ 150 t/m²",
+        "Flow Rate": "High flow, multidirectional",
+        "Sheet Size": "500mm x 500mm",
+        "Warranty": "5 years"
+      },
+      "features": [
+        "High-strength structural drainage layer",
+        "Superior water discharge capacity",
+        "Prevents root damage and soil compaction",
+        "Interlocking design for quick installation",
+        "Ideal for heavy-duty podium and terrace applications"
+      ],
+      "images": ["/productImages/ecoaqua-draincell-30mm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "EcoAqua Draincell 30mm | Heavy-Duty Drainage Cell India | Rainfield Technologies",
+      "metaDescription": "EcoAqua Draincell 30mm offers high-capacity drainage for podiums, turf areas, and green roofs. Strong, durable cells ideal for landscape drainage across India.",
+      "seoTitle": "EcoAqua Draincell 30mm - Landscape & Podium Drainage India",
+      "seoDescription": "High-performance 30mm drainage cell for landscaping, turf systems, and green roofs. Available pan-India.",
+      "seoKeywords": [
+        "Draincell 30mm",
+        "EcoAqua drainage",
+        "landscape drainage India",
+        "sports turf drainage",
+        "podium water management"
+      ],
+      "price": 345,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "DC30",
+      "applicationAreas": [
+        "sports turf drainage",
+        "podium decking",
+        "green roofs",
+        "planter boxes"
+      ],
+      "coverage": "Dependent on design",
+      "installationType": "professional",
+      "warranty": "5 years"
+    },
+
+    {
+      "id": "EA-DC40",
+      "sku": "ECOAQUA-DC40",
+      "slug": "ecoaqua-draincell-40mm",
+      "subtitle": "Draincell 40mm",
+      "title": "EcoAqua Draincell 40mm",
+      "category": "irrigation-systems",
+      "subcategory": "drainage",
+      "variants": ["40mm"],
+      "description": "EcoAqua Draincell 40mm is engineered for large-scale drainage requirements, offering very high void space and superior load-bearing strength. It’s perfect for podium gardens, basement drainage layers, landscapes, and water retention systems. The 40mm depth ensures maximum flow efficiency and reliable long-term performance.",
+      "specifications": {
+        "Thickness": "40 mm",
+        "Material": "Recycled polypropylene",
+        "Compressive Strength": "≥ 180 t/m²",
+        "Flow Rate": "Very high flow capacity",
+        "Sheet Size": "500mm x 500mm",
+        "Warranty": "5 years"
+      },
+      "features": [
+        "Large drainage volume for heavy-duty applications",
+        "Strong load-bearing grid structure",
+        "Reduces hydrostatic pressure on waterproofing",
+        "Long-lasting and resistant to soil chemicals",
+        "Ideal for podiums and deep drainage layers"
+      ],
+      "images": ["/productImages/ecoaqua-draincell-40mm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "EcoAqua Draincell 40mm | High Capacity Drainage Cell India | Rainfield Technologies",
+      "metaDescription": "Buy EcoAqua Draincell 40mm for large-scale drainage applications. High load-bearing, long-life drainage panels for landscapes and podiums across India.",
+      "seoTitle": "EcoAqua Draincell 40mm - High Void Volume Drainage Panel",
+      "seoDescription": "Premium 40mm drainage cell with high void volume for podiums, planters, and large-scale drainage systems in India.",
+      "seoKeywords": [
+        "Draincell 40mm",
+        "EcoAqua draincell India",
+        "high capacity drainage",
+        "podium garden drainage"
+      ],
+      "price": 425,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "DC40",
+      "applicationAreas": [
+        "podium gardens",
+        "basement drainage",
+        "landscape drainage",
+        "waterproofing protection"
+      ],
+      "coverage": "Dependent on design",
+      "installationType": "professional",
+      "warranty": "5 years"
+    },
+
+    {
+      "id": "EA-DC50",
+      "sku": "ECOAQUA-DC50",
+      "slug": "ecoaqua-draincell-50mm",
+      "subtitle": "Draincell 50mm",
+      "title": "EcoAqua Draincell 50mm",
+      "category": "irrigation-systems",
+      "subcategory": "drainage",
+      "variants": ["50mm"],
+      "description": "EcoAqua Draincell 50mm is the highest-capacity drainage panel in the series, used for deep drainage layers, podium substructures, and maximum water discharge systems. With exceptional strength and large void space, it handles high load environments and rapid water flow effortlessly.",
+      "specifications": {
+        "Thickness": "50 mm",
+        "Material": "Recycled polypropylene",
+        "Compressive Strength": "≥ 200 t/m²",
+        "Flow Rate": "Ultra-high flow capacity",
+        "Sheet Size": "500mm x 500mm",
+        "Warranty": "5 years"
+      },
+      "features": [
+        "Deep drainage panel with massive void volume",
+        "Handles heavy structural loads",
+        "Ideal for podium slabs, roof gardens, and water retention systems",
+        "Quick installation with interlocking joints",
+        "Protects waterproofing and reduces hydrostatic pressure"
+      ],
+      "images": ["/productImages/ecoaqua-draincell-50mm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "EcoAqua Draincell 50mm | Deep Drainage Cell India | Rainfield Technologies",
+      "metaDescription": "EcoAqua Draincell 50mm for deep drainage, podium systems, and high-load environments. Strong, long-lasting, and efficient drainage solution available across India.",
+      "seoTitle": "EcoAqua Draincell 50mm - Deep Profile Drainage System",
+      "seoDescription": "Top-end 50mm drainage cell for heavy-duty podium and landscape drainage applications across India.",
+      "seoKeywords": [
+        "Draincell 50mm",
+        "Deep drainage cell",
+        "EcoAqua drainage India",
+        "heavy duty drainage"
+      ],
+      "price": ,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "DC50",
+      "applicationAreas": [
+        "deep drainage systems",
+        "podium slabs",
+        "roof gardens",
+        "structural drainage"
+      ],
+      "coverage": "Dependent on design",
+      "installationType": "professional",
+      "warranty": "5 years"
+    },
+
+    {
+      "id": "GT-150",
+      "sku": "GEOTEXTILE-150GSM",
+      "slug": "geotextile-150gsm",
+      "subtitle": "Geotextile 150 GSM",
+      "title": "Geotextile Fabric 150 GSM",
+      "category": "irrigation-systems",
+      "subcategory": "geotextile",
+      "variants": ["150gsm"],
+      "description": "150 GSM non-woven geotextile fabric designed for filtration, separation, and drainage applications. Commonly used under draincells, in landscaping, waterproofing protection, and soil stabilization. Durable polypropylene fibers ensure long-term performance in Indian environments.",
+      "specifications": {
+        "GSM": "150",
+        "Material": "Polypropylene (non-woven)",
+        "Tensile Strength": "8–10 kN/m",
+        "Width": "1m / 2m",
+        "Permeability": "High",
+        "Warranty": "3 years"
+      },
+      "features": [
+        "High-quality non-woven PP fabric",
+        "Filtration and separation layer for drainage systems",
+        "Prevents soil clogging and protects membranes",
+        "Strong and durable for landscaping use",
+        "Compatible with all Draincell systems"
+      ],
+      "images": ["/productImages/geotextile-150gsm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "Geotextile 150 GSM | Landscaping & Drainage Fabric India | Rainfield Technologies",
+      "metaDescription": "Buy 150 GSM non-woven geotextile for drainage, filtration, and landscape applications. Durable PP fabric available across India.",
+      "seoTitle": "150 GSM Geotextile Fabric - Landscaping & Drainage Use",
+      "seoDescription": "Premium 150 GSM geotextile for drainage and soil filtration. Available pan-India.",
+      "seoKeywords": [
+        "geotextile 150gsm",
+        "non woven fabric India",
+        "landscape filtration",
+        "drainage geotextile"
+      ],
+      "price": ,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "GT150",
+      "applicationAreas": [
+        "drainage filtration",
+        "podium landscaping",
+        "soil separation",
+        "waterproofing protection"
+      ],
+      "coverage": "Variable",
+      "installationType": "professional",
+      "warranty": "3 years"
+    },
+    {
+      "id": "GT-180",
+      "sku": "GEOTEXTILE-180GSM",
+      "slug": "geotextile-180gsm",
+      "subtitle": "Geotextile 180 GSM",
+      "title": "Geotextile Fabric 180 GSM",
+      "category": "irrigation-systems",
+      "subcategory": "geotextile",
+      "variants": ["180gsm"],
+      "description": "180 GSM non-woven geotextile fabric offering higher tensile strength and durability for heavier landscape and drainage requirements. Commonly used under draincells, in podium landscapes, retaining structures, and filtration layers where stronger mechanical performance is needed.",
+      "specifications": {
+        "GSM": "180",
+        "Material": "Polypropylene (non-woven)",
+        "Tensile Strength": "10–12 kN/m",
+        "Width": "1m / 2m",
+        "Permeability": "High",
+        "Warranty": "3 years"
+      },
+      "features": [
+        "Higher strength for heavy-duty applications",
+        "Excellent filtration and drainage performance",
+        "Protects membranes and prevents soil migration",
+        "Suitable for podiums, planters and retaining walls",
+        "Compatible with all EcoAqua draincell products"
+      ],
+      "images": ["/productImages/geotextile-180gsm.webp"],
+      "brand": "EcoAqua",
+      "metaTitle": "Geotextile 180 GSM | Heavy Duty Drainage Fabric India | Rainfield Technologies",
+      "metaDescription": "Premium 180 GSM geotextile fabric for heavy-duty drainage and filtration tasks. Strong non-woven PP fabric available across India.",
+      "seoTitle": "180 GSM Geotextile Fabric - Heavy Duty Filtration Layer",
+      "seoDescription": "Durable 180 GSM non-woven geotextile suitable for heavy drainage and landscape applications across India.",
+      "seoKeywords": [
+        "geotextile 180gsm",
+        "heavy duty geotextile",
+        "landscape filtration fabric",
+        "drainage protection layer"
+      ],
+      "price": ,
+      "currency": "INR",
+      "availability": "InStock",
+      "condition": "New",
+      "mpn": "GT180",
+      "applicationAreas": [
+        "heavy-duty drainage",
+        "retaining structures",
+        "podium landscaping",
+        "soil stabilization"
+      ],
+      "coverage": "Variable",
+      "installationType": "professional",
+      "warranty": "3 years"
+    },
+    {
       "id": "443334",
       "sku": "PGJ04",
       "slug": "pgj04",
