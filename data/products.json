@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "EA-DC20",
+      "id": "20",
       "sku": "ECOAQUA-DC20",
       "slug": "ecoaqua-draincell-20mm",
       "subtitle": "Draincell 20mm",
@@ -55,7 +55,7 @@
     },
 
     {
-      "id": "EA-DC30",
+      "id": "30",
       "sku": "ECOAQUA-DC30",
       "slug": "ecoaqua-draincell-30mm",
       "subtitle": "Draincell 30mm",
@@ -109,7 +109,7 @@
     },
 
     {
-      "id": "EA-DC40",
+      "id": "40",
       "sku": "ECOAQUA-DC40",
       "slug": "ecoaqua-draincell-40mm",
       "subtitle": "Draincell 40mm",
@@ -162,7 +162,7 @@
     },
 
     {
-      "id": "EA-DC50",
+      "id": "50",
       "sku": "ECOAQUA-DC50",
       "slug": "ecoaqua-draincell-50mm",
       "subtitle": "Draincell 50mm",
@@ -215,7 +215,7 @@
     },
 
     {
-      "id": "GT-150",
+      "id": "150",
       "sku": "GEOTEXTILE-150GSM",
       "slug": "geotextile-150gsm",
       "subtitle": "Geotextile 150 GSM",
@@ -267,7 +267,7 @@
       "warranty": "3 years"
     },
     {
-      "id": "GT-180",
+      "id": "180",
       "sku": "GEOTEXTILE-180GSM",
       "slug": "geotextile-180gsm",
       "subtitle": "Geotextile 180 GSM",
